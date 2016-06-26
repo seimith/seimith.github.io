@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+## Ahoy mate!
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+This blog is simply a collection of snippets, thoughts, and other randomness from me. Things here might range from topics on JavaScript, React, Sass, Bash stuffs, and RV living. Do I live in an RV? No, but I really wish I did. Perhaps one day after I pay off my student loans I'll do it. However, in the meantime, I'm a stationary fool on the west coast.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+### Who am I?
+I'm a UX Engineer. I've been doing my thang for a little over 2 years now. As a UX Engineer, I primarily focus on front-end technologies and I get to tinker around while building high fidelity prototypes.
+
+### How did I get to where I am now?
+I attended General Assembly's WDI 3 month program. 
