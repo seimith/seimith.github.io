@@ -6,9 +6,54 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 31 Jul 2016 13:47:40 -0700</pubDate>
-    <lastBuildDate>Sun, 31 Jul 2016 13:47:40 -0700</lastBuildDate>
+    <pubDate>Fri, 05 Aug 2016 08:30:59 -0700</pubDate>
+    <lastBuildDate>Fri, 05 Aug 2016 08:30:59 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Edit Github Author For Past Commits</title>
+        <description>&lt;p&gt;So a while back I was working on a fun project on my new laptop. However, I totally forgot to set the Github username and email. This meant that all the authors on my commits were not recognized as me.&lt;/p&gt;
+
+&lt;p&gt;Luckily, Github always has a solution.&lt;/p&gt;
+
+&lt;p&gt;First, clone your repository. Then, do the below.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git filter-branch --env-filter &#39;
+
+OLD_EMAIL=&quot;your-laptop-name@your-laptop-name-MacBook-Pro.local&quot;
+CORRECT_NAME=&quot;your-name&quot;
+CORRECT_EMAIL=&quot;your@name.com&quot;
+
+if [ &quot;$GIT_COMMITTER_EMAIL&quot; = &quot;$OLD_EMAIL&quot; ]
+then
+	export GIT_COMMITTER_NAME=&quot;$CORRECT_NAME&quot;
+    export GIT_COMMITTER_EMAIL=&quot;$CORRECT_EMAIL&quot;
+fi
+if [ &quot;$GIT_AUTHOR_EMAIL&quot; = &quot;$OLD_EMAIL&quot; ]
+then
+	export GIT_AUTHOR_NAME=&quot;$CORRECT_NAME&quot;
+	export GIT_AUTHOR_EMAIL=&quot;$CORRECT_EMAIL&quot;
+fi
+&#39; --tag-name-filter cat -- --branches --tags
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After you do that, force update your project.&lt;/p&gt;
+
+&lt;p&gt;```
+git push –force –tags origin ‘refs/heads/*’
+``&lt;/p&gt;
+
+&lt;p&gt;And there you have it. Your repository should reflect new authors.`&lt;/p&gt;
+</description>
+        <pubDate>Fri, 05 Aug 2016 08:22:15 -0700</pubDate>
+        <link>http://seimith.github.io/snippits/2016/08/05/Edit-Github-Author-For-Past-Commits.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/snippits/2016/08/05/Edit-Github-Author-For-Past-Commits.html</guid>
+        
+        
+        <category>snippits</category>
+        
+      </item>
     
       <item>
         <title>Looping Through Files</title>
