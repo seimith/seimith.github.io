@@ -6,8 +6,8 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 05 Aug 2016 08:30:59 -0700</pubDate>
-    <lastBuildDate>Fri, 05 Aug 2016 08:30:59 -0700</lastBuildDate>
+    <pubDate>Sat, 06 Aug 2016 12:17:59 -0700</pubDate>
+    <lastBuildDate>Sat, 06 Aug 2016 12:17:59 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -40,11 +40,11 @@ fi
 
 &lt;p&gt;After you do that, force update your project.&lt;/p&gt;
 
-&lt;p&gt;```
-git push –force –tags origin ‘refs/heads/*’
-``&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git push --force --tags origin &#39;refs/heads/*&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;And there you have it. Your repository should reflect new authors.`&lt;/p&gt;
+&lt;p&gt;And there you have it. Your repository should reflect new authors.&lt;/p&gt;
 </description>
         <pubDate>Fri, 05 Aug 2016 08:22:15 -0700</pubDate>
         <link>http://seimith.github.io/snippits/2016/08/05/Edit-Github-Author-For-Past-Commits.html</link>

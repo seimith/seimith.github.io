@@ -35,6 +35,6 @@ After you do that, force update your project.
 
 ```
 git push --force --tags origin 'refs/heads/*'
-``
+```
 
-And there you have it. Your repository should reflect new authors.`
+And there you have it. Your repository should reflect new authors.
