@@ -17,4 +17,4 @@ Even if they aren't the most up-to-date (some files were last commited 2 years a
 
 [link]: https://github.com/github/gitignore
 
-![alt text](https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-07-assets/img1.png "List of some of the .gitignore files"]
+![alt text](https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-07-assets/img1.png "List of some of the .gitignore files")
