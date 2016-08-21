@@ -6,9 +6,51 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 13 Aug 2016 00:29:40 -0700</pubDate>
-    <lastBuildDate>Sat, 13 Aug 2016 00:29:40 -0700</lastBuildDate>
+    <pubDate>Sat, 20 Aug 2016 22:41:38 -0700</pubDate>
+    <lastBuildDate>Sat, 20 Aug 2016 22:41:38 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>(Swift) Create Navigation with Multiple Pages with only Storyboard</title>
+        <description>&lt;p&gt;After one week of playing around with Swift I have some opinions on using the storyboard. It’s weird. But, it definitely makes creating an app real easy. For example, if I want to make an application that has multiple pages, I can do that all via the storyboard. Styling the pages on storyboard, is another beast, and we won’t get into that right now.&lt;/p&gt;
+
+&lt;p&gt;In this post, I’ll go through steps to create an app that has 3 views/pages/scenes/whatever-you-call-it. You can navigate between each page via buttons on the actual views/pages/scenes and buttons on the navigation bar.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Swift 3&lt;/li&gt;
+  &lt;li&gt;Xcode Version 7.3.1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1: Create swift project&lt;/strong&gt;
+The first step to create your app is to actually create it! Make sure you select “Single View Application”, name your project, and deselect “Use Core Data”, “Include Unit Tests”, and “Include UI Tests” as we are not testing at all here.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```
+iOS &amp;gt; Application &amp;gt; Single View Application
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Inline-style:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.pn://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png&quot; alt=&quot;alt text&quot; title=&quot;Creating a single application page&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 20 Aug 2016 08:22:15 -0700</pubDate>
+        <link>http://seimith.github.io/swift/navigation/views/tutorial/2016/08/20/Swift-Create-Navigation-with-Multiple-Pages-with-only-Storyboard.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/swift/navigation/views/tutorial/2016/08/20/Swift-Create-Navigation-with-Multiple-Pages-with-only-Storyboard.html</guid>
+        
+        
+        <category>swift</category>
+        
+        <category>navigation</category>
+        
+        <category>views</category>
+        
+        <category>tutorial</category>
+        
+      </item>
     
       <item>
         <title>Nesting Navigator inside TabBarIOS for ultimate history stack</title>
