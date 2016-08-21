@@ -13,4 +13,8 @@ Here comes Github! They have a list of all sorts of `.gitignore` files for all t
 
 Check out [https://github.com/github/gitignore][link] for the list.
 
+Even if they aren't the most up-to-date (some files were last commited 2 years ago) it's still a nice base to have.
+
 [link]: https://github.com/github/gitignore
+
+![alt text](https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-07-assets/img1.png "List of some of the .gitignore files"]
