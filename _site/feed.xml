@@ -6,8 +6,8 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 20 Aug 2016 22:41:38 -0700</pubDate>
-    <lastBuildDate>Sat, 20 Aug 2016 22:41:38 -0700</lastBuildDate>
+    <pubDate>Sat, 20 Aug 2016 23:01:01 -0700</pubDate>
+    <lastBuildDate>Sat, 20 Aug 2016 23:01:01 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -26,16 +26,60 @@
 &lt;p&gt;&lt;strong&gt;Step 1: Create swift project&lt;/strong&gt;
 The first step to create your app is to actually create it! Make sure you select “Single View Application”, name your project, and deselect “Use Core Data”, “Include Unit Tests”, and “Include UI Tests” as we are not testing at all here.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```
-iOS &amp;gt; Application &amp;gt; Single View Application
-```
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;iOS &amp;gt; Application &amp;gt; Single View Application
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Inline-style:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-20-assets/img1.png&quot; alt=&quot;alt text&quot; title=&quot;Creating a single page application&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.pn://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png&quot; alt=&quot;alt text&quot; title=&quot;Creating a single application page&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-20-assets/img2.png&quot; alt=&quot;alt text&quot; title=&quot;Naming your Swift project&quot; /&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Step 2: Create the Navigation Controller&lt;/strong&gt;
+In this example, I want to create an application that has 3 pages. You can, of course, expand this and make multiple pages. Now, let’s start with adding in a “Navigation Controller”.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Open “Main.storyboard”
+- Select “View Controller”
+- Go to “Editor” &amp;gt; “Embed In” &amp;gt; “Navigation” in the toolbar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-20-assets/img3.png&quot; alt=&quot;alt text&quot; title=&quot;Embed in the navigation bar&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-20-assets/img4.png&quot; alt=&quot;alt text&quot; title=&quot;How the embeded navigation bar looks like in the storyboard&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3: Create Views&lt;/strong&gt;
+Now, let’s add a “View Controller”. When we do this, we will need to connect them via “seques”. Once we do that we can also select how the pages appear/transition. Also, let’s style it just to differentiate the pages from each other - I’m just going to give them different background colors.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Search “View Controller” and then drag that into your storyboard. 
+- Remember, don’t overlap it with your “Navigation Controller” or the other existing 
+- “View Controller”.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-20-assets/img5-1.png&quot; alt=&quot;alt text&quot; title=&quot;Search for view controller&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-20-assets/img5-2.png&quot; alt=&quot;alt text&quot; title=&quot;2 views in the storyboard&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Extra: Showing how to update the background color of a view.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-20-assets/img6.png&quot; alt=&quot;alt text&quot; title=&quot;Changing a view&#39;s background color&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4: Connect the Views&lt;/strong&gt;
+So how do you go from one page to another? This is the step to connect the views. Here, we’ll add a button, and then “segue” it to the other view.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Search for “Button” and then drag into the first view. You can change the text.
+- Click to select the button that was just added.
+- Hold down the “ctrl” key and drag a “connection” line to the next view.
+- You will see a pop-up with “Action” options - select “show”
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-20-assets/img7.png&quot; alt=&quot;alt text&quot; title=&quot;Segue-ing the views together&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5: There you have it!&lt;/strong&gt;
+You can run the App Simulator and go back and forth between your 2 views. If you want, with the information here, add a third view and multiple links to go back and forth.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-20-assets/img8.png&quot; alt=&quot;alt text&quot; title=&quot;A 3 view application&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 20 Aug 2016 08:22:15 -0700</pubDate>
         <link>http://seimith.github.io/swift/navigation/views/tutorial/2016/08/20/Swift-Create-Navigation-with-Multiple-Pages-with-only-Storyboard.html</link>
