@@ -6,9 +6,26 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 20 Aug 2016 23:01:01 -0700</pubDate>
-    <lastBuildDate>Sat, 20 Aug 2016 23:01:01 -0700</lastBuildDate>
+    <pubDate>Sun, 21 Aug 2016 19:23:05 -0700</pubDate>
+    <lastBuildDate>Sun, 21 Aug 2016 19:23:05 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Free Public Apis</title>
+        <description>&lt;p&gt;So if you need to make a project and you wanted to incorporate an API, check out &lt;a href=&quot;https://github.com/toddmotto/public-apis&quot;&gt;https://github.com/toddmotto/public-apis&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Wicked cool list of free shit!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 21 Aug 2016 08:22:15 -0700</pubDate>
+        <link>http://seimith.github.io/jekyll/update/2016/08/21/Free-Public-Apis.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/jekyll/update/2016/08/21/Free-Public-Apis.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>(Swift) Create Navigation with Multiple Pages with only Storyboard</title>
