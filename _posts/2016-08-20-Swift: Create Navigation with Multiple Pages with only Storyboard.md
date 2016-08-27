@@ -71,3 +71,6 @@ So how do you go from one page to another? This is the step to connect the views
 You can run the App Simulator and go back and forth between your 2 views. If you want, with the information here, add a third view and multiple links to go back and forth.
 
 ![alt text](https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-20-assets/img8.png "A 3 view application")
+
+
+**Side Note**: If you do not add the `Navigation Bar` the seques will not be a left-right movement. It will end up sliding your views into the scene. My advice would be to add the `Navigation Bar` and then hide it in the component's settings if you don't want a visible navigation.

@@ -6,9 +6,26 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 21 Aug 2016 08:04:42 -0700</pubDate>
-    <lastBuildDate>Sun, 21 Aug 2016 08:04:42 -0700</lastBuildDate>
+    <pubDate>Sat, 27 Aug 2016 08:11:27 -0700</pubDate>
+    <lastBuildDate>Sat, 27 Aug 2016 08:11:27 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Free Public Apis</title>
+        <description>&lt;p&gt;So if you need to make a project and you wanted to incorporate an API, check out &lt;a href=&quot;https://github.com/toddmotto/public-apis&quot;&gt;https://github.com/toddmotto/public-apis&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Wicked cool list of free shit!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 21 Aug 2016 08:22:15 -0700</pubDate>
+        <link>http://seimith.github.io/api/freebie/2016/08/21/Free-Public-Apis.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/api/freebie/2016/08/21/Free-Public-Apis.html</guid>
+        
+        
+        <category>api</category>
+        
+        <category>freebie</category>
+        
+      </item>
     
       <item>
         <title>(Swift) Create Navigation with Multiple Pages with only Storyboard</title>
@@ -80,6 +97,8 @@ So how do you go from one page to another? This is the step to connect the views
 You can run the App Simulator and go back and forth between your 2 views. If you want, with the information here, add a third view and multiple links to go back and forth.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-20-assets/img8.png&quot; alt=&quot;alt text&quot; title=&quot;A 3 view application&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Side Note&lt;/strong&gt;: If you do not add the &lt;code class=&quot;highlighter-rouge&quot;&gt;Navigation Bar&lt;/code&gt; the seques will not be a left-right movement. It will end up sliding your views into the scene. My advice would be to add the &lt;code class=&quot;highlighter-rouge&quot;&gt;Navigation Bar&lt;/code&gt; and then hide it in the component’s settings if you don’t want a visible navigation.&lt;/p&gt;
 </description>
         <pubDate>Sat, 20 Aug 2016 08:22:15 -0700</pubDate>
         <link>http://seimith.github.io/swift/navigation/views/tutorial/2016/08/20/Swift-Create-Navigation-with-Multiple-Pages-with-only-Storyboard.html</link>
