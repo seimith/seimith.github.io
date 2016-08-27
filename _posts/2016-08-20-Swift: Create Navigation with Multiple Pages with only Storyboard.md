@@ -72,5 +72,8 @@ You can run the App Simulator and go back and forth between your 2 views. If you
 
 ![alt text](https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-20-assets/img8.png "A 3 view application")
 
-
 **Side Note**: If you do not add the `Navigation Bar` the seques will not be a left-right movement. It will end up sliding your views into the scene. My advice would be to add the `Navigation Bar` and then hide it in the component's settings if you don't want a visible navigation.
+
+**You can get the storyboard project is in [this repo][link].**
+
+[link]: https://github.com/seimith/SwiftNavigationControl
