@@ -7,11 +7,13 @@ categories: ["swift", "navigation", "views", "tutorial"]
 
 After one week of playing around with Swift I have some opinions on using the storyboard. It’s weird. But, it definitely makes creating an app real easy. For example, if I want to make an application that has multiple pages, I can do that all via the storyboard. Styling the pages on storyboard, is another beast, and we won’t get into that right now.
 
-In this post, I’ll go through steps to create an app that has 3 views/pages/scenes/whatever-you-call-it. You can navigate between each page via buttons on the actual views/pages/scenes and buttons on the navigation bar. 
+In this post, I’ll go through steps to create an app that has 3 views/pages/scenes/whatever-you-call-it. You can navigate between each page via buttons on the actual views/pages/scenes and buttons on the navigation bar.
 
-**Tools:**   
+![alt text](https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-20-assets/SwiftNavigationControlVideoSmall.gif "Creating a single page application")
 
-- Swift 3   
+**Tools:**
+
+- Swift 3
 - Xcode Version 7.3.1
 
 **Step 1: Create swift project**
@@ -41,8 +43,8 @@ In this example, I want to create an application that has 3 pages. You can, of c
 Now, let’s add a “View Controller”. When we do this, we will need to connect them via “seques”. Once we do that we can also select how the pages appear/transition. Also, let’s style it just to differentiate the pages from each other - I’m just going to give them different background colors.
 
 ```
-- Search “View Controller” and then drag that into your storyboard. 
-- Remember, don’t overlap it with your “Navigation Controller” or the other existing 
+- Search “View Controller” and then drag that into your storyboard.
+- Remember, don’t overlap it with your “Navigation Controller” or the other existing
 - “View Controller”.
 ```
 
@@ -56,7 +58,7 @@ Extra: Showing how to update the background color of a view.
 ![alt text](https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-20-assets/img6.png "Changing a view's background color")
 
 **Step 4: Connect the Views**
-So how do you go from one page to another? This is the step to connect the views. Here, we’ll add a button, and then “segue” it to the other view. 
+So how do you go from one page to another? This is the step to connect the views. Here, we’ll add a button, and then “segue” it to the other view.
 
 ```
 - Search for “Button” and then drag into the first view. You can change the text.

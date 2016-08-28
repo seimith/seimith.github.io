@@ -6,8 +6,8 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 28 Aug 2016 15:37:37 -0700</pubDate>
-    <lastBuildDate>Sun, 28 Aug 2016 15:37:37 -0700</lastBuildDate>
+    <pubDate>Sun, 28 Aug 2016 15:39:29 -0700</pubDate>
+    <lastBuildDate>Sun, 28 Aug 2016 15:39:29 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -69,6 +69,8 @@
 
 &lt;p&gt;In this post, I’ll go through steps to create an app that has 3 views/pages/scenes/whatever-you-call-it. You can navigate between each page via buttons on the actual views/pages/scenes and buttons on the navigation bar.&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-20-assets/SwiftNavigationControlVideoSmall.gif&quot; alt=&quot;alt text&quot; title=&quot;Creating a single page application&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
@@ -102,8 +104,8 @@ In this example, I want to create an application that has 3 pages. You can, of c
 &lt;p&gt;&lt;strong&gt;Step 3: Create Views&lt;/strong&gt;
 Now, let’s add a “View Controller”. When we do this, we will need to connect them via “seques”. Once we do that we can also select how the pages appear/transition. Also, let’s style it just to differentiate the pages from each other - I’m just going to give them different background colors.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Search “View Controller” and then drag that into your storyboard. 
-- Remember, don’t overlap it with your “Navigation Controller” or the other existing 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Search “View Controller” and then drag that into your storyboard.
+- Remember, don’t overlap it with your “Navigation Controller” or the other existing
 - “View Controller”.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
