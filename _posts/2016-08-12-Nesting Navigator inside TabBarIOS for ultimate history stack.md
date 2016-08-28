@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Nesting Navigator inside TabBarIOS for ultimate history stack
+title: (React-Native) Nesting Navigator inside TabBarIOS for ultimate history stack
 date:   2016-08-12 8:22:15 -0700
 categories: ["react-native", "shorttech", "ios"]
 ---
