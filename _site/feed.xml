@@ -6,8 +6,8 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 28 Aug 2016 15:39:29 -0700</pubDate>
-    <lastBuildDate>Sun, 28 Aug 2016 15:39:29 -0700</lastBuildDate>
+    <pubDate>Sun, 28 Aug 2016 15:46:46 -0700</pubDate>
+    <lastBuildDate>Sun, 28 Aug 2016 15:46:46 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -17,6 +17,8 @@
 &lt;p&gt;Anywho, you might just need to animate a loading spinner thing or something for you app.&lt;/p&gt;
 
 &lt;p&gt;In this case, I’ve just created a few UIViews and added animation to it. If you want, you can even just use a UIImage component and spin that instead.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-28-assets/RotatingUIViewSmall.gif&quot; alt=&quot;alt text&quot; title=&quot;Creating a single page application&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
 
