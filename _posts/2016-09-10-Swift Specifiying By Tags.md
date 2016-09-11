@@ -27,5 +27,5 @@ Here is an example:
 ```
 if let theLabel = self.view.viewWithTag(1) as? UILabel {
 	theLabel.text = "I'm replacing text here"
-	}
+}
 ```
