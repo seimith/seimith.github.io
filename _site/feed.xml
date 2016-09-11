@@ -6,9 +6,32 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 11 Sep 2016 15:16:48 -0700</pubDate>
-    <lastBuildDate>Sun, 11 Sep 2016 15:16:48 -0700</lastBuildDate>
+    <pubDate>Sun, 11 Sep 2016 15:23:30 -0700</pubDate>
+    <lastBuildDate>Sun, 11 Sep 2016 15:23:30 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Gif Capturing App (GIPHY)</title>
+        <description>&lt;p&gt;I wanted to give a shoutout to a cool app that I recently downloaded from the app store. It’s called GIPHY and I use it to create gifs of what I’m doing.&lt;/p&gt;
+
+&lt;p&gt;It has a super simple user interface and thus is very intuitive to use.&lt;/p&gt;
+
+&lt;p&gt;There is an editing feature and it is super simple! It has options to cut the beginning and end of your gif, how to loop it, what size you want your gif to be, and how many frames per second you want your gif to be.&lt;/p&gt;
+
+&lt;p&gt;I totally recommend it! https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-09-11-assets/img2.png&quot; alt=&quot;alt text&quot; title=&quot;GIPHY app&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 11 Sep 2016 08:22:15 -0700</pubDate>
+        <link>http://seimith.github.io/jekyll/update/2016/09/11/Gif-Capturing-App.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/jekyll/update/2016/09/11/Gif-Capturing-App.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>(Swift) Specifiying By Tags</title>
@@ -477,80 +500,6 @@ This is how I went through my files and rename it.&lt;/p&gt;
         
         
         <category>snippets</category>
-        
-      </item>
-    
-      <item>
-        <title>New Laptop Installfest</title>
-        <description>&lt;p&gt;So I recently purchased a laptop.&lt;/p&gt;
-
-&lt;p&gt;And you know what, it’s the first laptop that I’ve every really owned. It’s not a “handmidown”. Not a shitty one on loan. It’s a laptop that I purchased with my own money! Yay, I’m soooo #adulting!&lt;/p&gt;
-
-&lt;p&gt;Anyway, the reason why I decided to buy  a personal laptop was because of some side projects that I wish to focus on. I also want to be responsible and not do it on my company’s equipment.&lt;/p&gt;
-
-&lt;h3 id=&quot;about-my-macbook&quot;&gt;About My Macbook&lt;/h3&gt;
-&lt;p&gt;Since I’m not a gamer and I plan on focusing on font-end development, I didn’t spec it out too crazily.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;MacBook Pro&lt;/li&gt;
-  &lt;li&gt;2.9 GHz Intel Core i5 Processor&lt;/li&gt;
-  &lt;li&gt;16 BG Memory&lt;/li&gt;
-  &lt;li&gt;Intel Iris Graphics Card&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;installations-by-order-of-whatever&quot;&gt;Installations (by order of whatever)&lt;/h3&gt;
-&lt;p&gt;The following below are the things that I installed. There’s no order of significance because I just started installing things based on what I use a lot. I know that some folks publish a list of all the cool tools they use and whatnot, but I like reinventing the wheel for myself sometimes. Why? Well, why not.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Chrome&lt;/strong&gt;:
-  This is the main browser that I use for development. I enjoy using the dev tools and currently have no qualms about it.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Spectacle&lt;/strong&gt;
-  Similar to Diivy, but free. I love this tool. I use it to move windows around on my screen for maximum productivity.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Affinity&lt;/strong&gt;
-  This is a vector software. I actually don’t really use it. However, it was the 3rd thing that I installed because I want to go back into vector creation. Just for fun.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt;
-  Duh. Git is life. I need this for code management. “Git” commands require the command line developer tools. Just download Xcode via the app store or an apple developer account to install the command line developer tools, then Git.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Xcode&lt;/strong&gt;
-  Duh. I need this too. Ios develpment might be in my future too.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;iTerm2&lt;/strong&gt;
-  I know I can just use the regular terminal… But… Just because.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;oh-my-zhs&lt;/strong&gt;
-  Cool themes and autocompletion. In terms of customization, yes, you can totally pimp your own bash (“Pimp You Bash” article coming soon), but I’m too lazy at the current moment to do so. Plus I like the autocomplete because, again, I’m lazy.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Sublime&lt;/strong&gt;
-  My trusty text editor tool. However, I plan on learning VIM. Just for fun.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;node + nvm&lt;/strong&gt;
-  Duh. I need this too. I like to pretend that this isn’t my life, but it is. Some projects I need the latest versions, some I need some other version.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;heroku cli&lt;/strong&gt;
-  I like to deploy my projects to Heroku. It’s fast and easy to get spinning up.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sat, 11 Jun 2016 08:22:15 -0700</pubDate>
-        <link>http://seimith.github.io/installation/2016/06/11/New-Laptop-Installfest.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/installation/2016/06/11/New-Laptop-Installfest.html</guid>
-        
-        
-        <category>installation</category>
         
       </item>
     
