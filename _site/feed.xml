@@ -6,8 +6,8 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 03 Sep 2016 21:23:23 -0700</pubDate>
-    <lastBuildDate>Sat, 03 Sep 2016 21:23:23 -0700</lastBuildDate>
+    <pubDate>Sat, 10 Sep 2016 19:47:31 -0700</pubDate>
+    <lastBuildDate>Sat, 10 Sep 2016 19:47:31 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -18,7 +18,7 @@
 
 &lt;p&gt;In this case, I’ve just created a few UIViews and added animation to it. If you want, you can even just use a UIImage component and spin that instead.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-28-assets/RotatingUIViewSmall.gif&quot; alt=&quot;alt text&quot; title=&quot;Creating a single page application&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-28-assets/RotatingUIViewSmall.gif&quot; alt=&quot;alt text&quot; title=&quot;Rotating UIViews&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
 
@@ -30,80 +30,84 @@
 &lt;p&gt;&lt;strong&gt;Step 1: Create swift project&lt;/strong&gt;
 Create a “Single View Application” project. If you don’t want extra folders in your project for testing, make sure you uncheck the items for tests.&lt;/p&gt;
 
-&lt;p&gt;[img1]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-28-assets/img1.png&quot; alt=&quot;alt text&quot; title=&quot;Creating a single page application&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 2: Add &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView&lt;/code&gt; to storyboard&lt;/strong&gt;
 Search up the UIView component in the bottom left corner of Xcode and drag it into your storyboard.&lt;/p&gt;
 
 &lt;p&gt;After adding the component to your storyboard, change it’s color so that you can see it. It will default to white which can be difficult to see.&lt;/p&gt;
 
-&lt;p&gt;If you run this in the simulator at this point, all sorts of misalignments will happen here. This is because there are no constraints.&lt;/p&gt;
-
-&lt;p&gt;[img2]&lt;/p&gt;
+&lt;p&gt;If you run this in the simulator at this point, all sorts of misalignments will happen here. This is because there are no constraints.
+&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-28-assets/img2.png&quot; alt=&quot;alt text&quot; title=&quot;Drag in a UIView&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 3: Add constraints&lt;/strong&gt;*
 The first set of constraints that we’ll add here are “horizontal” and “vertical” constraints.&lt;/p&gt;
 
 &lt;p&gt;To do this make sure you have your UIView selected and then locate the icon at the bottom left of Xcode (look for the icon that look like sideways bar graphs). Then, check off the corresponding checkboxes.&lt;/p&gt;
 
-&lt;p&gt;[img3]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-28-assets/img3.png&quot; alt=&quot;alt text&quot; title=&quot;Add aligning constraints to UIView&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The second set of constraints will be to give it a “width” and “height” constraint. To do this you need to find the square “Tie-fighter” icon at the bottom left of Xcode.&lt;/p&gt;
 
-&lt;p&gt;[img4]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-28-assets/img4.png&quot; alt=&quot;alt text&quot; title=&quot;Add width and height constraints to UIView&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Once you add these two sets of constraints you’ll get a warning in the “Document Outline Panel”. Resolve these warnings as it will fix the placement of your UIView in your storyboard.&lt;/p&gt;
 
-&lt;p&gt;[img5]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-28-assets/img5.gif&quot; alt=&quot;alt text&quot; title=&quot;Fix constraint warnings&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At this point if you run this in the simulator you’ll see that the UIView is centered in the middle of the screen in all rotations.&lt;/p&gt;
 
-&lt;p&gt;[img6]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-28-assets/img6.gif&quot; alt=&quot;alt text&quot; title=&quot;Simulator of UIView in the middle of the device&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 4: Create and connect IBOutlets to your controller&lt;/strong&gt;
 Now that you have your UIView set up, it’s time to create an “IBOutlet”. This is kind of like a variable that exists in the “Interface Builder” and gets connected to your code.&lt;/p&gt;
 
 &lt;p&gt;There are multiple ways of creating an “IBOutlet”. These are the two ways that I create them.&lt;/p&gt;
 
-&lt;p&gt;Version 1
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-- Open `ViewController.swift` file
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Version 1&lt;/em&gt;&lt;/strong&gt; You want to add an &lt;code class=&quot;highlighter-rouge&quot;&gt;@IBOutlet&lt;/code&gt; in your view controller.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Open `ViewController.swift` file
 - Add “@IBOutlet weak var mySpinnerView: UIView!” to the class
 - Go to the storyboard to connect UIView w/ IBOUTLET
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Your code should look something like this:
-```
-import UIKit&lt;/p&gt;
+&lt;p&gt;Your code should look something like this:&lt;/p&gt;
 
-&lt;p&gt;class ViewController: UIViewController {&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import UIKit
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@IBOutlet weak var mySpinnerView: UIView!
+class ViewController: UIViewController {
 
-override func viewDidLoad() {
-	super.viewDidLoad()
-	// Do any additional setup after loading the view, typically from a nib.
+	@IBOutlet weak var mySpinnerView: UIView!
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		// Do any additional setup after loading the view, typically from a nib.
+	}
+
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
+	}
 }
-
-override func didReceiveMemoryWarning() {
-	super.didReceiveMemoryWarning()
-	// Dispose of any resources that can be recreated.
-} } ```
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;You should also notice that there is a tiny unfilled dot next to your &lt;code class=&quot;highlighter-rouge&quot;&gt;IBOutlet&lt;/code&gt;. This means that this outlet is not connected to anything in your storyboard.&lt;/p&gt;
 
-&lt;p&gt;To connect your newly created &lt;code class=&quot;highlighter-rouge&quot;&gt;IBOutlet&lt;/code&gt; go back to your storyboard and then click on your view controller. Make sure you have your &lt;code class=&quot;highlighter-rouge&quot;&gt;Utilities&lt;/code&gt; panel (right panel icon) open. Here, you will see that there is a list of outlets with unfilled dots as well. This is where you can click + drag to connect them. The dot should not be filled in.&lt;/p&gt;
+&lt;p&gt;To connect your newly created &lt;code class=&quot;highlighter-rouge&quot;&gt;IBOutlet&lt;/code&gt; go back to your storyboard and then click on your view controller. Make sure you have your &lt;code class=&quot;highlighter-rouge&quot;&gt;Utilities&lt;/code&gt; panel (right panel icon) open. Here, you will see that there is a list of outlets with unfilled dots as well. This is where you can click + drag to connect them. The dot should now be filled in.&lt;/p&gt;
 
-&lt;p&gt;[ADD GIF HERE….]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-28-assets/img7.png&quot; alt=&quot;alt text&quot; title=&quot;Connect IBOutlet from utilities panel&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Version 2
-Open your storyboard and click on &lt;code class=&quot;highlighter-rouge&quot;&gt;Show Assistant Editor&lt;/code&gt; (this is the venn-diagram-looking icon in the top of Xcode).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Version 2&lt;/em&gt;&lt;/strong&gt; Open your storyboard and click on &lt;code class=&quot;highlighter-rouge&quot;&gt;Show Assistant Editor&lt;/code&gt; (this is the venn-diagram-looking icon in the top of Xcode).&lt;/p&gt;
 
-&lt;p&gt;Ctrl + Click drag the UIView into your class and then name it. The dot should not be filled in.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ctrl + Click drag the UIView into your class and then name it. The dot should not be filled in.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;[ADD GIF HERE….]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-28-assets/img8.png&quot; alt=&quot;alt text&quot; title=&quot;Connect IBOutlet from your storyboard&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-28-assets/img9.png&quot; alt=&quot;alt text&quot; title=&quot;Connect IBOutlet from your storyboard&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 5: Add code to rotate forever&lt;/strong&gt;
 In this example, we’re adding animation to spin a &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView&lt;/code&gt; once the app loads. To do that, we’ll create a function, then call that function within the &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; lifecycle function.&lt;/p&gt;
@@ -120,44 +124,46 @@ In this example, we’re adding animation to spin a &lt;code class=&quot;highlig
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Add code in viewDidLoad to start the spinning
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-self.beginAnimation()
-&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Add code in your &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; to start the spinning&lt;/p&gt;
 
-&lt;p&gt;Your file should look like this:
-```
-import UIKit&lt;/p&gt;
-
-&lt;p&gt;class ViewController: UIViewController {&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 1. We just added this IBOutlet
-@IBOutlet weak var mySpinnerView: UIView!
-
-override func viewDidLoad() {
-	super.viewDidLoad()
-
-	// 3. Starting animation when app loads
-	self.beginAnimation()
-}
-
-override func didReceiveMemoryWarning() {
-	super.didReceiveMemoryWarning()
-	// Dispose of any resources that can be recreated.
-}
-
-// 2. Function to spin foreverrrr
-func beginAnimation () {
-	UIView.animateWithDuration(1.0, delay: 0, options: .CurveLinear, animations: { () -&amp;gt; Void in
-		self.mySpinnerView.transform = CGAffineTransformRotate(self.mySpinnerView.transform, CGFloat(M_PI))
-	}) { (finished) -&amp;gt; Void in
-		self.beginAnimation()
-	}
-} } ```
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;self.beginAnimation()
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;…. more to come…&lt;/p&gt;
+&lt;p&gt;Your file should look like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import UIKit
+
+class ViewController: UIViewController {
+
+	// 1. We just added this IBOutlet
+	@IBOutlet weak var mySpinnerView: UIView!
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+
+		// 3. Starting animation when app loads
+		self.beginAnimation()
+	}
+
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
+	}
+
+	// 2. Function to spin foreverrrr
+	func beginAnimation () {
+		UIView.animateWithDuration(1.0, delay: 0, options: .CurveLinear, animations: { () -&amp;gt; Void in
+			self.mySpinnerView.transform = CGAffineTransformRotate(self.mySpinnerView.transform, CGFloat(M_PI))
+		}) { (finished) -&amp;gt; Void in
+			self.beginAnimation()
+		}
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And that should be it. When you reload your simulator you should see a rotating pink square. Play around and add more spinning things!&lt;/p&gt;
 </description>
         <pubDate>Sun, 28 Aug 2016 08:22:15 -0700</pubDate>
         <link>http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/08/28/Swift-Rotating-UIView.html</link>
