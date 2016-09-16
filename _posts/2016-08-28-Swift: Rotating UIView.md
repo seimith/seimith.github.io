@@ -15,7 +15,7 @@ In this case, I've just created a few UIViews and added animation to it. If you 
 
 **Tools:**
 
-- Swift 3
+- Swift 2.2
 - Xcode Version 7.3.1
 
 **Step 1: Create swift project**
