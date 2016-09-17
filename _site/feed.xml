@@ -6,8 +6,8 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 11 Sep 2016 15:23:30 -0700</pubDate>
-    <lastBuildDate>Sun, 11 Sep 2016 15:23:30 -0700</lastBuildDate>
+    <pubDate>Sun, 11 Sep 2016 17:51:31 -0700</pubDate>
+    <lastBuildDate>Sun, 11 Sep 2016 17:51:31 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -23,13 +23,15 @@
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-09-11-assets/img2.png&quot; alt=&quot;alt text&quot; title=&quot;GIPHY app&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 11 Sep 2016 08:22:15 -0700</pubDate>
-        <link>http://seimith.github.io/jekyll/update/2016/09/11/Gif-Capturing-App.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/jekyll/update/2016/09/11/Gif-Capturing-App.html</guid>
+        <link>http://seimith.github.io/app/gif/2016/09/11/Gif-Capturing-App.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/app/gif/2016/09/11/Gif-Capturing-App.html</guid>
+        
+        <category>ahhhhrealmonsters</category>
         
         
-        <category>jekyll</category>
+        <category>app</category>
         
-        <category>update</category>
+        <category>gif</category>
         
       </item>
     
@@ -61,13 +63,19 @@
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 10 Sep 2016 08:22:15 -0700</pubDate>
-        <link>http://seimith.github.io/jekyll/update/2016/09/10/Swift-Specifiying-By-Tags.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/jekyll/update/2016/09/10/Swift-Specifiying-By-Tags.html</guid>
+        <link>http://seimith.github.io/swift/uiview/views/tutorial/tags/2016/09/10/Swift-Specifiying-By-Tags.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/swift/uiview/views/tutorial/tags/2016/09/10/Swift-Specifiying-By-Tags.html</guid>
         
         
-        <category>jekyll</category>
+        <category>swift</category>
         
-        <category>update</category>
+        <category>uiview</category>
+        
+        <category>views</category>
+        
+        <category>tutorial</category>
+        
+        <category>tags</category>
         
       </item>
     
@@ -362,13 +370,13 @@ You can run the App Simulator and go back and forth between your 2 views. If you
 &lt;p&gt;Code snippet to come soon…&lt;/p&gt;
 </description>
         <pubDate>Fri, 12 Aug 2016 08:22:15 -0700</pubDate>
-        <link>http://seimith.github.io/react-native/shorttech/ios/2016/08/12/Nesting-Navigator-inside-TabBarIOS-for-ultimate-history-stack.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/react-native/shorttech/ios/2016/08/12/Nesting-Navigator-inside-TabBarIOS-for-ultimate-history-stack.html</guid>
+        <link>http://seimith.github.io/react-native/snippet/ios/2016/08/12/Nesting-Navigator-inside-TabBarIOS-for-ultimate-history-stack.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/react-native/snippet/ios/2016/08/12/Nesting-Navigator-inside-TabBarIOS-for-ultimate-history-stack.html</guid>
         
         
         <category>react-native</category>
         
-        <category>shorttech</category>
+        <category>snippet</category>
         
         <category>ios</category>
         
@@ -438,11 +446,11 @@ fi
 &lt;p&gt;And there you have it. Your repository should reflect new authors.&lt;/p&gt;
 </description>
         <pubDate>Fri, 05 Aug 2016 08:22:15 -0700</pubDate>
-        <link>http://seimith.github.io/snippits/2016/08/05/Edit-Github-Author-For-Past-Commits.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/snippits/2016/08/05/Edit-Github-Author-For-Past-Commits.html</guid>
+        <link>http://seimith.github.io/snippet/2016/08/05/Edit-Github-Author-For-Past-Commits.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/snippet/2016/08/05/Edit-Github-Author-For-Past-Commits.html</guid>
         
         
-        <category>snippits</category>
+        <category>snippet</category>
         
       </item>
     
@@ -495,11 +503,11 @@ This is how I went through my files and rename it.&lt;/p&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Sun, 12 Jun 2016 10:22:15 -0700</pubDate>
-        <link>http://seimith.github.io/snippets/2016/06/12/Sublime-Snippets.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/snippets/2016/06/12/Sublime-Snippets.html</guid>
+        <link>http://seimith.github.io/snippet/2016/06/12/Sublime-Snippets.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/snippet/2016/06/12/Sublime-Snippets.html</guid>
         
         
-        <category>snippets</category>
+        <category>snippet</category>
         
       </item>
     

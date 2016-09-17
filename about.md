@@ -12,4 +12,4 @@ This blog is simply a collection of snippets, thoughts, and other randomness fro
 I'm a UX Engineer. I've been doing my thang for a little over 2 years now. As a UX Engineer, I primarily focus on front-end technologies and I get to tinker around while building high fidelity prototypes.
 
 ### How did I get to where I am now?
-I attended General Assembly's WDI 3 month program. 
+I attended General Assembly's WDI 3 month program.

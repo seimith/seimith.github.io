@@ -2,14 +2,14 @@
 layout: post
 title:  New Laptop Installfest
 date:   2016-06-11 8:22:15 -0700
-categories: installation
+categories: ["installation"]
 ---
 
-So I recently purchased a laptop. 
+So I recently purchased a laptop.
 
 And you know what, it's the first laptop that I've every really owned. It's not a "handmidown". Not a shitty one on loan. It's a laptop that I purchased with my own money! Yay, I'm soooo #adulting!
 
-Anyway, the reason why I decided to buy  a personal laptop was because of some side projects that I wish to focus on. I also want to be responsible and not do it on my company's equipment. 
+Anyway, the reason why I decided to buy  a personal laptop was because of some side projects that I wish to focus on. I also want to be responsible and not do it on my company's equipment.
 
 ### About My Macbook
 Since I'm not a gamer and I plan on focusing on font-end development, I didn't spec it out too crazily.

@@ -2,7 +2,7 @@
 layout: post
 title:  Week 1 General Assembly WDI SF
 date:   2013-09-30 8:22:15 -0700
-categories: jekyll update
+categories: ["general assembly", "wdi", "web development immersive"]
 ---
 
 I just completed my first week of General Assembly's Web Development Immersive program and I feel like I've been sitting with my classmates for months! Where to start?

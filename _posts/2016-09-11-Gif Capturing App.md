@@ -2,12 +2,13 @@
 layout: post
 title:  Gif Capturing App (GIPHY)
 date:   2016-09-11 8:22:15 -0700
-categories: jekyll update
+categories: ["app", "gif"]
+tags: ["ahhhhrealmonsters"]
 ---
 
-I wanted to give a shoutout to a cool app that I recently downloaded from the app store. It's called GIPHY and I use it to create gifs of what I'm doing. 
+I wanted to give a shoutout to a cool app that I recently downloaded from the app store. It's called GIPHY and I use it to create gifs of what I'm doing.
 
-It has a super simple user interface and thus is very intuitive to use. 
+It has a super simple user interface and thus is very intuitive to use.
 
 There is an editing feature and it is super simple! It has options to cut the beginning and end of your gif, how to loop it, what size you want your gif to be, and how many frames per second you want your gif to be.
 
