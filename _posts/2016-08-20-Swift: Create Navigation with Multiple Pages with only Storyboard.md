@@ -13,7 +13,7 @@ In this post, I’ll go through steps to create an app that has 3 views/pages/sc
 
 **Tools:**
 
-- Swift 3
+- Swift 2.2
 - Xcode Version 7.3.1
 
 **Step 1: Create swift project**

@@ -9,6 +9,11 @@ In Swift, you can add items to your storyboard and refer to it in your code. For
 
 Another way to do this is by giving it a tag number. Although this way might not be the best way to "grab" and assign things because I feel like it's very thinking to assigning an ID to a tag in web development.
 
+**Tools:**
+
+- Swift 2.2
+- Xcode Version 7.3.1
+
 To give your item a tag,
 
 ```
