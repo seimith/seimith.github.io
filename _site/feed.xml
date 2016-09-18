@@ -6,9 +6,145 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 11 Sep 2016 17:51:31 -0700</pubDate>
-    <lastBuildDate>Sun, 11 Sep 2016 17:51:31 -0700</lastBuildDate>
+    <pubDate>Sun, 18 Sep 2016 14:03:36 -0700</pubDate>
+    <lastBuildDate>Sun, 18 Sep 2016 14:03:36 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>(Swift) Pulsating UIView</title>
+        <description>&lt;p&gt;This tutorial is very similar to my prievious post about &lt;a href=&quot;http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/08/28/Swift-Rotating-UIView.html&quot; title=&quot;Post on rotating UIViews&quot;&gt;rotating UIViews&lt;/a&gt;, but this is how to do pulsating animations. You might need this type of animation for a loader, an onTap of a button, or whatever.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-09-18-assets/pulsatingUIView.gif&quot; alt=&quot;alt text&quot; title=&quot;Rotating UIViews&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Swift 2.2&lt;/li&gt;
+  &lt;li&gt;Xcode Version 7.3.1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1 to 4: Create swift project, set up your storyboard, add constraints, and connect your outlets&lt;/strong&gt;
+The steps to set up this project this is pretty much the same as the &lt;a href=&quot;http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/08/28/Swift-Rotating-UIView.html&quot; title=&quot;Post on rotating UIViews&quot;&gt;rotating UIViews&lt;/a&gt; post, so check it out first. After that, you can just augment &lt;strong&gt;Step 5&lt;/strong&gt; to make your UIView pulse.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5: Add code to pulse&lt;/strong&gt;
+In this example, we’re adding animation to spin a &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView&lt;/code&gt; once the app loads. To do that, we’ll create a function, then call that function within the &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; lifecycle function.&lt;/p&gt;
+
+&lt;p&gt;This is the function that contains the animation.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func beginAnimation () {
+  // code for animation
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;There are a couple of ways to animate your UIView to make it pulse. Below are 3 examples.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Version 1: Pulsate 3x&lt;/strong&gt;
+I haven’t used this technique to animate things in my personal projects so I don’t have any strong opinions as to whether or not it’s a better way to animate, but here it is…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let scaleAnimation:CABasicAnimation = CABasicAnimation(keyPath: &quot;transform.scale&quot;)
+scaleAnimation.duration = 1.0
+scaleAnimation.repeatCount = 3.0
+scaleAnimation.autoreverses = true
+scaleAnimation.fromValue = 1.0;
+scaleAnimation.toValue = 1.2;
+self.uiViewToPulsate.layer.addAnimation(scaleAnimation, forKey: &quot;scale&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Version 2: To Pulse Forever&lt;/strong&gt;
+This is how I’ve learned to animate. I’ve selected &lt;code class=&quot;highlighter-rouge&quot;&gt;.animateWithDuration&lt;/code&gt; with &lt;code class=&quot;highlighter-rouge&quot;&gt;options&lt;/code&gt; and this allows me to specify that I want my UIView to repeat and then reverse after the first loop by pluggin in an array.&lt;/p&gt;
+
+&lt;p&gt;If I were to just pass &lt;code class=&quot;highlighter-rouge&quot;&gt;.Repeat&lt;/code&gt; as the only thing in &lt;code class=&quot;highlighter-rouge&quot;&gt;options&lt;/code&gt;, my UIView would keep on growing from its original size to &lt;code class=&quot;highlighter-rouge&quot;&gt;1.2&lt;/code&gt; and then jarringly start over and over again.&lt;/p&gt;
+
+&lt;p&gt;Adding &lt;code class=&quot;highlighter-rouge&quot;&gt;.Autoreverse&lt;/code&gt; will perform the reverse of the animation and help make the transitions be smoother.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;completion&lt;/code&gt; block is &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; because I want my UIView to animate forever. Nobody would want their UIView to animate forever, but for this example why not?&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;UIView.animateWithDuration(1.0, delay:0, options: [.Repeat, .Autoreverse], animations: {
+    self.uiViewToPulsate.transform = CGAffineTransformMakeScale(1.2, 1.2)
+}, completion: nil)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Version 2: Pulsate 3x&lt;/strong&gt;
+This is similar to the code above except for the extra line &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView.setAnimationRepeatCount(3)&lt;/code&gt; and the lines in the completion block.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;UIView.setAnimationRepeatCount(3)&lt;/code&gt; is what you’d use to set the number of times you want you animation to run for.&lt;/p&gt;
+
+&lt;p&gt;Then, the &lt;code class=&quot;highlighter-rouge&quot;&gt;completion&lt;/code&gt; block is important to have to make the animation “reset” to it’s original size smoothly. If I were to have the block be &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; like in the code above, after 3 animation rounds the UIView would stop abruptly at size 1.2x.&lt;/p&gt;
+
+&lt;p&gt;Having &lt;code class=&quot;highlighter-rouge&quot;&gt;self.uiViewToPulsate.transform = CGAffineTransformMakeScale(1, 1)&lt;/code&gt; within the &lt;code class=&quot;highlighter-rouge&quot;&gt;completion&lt;/code&gt; block makes it such that once the animation is completed, the UIView will transition to it’s original size at 1x.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;UIView.animateWithDuration(1.0, delay:0, options: [.Repeat, .Autoreverse], animations: {
+    UIView.setAnimationRepeatCount(3)
+    self.uiViewToPulsate.transform = CGAffineTransformMakeScale(1.2, 1.2)
+
+    }, completion: {completion in
+        self.uiViewToPulsate.transform = CGAffineTransformMakeScale(1, 1)
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Add the code in your &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; to start the spinning&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;self.beginAnimation()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Your file should look similar to this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import UIKit
+
+class ViewController: UIViewController {
+
+  // 1. We just added this IBOutlet
+  @IBOutlet weak var uiViewToPulsate: UIView!
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    // 3. Starting animation when app loads
+    self.beginAnimation()
+  }
+
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+
+  // 2. Function to spin foreverrrr
+  func beginAnimation () {
+      UIView.animateWithDuration(1.0, delay:0, options: [.Repeat, .Autoreverse], animations: {
+          UIView.setAnimationRepeatCount(3)
+          self.uiViewToPulsate.transform = CGAffineTransformMakeScale(1.2, 1.2)
+          }, completion: {completion in
+              self.uiViewToPulsate.transform = CGAffineTransformMakeScale(1, 1)
+      })
+
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And that should be it. When you reload your simulator you should see a pulsating pink square!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 18 Sep 2016 08:22:15 -0700</pubDate>
+        <link>http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/09/18/Swift-Pulsating-UIView.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/09/18/Swift-Pulsating-UIView.html</guid>
+        
+        
+        <category>swift</category>
+        
+        <category>uiview</category>
+        
+        <category>views</category>
+        
+        <category>tutorial</category>
+        
+        <category>animation</category>
+        
+      </item>
     
       <item>
         <title>Gif Capturing App (GIPHY)</title>
@@ -18,7 +154,7 @@
 
 &lt;p&gt;There is an editing feature and it is super simple! It has options to cut the beginning and end of your gif, how to loop it, what size you want your gif to be, and how many frames per second you want your gif to be.&lt;/p&gt;
 
-&lt;p&gt;I totally recommend it! https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12&lt;/p&gt;
+&lt;p&gt;I totally recommend it! &lt;a href=&quot;https://itunes.apple.com/us/app/giphy-capture.-the-gif-maker/id668208984?mt=12&quot; title=&quot;GIPHY&quot;&gt;Get GIPHY on iTunes!&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-09-11-assets/img2.png&quot; alt=&quot;alt text&quot; title=&quot;GIPHY app&quot; /&gt;&lt;/p&gt;
 </description>
@@ -40,6 +176,13 @@
         <description>&lt;p&gt;In Swift, you can add items to your storyboard and refer to it in your code. For example, you can add a UIButton and then create an IBOutlet in your code to “connect” to it.&lt;/p&gt;
 
 &lt;p&gt;Another way to do this is by giving it a tag number. Although this way might not be the best way to “grab” and assign things because I feel like it’s very thinking to assigning an ID to a tag in web development.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Swift 2.2&lt;/li&gt;
+  &lt;li&gt;Xcode Version 7.3.1&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;To give your item a tag,&lt;/p&gt;
 
@@ -92,7 +235,7 @@
 &lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Swift 3&lt;/li&gt;
+  &lt;li&gt;Swift 2.2&lt;/li&gt;
   &lt;li&gt;Xcode Version 7.3.1&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -279,7 +422,7 @@ class ViewController: UIViewController {
 &lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Swift 3&lt;/li&gt;
+  &lt;li&gt;Swift 2.2&lt;/li&gt;
   &lt;li&gt;Xcode Version 7.3.1&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -469,42 +612,6 @@ This is how I went through my files and rename it.&lt;/p&gt;
         <pubDate>Mon, 13 Jun 2016 08:22:15 -0700</pubDate>
         <link>http://seimith.github.io/snippet/2016/06/13/Looping-Through-Files.html</link>
         <guid isPermaLink="true">http://seimith.github.io/snippet/2016/06/13/Looping-Through-Files.html</guid>
-        
-        
-        <category>snippet</category>
-        
-      </item>
-    
-      <item>
-        <title>Sublime User Preferences</title>
-        <description>&lt;p&gt;I don’t like to customize my sublime (or anything else, really) very much but when I do I blog about it. Just in case I forget.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;auto_indent&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;bold_folder_labels&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;draw_white_space&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;all&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;ensure_newline_at_eof_on_save&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;font_size&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;highlight_line&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;highlight_modified_tabs&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;ignored_packages&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  	&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  	  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Vintage&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-	&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;indent_to_bracket&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;match_brackets_angle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;smart_indent&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;spell_check&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;tab_size&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;translate_tabs_to_spaces&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;trim_trailing_white_space_on_save&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Sun, 12 Jun 2016 10:22:15 -0700</pubDate>
-        <link>http://seimith.github.io/snippet/2016/06/12/Sublime-Snippets.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/snippet/2016/06/12/Sublime-Snippets.html</guid>
         
         
         <category>snippet</category>
