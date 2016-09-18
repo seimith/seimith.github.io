@@ -105,7 +105,7 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
-  // 2. Function to spin foreverrrr
+  // 2. Function to pulse 3x
   func beginAnimation () {
       UIView.animateWithDuration(1.0, delay:0, options: [.Repeat, .Autoreverse], animations: {
           UIView.setAnimationRepeatCount(3)
