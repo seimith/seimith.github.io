@@ -6,8 +6,8 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 18 Sep 2016 14:04:59 -0700</pubDate>
-    <lastBuildDate>Sun, 18 Sep 2016 14:04:59 -0700</lastBuildDate>
+    <pubDate>Sun, 18 Sep 2016 14:05:40 -0700</pubDate>
+    <lastBuildDate>Sun, 18 Sep 2016 14:05:40 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -86,7 +86,7 @@ This is similar to the code above except for the extra line &lt;code class=&quot
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Add the code in your &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; to start the spinning&lt;/p&gt;
+&lt;p&gt;Add the code in your &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; to start the pulse&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;self.beginAnimation()
 &lt;/code&gt;&lt;/pre&gt;

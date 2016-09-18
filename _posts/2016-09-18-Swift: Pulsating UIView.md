@@ -77,7 +77,7 @@ UIView.animateWithDuration(1.0, delay:0, options: [.Repeat, .Autoreverse], anima
 })
 ```
 
-Add the code in your `viewDidLoad` to start the spinning
+Add the code in your `viewDidLoad` to start the pulse
 
 ```
 self.beginAnimation()
