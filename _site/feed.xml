@@ -6,8 +6,8 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 18 Sep 2016 14:09:14 -0700</pubDate>
-    <lastBuildDate>Sun, 18 Sep 2016 14:09:14 -0700</lastBuildDate>
+    <pubDate>Sat, 01 Oct 2016 12:14:11 -0700</pubDate>
+    <lastBuildDate>Sat, 01 Oct 2016 12:14:11 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -128,6 +128,9 @@ class ViewController: UIViewController {
 &lt;/div&gt;
 
 &lt;p&gt;And that should be it. When you reload your simulator you should see a pulsating pink square!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;You can get the storyboard project is in &lt;a href=&quot;https://github.com/seimith/SwiftPulsatingUIView&quot;&gt;this repo&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
 </description>
         <pubDate>Sun, 18 Sep 2016 08:22:15 -0700</pubDate>
         <link>http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/09/18/Swift-Pulsating-UIView.html</link>
@@ -376,6 +379,9 @@ class ViewController: UIViewController {
 &lt;/div&gt;
 
 &lt;p&gt;And that should be it. When you reload your simulator you should see a rotating pink square. Play around and add more spinning things!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;You can get the storyboard project is in &lt;a href=&quot;https://github.com/seimith/SwiftRotatingUIView&quot;&gt;this repo&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
 </description>
         <pubDate>Sun, 28 Aug 2016 08:22:15 -0700</pubDate>
         <link>http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/08/28/Swift-Rotating-UIView.html</link>

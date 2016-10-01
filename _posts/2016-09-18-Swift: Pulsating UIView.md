@@ -119,3 +119,7 @@ class ViewController: UIViewController {
 ```
 
 And that should be it. When you reload your simulator you should see a pulsating pink square!
+
+**You can get the storyboard project is in [this repo][link].**
+
+[link]: https://github.com/seimith/SwiftPulsatingUIView
