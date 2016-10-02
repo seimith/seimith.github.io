@@ -18,7 +18,7 @@ This tutorial is very similar to my prievious post about [rotating UIViews](http
 The steps to set up this project this is pretty much the same as the [rotating UIViews](http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/08/28/Swift-Rotating-UIView.html "Post on rotating UIViews") post, so check it out first. After that, you can just augment **Step 5** to make your UIView pulse.
 
 **Step 5: Add code to pulse**
-In this example, we’re adding animation to spin a `UIView` once the app loads. To do that, we’ll create a function, then call that function within the `viewDidLoad` lifecycle function.
+In this example, we’re adding animation to pulse a `UIView` once the app loads. To do that, we’ll create a function, then call that function within the `viewDidLoad` lifecycle function.
 
 This is the function that contains the animation.
 
@@ -58,7 +58,7 @@ UIView.animateWithDuration(1.0, delay:0, options: [.Repeat, .Autoreverse], anima
 }, completion: nil)
 ```
 
-**Version 2: Pulsate 3x**
+**Version 3: Pulsate 3x**
 This is similar to the code above except for the extra line `UIView.setAnimationRepeatCount(3)` and the lines in the completion block.
 
 `UIView.setAnimationRepeatCount(3)` is what you'd use to set the number of times you want you animation to run for.

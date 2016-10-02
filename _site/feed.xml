@@ -6,9 +6,124 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 01 Oct 2016 12:14:11 -0700</pubDate>
-    <lastBuildDate>Sat, 01 Oct 2016 12:14:11 -0700</lastBuildDate>
+    <pubDate>Sun, 02 Oct 2016 13:58:33 -0700</pubDate>
+    <lastBuildDate>Sun, 02 Oct 2016 13:58:33 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>(Swift) Sliding UIView</title>
+        <description>&lt;p&gt;Today we’re going to make a sliding UIView. Similar to the previous post, this tutorial is also very similar to my prievious post about &lt;a href=&quot;http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/08/28/Swift-Rotating-UIView.html&quot; title=&quot;Post on rotating UIViews&quot;&gt;rotating UIViews&lt;/a&gt;, but this is how to do a sliding animation. You might need this type of animation for opening a menu or showing an alert.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-10-01-assets/slidingUIViewSm.gif&quot; alt=&quot;alt text&quot; title=&quot;Sliding UIViews&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Swift 2.2&lt;/li&gt;
+  &lt;li&gt;Xcode Version 7.3.1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1 to 4: Create swift project, set up your storyboard, add constraints, and connect your outlets&lt;/strong&gt;
+The steps to set up this project this is pretty much the same as the &lt;a href=&quot;http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/08/28/Swift-Rotating-UIView.html&quot; title=&quot;Post on rotating UIViews&quot;&gt;rotating UIViews&lt;/a&gt; post, so check it out first. After that, you can just augment &lt;strong&gt;Step 5&lt;/strong&gt; to make your UIView slide.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Side Note&lt;/strong&gt;: What’s different from this and the previous tutorials are the constraints that I added to the UIView. However, it doesn’t really matter… :)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5: Add code to slide&lt;/strong&gt;
+In this example, we’re adding animation to slide a &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView&lt;/code&gt; once the app loads. To do that, we’ll create a function, then call that function within the &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; lifecycle function.&lt;/p&gt;
+
+&lt;p&gt;This is the function that contains the animation.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func beginAnimation () {
+  // 1st transformation
+  self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, -100)
+
+  UIView.animateWithDuration(0.4, delay: 0, options: [.CurveEaseInOut], animations: {
+      // 2nd transformation
+      self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, 50)
+      }, completion: { completion in
+          UIView.animateWithDuration(0.2, delay: 0.0, options: [.CurveEaseInOut], animations: {
+              // 3rd transformation
+              self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, 0)
+          }, completion: nil)
+  })
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;In this example, I’ve got 3 transformations because the animation that I’m going for is a slide+little bump+short slide to position.&lt;/p&gt;
+
+&lt;p&gt;The first transformation is the starting position, and here, I’ve got it set above the visible viewport at &lt;code class=&quot;highlighter-rouge&quot;&gt;-100&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, -100)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The second transformation brings the UIView into the view, and with the “.CurveEaseInOut” option will give this a snappiness at &lt;code class=&quot;highlighter-rouge&quot;&gt;50&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, 50)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;And finally, the third transformation, I have it in the completion block, and this will bring the UIView up and make it look like it “bumps” into it’s final position at &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, 0)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Add the code in your &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; to start the pulse&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;self.beginAnimation()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Your file should look similar to this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import UIKit
+
+class ViewController: UIViewController {
+  @IBOutlet weak var uiViewToSlide: UIView!
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view, typically from a nib.
+    self.beginAnimation()
+  }
+
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+
+  func beginAnimation() {
+    self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, -100)
+
+    UIView.animateWithDuration(0.4, delay: 0, options: [.CurveEaseInOut], animations: {
+      self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, 50)
+      }, completion: { completion in
+        UIView.animateWithDuration(0.2, delay: 0.0, options: [.CurveEaseInOut], animations: {
+          self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, 0)
+        }, completion: nil)
+    })
+
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And that should be it. When you reload your simulator you should see a pulsating pink square!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;You can get the storyboard project is in &lt;a href=&quot;https://github.com/seimith/SwiftSlidingUIView&quot;&gt;this repo&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 01 Oct 2016 08:22:15 -0700</pubDate>
+        <link>http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/10/01/Swift-Sliding-UIView.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/10/01/Swift-Sliding-UIView.html</guid>
+        
+        
+        <category>swift</category>
+        
+        <category>uiview</category>
+        
+        <category>views</category>
+        
+        <category>tutorial</category>
+        
+        <category>animation</category>
+        
+      </item>
     
       <item>
         <title>(Swift) Pulsating UIView</title>
@@ -27,7 +142,7 @@
 The steps to set up this project this is pretty much the same as the &lt;a href=&quot;http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/08/28/Swift-Rotating-UIView.html&quot; title=&quot;Post on rotating UIViews&quot;&gt;rotating UIViews&lt;/a&gt; post, so check it out first. After that, you can just augment &lt;strong&gt;Step 5&lt;/strong&gt; to make your UIView pulse.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 5: Add code to pulse&lt;/strong&gt;
-In this example, we’re adding animation to spin a &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView&lt;/code&gt; once the app loads. To do that, we’ll create a function, then call that function within the &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; lifecycle function.&lt;/p&gt;
+In this example, we’re adding animation to pulse a &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView&lt;/code&gt; once the app loads. To do that, we’ll create a function, then call that function within the &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; lifecycle function.&lt;/p&gt;
 
 &lt;p&gt;This is the function that contains the animation.&lt;/p&gt;
 
@@ -67,7 +182,7 @@ This is how I’ve learned to animate. I’ve selected &lt;code class=&quot;high
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;Version 2: Pulsate 3x&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;Version 3: Pulsate 3x&lt;/strong&gt;
 This is similar to the code above except for the extra line &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView.setAnimationRepeatCount(3)&lt;/code&gt; and the lines in the completion block.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;UIView.setAnimationRepeatCount(3)&lt;/code&gt; is what you’d use to set the number of times you want you animation to run for.&lt;/p&gt;
@@ -597,27 +712,6 @@ fi
         <pubDate>Fri, 05 Aug 2016 08:22:15 -0700</pubDate>
         <link>http://seimith.github.io/snippet/2016/08/05/Edit-Github-Author-For-Past-Commits.html</link>
         <guid isPermaLink="true">http://seimith.github.io/snippet/2016/08/05/Edit-Github-Author-For-Past-Commits.html</guid>
-        
-        
-        <category>snippet</category>
-        
-      </item>
-    
-      <item>
-        <title>Looping Through Files</title>
-        <description>&lt;p&gt;So the other day I needed to loop though some files that included a specific string.
-This is how I went through my files and rename it.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;n *_60.png
-  do
-      mv &quot;$file&quot;  &quot;${file/.png/@2x.png}&quot;
-	done
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Mon, 13 Jun 2016 08:22:15 -0700</pubDate>
-        <link>http://seimith.github.io/snippet/2016/06/13/Looping-Through-Files.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/snippet/2016/06/13/Looping-Through-Files.html</guid>
         
         
         <category>snippet</category>
