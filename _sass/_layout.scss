@@ -10,8 +10,8 @@ body {
 
 .page-content {
   .image {
-    -webkit-box-shadow: inset 0px 0px 400px #000;
-    -moz-box-shadow:    inset 0px 0px 400px #000;
+    /* -webkit-box-shadow: inset 0px 0px 400px #000; */
+    /* -moz-box-shadow:    inset 0px 0px 400px #000; */
     box-shadow:         inset 0px 0px 400px #000;
     line-height: 0;         /* ensure no space between bottom */
     display: inline-block;  /* don't go wider than image */
