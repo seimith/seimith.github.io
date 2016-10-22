@@ -161,7 +161,10 @@ body {
   /* ensure no space between bottom */
   display: inline-block;
   /* don't go wider than image */
-  margin: 0 0 60px 0; }
+  margin: 0 0 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 .page-content .image img {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
