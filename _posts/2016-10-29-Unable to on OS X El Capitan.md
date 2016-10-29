@@ -19,5 +19,9 @@ ERROR:  While executing gem ... (Gem::FilePermissionError)
 You don't have write permissions for the /usr/bin directory.
 ```
 
-Try installing to your directory: `gem install bundler -n /usr/local/bin`.
+Try installing to your directory: 
+
+```
+gem install bundler -n /usr/local/bin
+```
 
