@@ -5,18 +5,20 @@
 
   <body>
 
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="image">
-        <a href="#" class="menu-icon">
-          <img src="https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/hanuman.png">
-        </a>
+    <div class="content">
+      {% include header.html %}
+      <div class="splash">
+        <div class="scrimview"></div>
+        <div class="greetings">
+          <p>kaixo, i'm smith.</p>
+        </div>
       </div>
+
       <div class="wrapper">
         {{ content }}
       </div>
     </div>
+
 
     <!-- <div class="page-content">
       <div class="wrapper">

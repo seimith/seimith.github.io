@@ -93,14 +93,17 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: $brand-color;
     text-decoration: none;
+    font-size: 2rem !important;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        //color: darken($brand-color, 15%);
+        color: $text-color;
     }
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        //color: $text-color;
+        color: #16a085 !important;
+        text-decoration: none;
     }
 }
 
