@@ -6,9 +6,39 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 29 Oct 2016 14:18:29 -0700</pubDate>
-    <lastBuildDate>Sat, 29 Oct 2016 14:18:29 -0700</lastBuildDate>
+    <pubDate>Sun, 30 Oct 2016 13:01:00 -0700</pubDate>
+    <lastBuildDate>Sun, 30 Oct 2016 13:01:00 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>(Swift) UIImage to Base64</title>
+        <description>&lt;p&gt;I recently had a project where I needed to convert my image to base64. With JavaScript it’s relatively easy and since I was new to Swift I had no idea how to do this.&lt;/p&gt;
+
+&lt;p&gt;Below, I obtain my image as a &lt;code class=&quot;highlighter-rouge&quot;&gt;UIImage&lt;/code&gt;, then convert it into NSData, and then into base64.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let image = ...UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)...
+ 
+// Turn UIImage into Base64
+let imageNSData = UIImageJPEGRepresentation(image, 0.05)
+let base64String = imageNSData!.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
+
+print(&quot;Base64?&quot;, base64String)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can use &lt;a href=&quot;http://codebeautify.org/base64-to-image-converter&quot;&gt;http://codebeautify.org/base64-to-image-converter&lt;/a&gt; to test the base64 image.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 30 Oct 2016 08:22:15 -0700</pubDate>
+        <link>http://seimith.github.io/swift/snippet/2016/10/30/Swift-UIImage-to-Base64.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/swift/snippet/2016/10/30/Swift-UIImage-to-Base64.html</guid>
+        
+        
+        <category>swift</category>
+        
+        <category>snippet</category>
+        
+      </item>
     
       <item>
         <title>Unable to run gem install XYZ on OS X El Capitan</title>
@@ -681,33 +711,6 @@ You can run the App Simulator and go back and forth between your 2 views. If you
         <category>snippet</category>
         
         <category>ios</category>
-        
-      </item>
-    
-      <item>
-        <title>GitHub gitignore files for all</title>
-        <description>&lt;p&gt;Whenever I start a project I always think to myself, “What the heck do I ignore?” Sometimes it’s easy to discern. However, sometimes it’s not.&lt;/p&gt;
-
-&lt;p&gt;For example, the past week or so I’ve been dabbling with Swift. I had no prior knowledge of Ios development and had no idea what should be exposed or not.&lt;/p&gt;
-
-&lt;p&gt;Here comes Github! They have a list of all sorts of &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; files for all types of projects.&lt;/p&gt;
-
-&lt;p&gt;Check out &lt;a href=&quot;https://github.com/github/gitignore&quot;&gt;https://github.com/github/gitignore&lt;/a&gt; for the list.&lt;/p&gt;
-
-&lt;p&gt;Even if they aren’t the most up-to-date (some files were last commited 2 years ago) it’s still a nice base to have.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-08-07-assets/img1.png&quot; alt=&quot;alt text&quot; title=&quot;List of some of the .gitignore files&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 07 Aug 2016 08:22:15 -0700</pubDate>
-        <link>http://seimith.github.io/freebie/github/gitignore/2016/08/07/GitHub-gitignore-files-for-all.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/freebie/github/gitignore/2016/08/07/GitHub-gitignore-files-for-all.html</guid>
-        
-        
-        <category>freebie</category>
-        
-        <category>github</category>
-        
-        <category>gitignore</category>
         
       </item>
     
