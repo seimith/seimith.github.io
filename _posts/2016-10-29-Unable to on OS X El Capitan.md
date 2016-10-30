@@ -7,7 +7,7 @@ categories: ["gem", "el capitan", "install", "troubleshoot"]
 
 If you've upgraded your computer to El Capitan and you're getting errors while trying to install some gems, this is due to  El Capitan's introduction of SIP (System Integrity Protection).
 
-Read more about SIP here: https://support.apple.com/en-us/HT204899
+Read more about SIP here: [https://support.apple.com/en-us/HT204899][link]
 
 The other day I was trying to run `gem install bundler` and got a permissions error. Not cool.
 
@@ -25,3 +25,4 @@ Try installing to your directory:
 gem install bundler -n /usr/local/bin
 ```
 
+[link]:https://support.apple.com/en-us/HT204899 
