@@ -66,13 +66,13 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #2a7ae2;
+  color: #087b64 !important;
   text-decoration: none;
   font-size: 2rem !important; }
   a:visited {
-    color: #111; }
+    color: #087b64 !important; }
   a:hover {
-    color: #16a085 !important;
+    color: #111 !important;
     text-decoration: none; }
 
 /**
@@ -148,6 +148,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif; }
+
+strong {
+  display: block;
+  font-size: 2rem; }
 
 .content {
   background: #FFF;

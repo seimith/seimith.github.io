@@ -6,9 +6,161 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 30 Oct 2016 14:09:01 -0700</pubDate>
-    <lastBuildDate>Sun, 30 Oct 2016 14:09:01 -0700</lastBuildDate>
+    <pubDate>Sun, 06 Nov 2016 14:00:36 -0800</pubDate>
+    <lastBuildDate>Sun, 06 Nov 2016 14:00:36 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>(Swift) Custom Segue</title>
+        <description>&lt;p&gt;This tutorial will demonstrate how to add a custom segue to your Swift app.&lt;/p&gt;
+
+&lt;p&gt;There are a few generic segues that are available to use in Xcode, however, you might be in a situation where you need specific transitions that might be better suited for gestures.&lt;/p&gt;
+
+&lt;p&gt;In this case, the animation in play will be a sliding one (great for swiping).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-11-05-assets/CustomSegue.gif&quot; alt=&quot;alt text&quot; title=&quot;Custom segue&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Swift 3.0&lt;/li&gt;
+  &lt;li&gt;Xcode Version 8.1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1: Create swift project&lt;/strong&gt;
+Create a “Single View Application” project. If you don’t want extra folders in your project for testing, make sure you uncheck the items for tests.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-11-05-assets/1.png&quot; alt=&quot;alt text&quot; title=&quot;Creating a single page application&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-11-05-assets/2.png&quot; alt=&quot;alt text&quot; title=&quot;Creating a single page application&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2: Create your segue&lt;/strong&gt;
+I made a bit of a mistake here in naming my class with lowercase, “firstCustomSegue”. However, this example works just find.&lt;/p&gt;
+
+&lt;p&gt;Make sure to select &lt;code class=&quot;highlighter-rouge&quot;&gt;UIStoryboardSegue&lt;/code&gt; as the subclass and Swift as the language.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-11-05-assets/3.png&quot; alt=&quot;alt text&quot; title=&quot;Creating a new file for your segue&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-11-05-assets/4.png&quot; alt=&quot;alt text&quot; title=&quot;Naming your segue file&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The following is the code + comments for the custom segue explaining each section.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import UIKit
+
+class firstCustomSegue: UIStoryboardSegue {
+    override func perform() {
+        // Declare the INITAL view and the DESTINATION view
+        // This will break and be nil if you don&#39;t have a second view controller for your DESTINATION view
+        let initalView = self.source.view as UIView!
+        let destinationView = self.destination.view as UIView!
+
+        // Specify the screen HEIGHT and WIDTH
+        let screenHeight = UIScreen.main.bounds.size.height
+        let screenWidth = UIScreen.main.bounds.size.width
+
+        // Specify the INITIAL PLACEMENT of the DESTINATION view
+        initalView?.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+        destinationView?.frame = CGRect(x: screenWidth, y: 0, width: screenWidth, height: screenHeight)
+
+        // Access the app&#39;s key window and add the DESTINATION view ABOVE the INITAL view
+        let appWindow = UIApplication.shared.keyWindow
+        appWindow?.insertSubview(destinationView!, aboveSubview: initalView!)
+
+        // Animate the segue&#39;s transition
+        UIView.animate(withDuration: 0.4, animations: {
+            // Left/Right
+            initalView?.frame = (initalView?.frame.offsetBy(dx: -screenWidth, dy: 0))!
+            destinationView?.frame = (destinationView?.frame.offsetBy(dx: -screenWidth, dy: 0))!
+        }) { (Bool) in
+            self.source.present(self.destination, animated: false, completion: nil)
+        }
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Step 3: Create a second view controller&lt;/strong&gt;
+When you initially create your Swift app, you get a boilerplate set of files. One of them is the &lt;code class=&quot;highlighter-rouge&quot;&gt;ViewController.swift&lt;/code&gt;. We’re going to use this view controller, but in addition to this view controller we need to create another view controller for another view that we also need to make. &lt;code class=&quot;highlighter-rouge&quot;&gt;:-} in next step&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;In this case, the new view controller that I’ve created here is called &lt;code class=&quot;highlighter-rouge&quot;&gt;SecondViewController&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Make sure to update the subclass to &lt;code class=&quot;highlighter-rouge&quot;&gt;UIViewController&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You don’t need to add anything in the second view controller.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-11-05-assets/5.png&quot; alt=&quot;alt text&quot; title=&quot;Creating a new view controller&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4: Add a second UIView controller to the storyboard&lt;/strong&gt;
+Now that I’ve created a second view controller I need to add a new view controller.&lt;/p&gt;
+
+&lt;p&gt;This can be done via the &lt;code class=&quot;highlighter-rouge&quot;&gt;Main.storyboard&lt;/code&gt; and by searching for &lt;code class=&quot;highlighter-rouge&quot;&gt;View Controller&lt;/code&gt; and dragging it onto the board.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-11-05-assets/6.png&quot; alt=&quot;alt text&quot; title=&quot;Adding a second UIView controller&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you do that you need to reassign the view controller “controlling” that new view.&lt;/p&gt;
+
+&lt;p&gt;Make sure you update the class to the &lt;code class=&quot;highlighter-rouge&quot;&gt;SecondViewController&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-11-05-assets/13.png&quot; alt=&quot;alt text&quot; title=&quot;Reassigning the controller for the new UIView controller&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5: Differentiating the scenes, adding a button and its constraints&lt;/strong&gt;
+Here, I’ve added different background colors to my views so I can visually differentiate the two scenes that I want to segue between.&lt;/p&gt;
+
+&lt;p&gt;I’ve also added a button such that I can use it to trigger my custom segue. You can totally add gesture recognizers here, but that’s for another time. &lt;code class=&quot;highlighter-rouge&quot;&gt;:)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;In terms of constraints, I’ve added a total of 4 constraints to my button:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Height&lt;/li&gt;
+  &lt;li&gt;Width&lt;/li&gt;
+  &lt;li&gt;Horizontally in Container&lt;/li&gt;
+  &lt;li&gt;Vertically in Container&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-11-05-assets/7.png&quot; alt=&quot;alt text&quot; title=&quot;Adding constraints: height, width&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-11-05-assets/8.png&quot; alt=&quot;alt text&quot; title=&quot;Adding constraints: horizontal, vertical&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 6: Setting the custom segue&lt;/strong&gt;
+This is where you finally add the segue.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-11-05-assets/9.png&quot; alt=&quot;alt text&quot; title=&quot;Setting the custom segue&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;On a Mac, &lt;code class=&quot;highlighter-rouge&quot;&gt;control + click + drag&lt;/code&gt;, from the button to the second view controller and you will get &lt;code class=&quot;highlighter-rouge&quot;&gt;Action Segue&lt;/code&gt; selections.&lt;/p&gt;
+
+&lt;p&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;Custom&lt;/code&gt;. (Although I see my custom segue class name in the list, &lt;code class=&quot;highlighter-rouge&quot;&gt;first custom&lt;/code&gt;, selecting this has not worked for me.)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-11-05-assets/11.png&quot; alt=&quot;alt text&quot; title=&quot;Selecting your custom segue&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, click on the segue representation on the storyboard (the thing with the bracket icon connecting the two view controllers) and remember to update the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Identifier&lt;/li&gt;
+  &lt;li&gt;Class&lt;/li&gt;
+  &lt;li&gt;Kind (should already be &lt;code class=&quot;highlighter-rouge&quot;&gt;Custom&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-11-05-assets/12.png&quot; alt=&quot;alt text&quot; title=&quot;Updating segue&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And that should be it. When you load your simulator you should be able to segue by “sliding” between two scenes!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;You can get the storyboard project is in &lt;a href=&quot;https://github.com/seimith/SwiftCustomSegues&quot;&gt;this repo&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 05 Nov 2016 08:22:15 -0700</pubDate>
+        <link>http://seimith.github.io/swift/segue/transitions/animation/2016/11/05/Swift-Custom-Segue.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/swift/segue/transitions/animation/2016/11/05/Swift-Custom-Segue.html</guid>
+        
+        
+        <category>swift</category>
+        
+        <category>segue</category>
+        
+        <category>transitions</category>
+        
+        <category>animation</category>
+        
+      </item>
     
       <item>
         <title>(Swift) UIImage to Base64</title>
@@ -690,27 +842,6 @@ You can run the App Simulator and go back and forth between your 2 views. If you
         <category>views</category>
         
         <category>tutorial</category>
-        
-      </item>
-    
-      <item>
-        <title>(React-Native) Nesting Navigator inside TabBarIOS for ultimate history stack</title>
-        <description>&lt;p&gt;A few weeks ago I started working on react-native and I wanted to build an app that had a navigation bar and tabs. Each tab was supposed have it’s own history stack and have a unique navigation bar.&lt;/p&gt;
-
-&lt;p&gt;In order for me to do that I nested &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Navigator/&amp;gt;&lt;/code&gt; inside of &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;TabBarIOS/&amp;gt;&lt;/code&gt; such that every time I switch to a different tab the history of the other tabs remained scoped to their own space.&lt;/p&gt;
-
-&lt;p&gt;Code snippet to come soon…&lt;/p&gt;
-</description>
-        <pubDate>Fri, 12 Aug 2016 08:22:15 -0700</pubDate>
-        <link>http://seimith.github.io/react-native/snippet/ios/2016/08/12/Nesting-Navigator-inside-TabBarIOS-for-ultimate-history-stack.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/react-native/snippet/ios/2016/08/12/Nesting-Navigator-inside-TabBarIOS-for-ultimate-history-stack.html</guid>
-        
-        
-        <category>react-native</category>
-        
-        <category>snippet</category>
-        
-        <category>ios</category>
         
       </item>
     

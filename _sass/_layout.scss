@@ -5,6 +5,11 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+strong {
+    display: block;
+    font-size: 2rem;
+}
+
 .content {
   background: #FFF;
   padding-bottom: 15rem;
@@ -33,7 +38,6 @@ body {
         }
 
     }
-
 
   .splash {
     background: url("//raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/rio1.jpg") center no-repeat;
