@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Gif Capturing App (GIPHY)
+title:  (App/Extension) GIPHY
 date:   2016-09-11 8:22:15 -0700
 categories: ["app", "gif"]
 tags: ["ahhhhrealmonsters"]

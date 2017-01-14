@@ -6,15 +6,39 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 13 Jan 2017 20:40:46 -0800</pubDate>
-    <lastBuildDate>Fri, 13 Jan 2017 20:40:46 -0800</lastBuildDate>
+    <pubDate>Sat, 14 Jan 2017 09:45:11 -0800</pubDate>
+    <lastBuildDate>Sat, 14 Jan 2017 09:45:11 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>(App/Extension) The Great Suspender</title>
+        <description>&lt;p&gt;I just started using this Chrome extension. It’s called &lt;code class=&quot;highlighter-rouge&quot;&gt;The Great Suspender&lt;/code&gt; and it timesout, or suspends, idle tabs in your browser to save memory and system resources. This is super great if you’re one of those people who have hundreds of tabs open but never seem to be able to get rid of them after days…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-14-assets/img1.png&quot; alt=&quot;The great suspender screenshot&quot; title=&quot;The great suspender screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Check out &lt;a href=&quot;https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg?hl=en&quot;&gt;The Great Suspender&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 14 Jan 2017 02:33:33 -0800</pubDate>
+        <link>http://seimith.github.io/app/tabs/chrome/extension/2017/01/14/The-Great-Suspender.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/app/tabs/chrome/extension/2017/01/14/The-Great-Suspender.html</guid>
+        
+        
+        <category>app</category>
+        
+        <category>tabs</category>
+        
+        <category>chrome</category>
+        
+        <category>extension</category>
+        
+      </item>
     
       <item>
         <title>3D Printing</title>
         <description>&lt;p&gt;I recently began fiddling around with 3D printing. In hind site, I should’ve started about a year ago because I had access to a 3D printer. Unfortunately, life happened and I never got around to it. Until now. :)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/13Large.gif&quot; alt=&quot;End result of 3D print&quot; title=&quot;End result of 3D print&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/13Large.gif&quot; alt=&quot;Animated image of Tinkerine DittoPro printing&quot; title=&quot;Animated image of Tinkerine DittoPro printing&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The 3D printing machines that I have access to are the &lt;code class=&quot;highlighter-rouge&quot;&gt;FormLabs Form 1+&lt;/code&gt; and the &lt;code class=&quot;highlighter-rouge&quot;&gt;Tinkerine DittoPro&lt;/code&gt;.&lt;/p&gt;
 
@@ -34,37 +58,39 @@
 
 &lt;p&gt;&lt;strong&gt;Step 1: Create vector (ex Sketch)&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/1.png&quot; alt=&quot;End result of 3D print&quot; title=&quot;End result of 3D print&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/1.png&quot; alt=&quot;Example of Sketch being used for vector drawing&quot; title=&quot;Example of Sketch being used for vector drawing&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Step 2: Save vector as an .esp file&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/2.png&quot; alt=&quot;End result of 3D print&quot; title=&quot;End result of 3D print&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/2.png&quot; alt=&quot;Example of exporting vectors as an .esp file&quot; title=&quot;Example of exporting vectors as an .esp file&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Step 3: Open 3D software (ex Rhino 5) and import your .esp file&lt;/p&gt;
 
 &lt;p&gt;Step 4: Convert your imported vector into a layer and then extrude, bool diff, and/or union&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/3.png&quot; alt=&quot;End result of 3D print&quot; title=&quot;End result of 3D print&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/3.png&quot; alt=&quot;Example of using Rhino 5 to transform vectors into surfaces&quot; title=&quot;Example of using Rhino 5 to transform vectors into surfaces&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/4.png&quot; alt=&quot;End result of 3D print&quot; title=&quot;End result of 3D print&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/4.png&quot; alt=&quot;Example of using Rhino 5 to extrude surfaces&quot; title=&quot;Example of using Rhino 5 to extrude surfaces&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/6.png&quot; alt=&quot;End result of 3D print&quot; title=&quot;End result of 3D print&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/7.png&quot; alt=&quot;Example of using Rhino 5 to preform a boolean diff&quot; title=&quot;Example of using Rhino 5 to preform a boolean diff&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/7.png&quot; alt=&quot;End result of 3D print&quot; title=&quot;End result of 3D print&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/6.png&quot; alt=&quot;Example of using Rhino 5 to preform a boolean diff&quot; title=&quot;Example of using Rhino 5 to preform a boolean diff&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/8.gif&quot; alt=&quot;End result of 3D print&quot; title=&quot;End result of 3D print&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/7.png&quot; alt=&quot;Example of using Rhino 5 to preform a boolean diff&quot; title=&quot;Example of using Rhino 5 to preform a boolean diff&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/8.gif&quot; alt=&quot;Example of using Rhino 5 to preform a boolean diff&quot; title=&quot;Example of using Rhino 5 to preform a boolean diff&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Step 5: Select your object and export as .stl&lt;/p&gt;
 
 &lt;p&gt;Step 6: Import your .stl file in 3D printing program (ex Tinkerine DittoPro or FormLabs PreForm)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/10.png&quot; alt=&quot;End result of 3D print&quot; title=&quot;End result of 3D print&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/10.png&quot; alt=&quot;Tinkerine DittoPro printing software&quot; title=&quot;Tinkerine DittoPro printing software&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/11.png&quot; alt=&quot;End result of 3D print&quot; title=&quot;End result of 3D print&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/11.png&quot; alt=&quot;FormLabs PreForm printing software&quot; title=&quot;FormLabs PreForm printing software&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Step 7: Either print via the FormLabs Form 1+ (connect with usb) or save your project as a &lt;code class=&quot;highlighter-rouge&quot;&gt;.g&lt;/code&gt; file and put it on an SD card that can be plugged into the Tinkerine DittoPro&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/13Large.gif&quot; alt=&quot;End result of 3D print&quot; title=&quot;End result of 3D print&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/13Large.gif&quot; alt=&quot;Animated image of Tinkerine DittoPro printing&quot; title=&quot;Animated image of Tinkerine DittoPro printing&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 13 Jan 2017 07:22:15 -0800</pubDate>
         <link>http://seimith.github.io/3d/printing/formlabs/formlabs%20form%201+/tinkerine/dittopro/2017/01/13/3D-Printing.html</link>
@@ -525,121 +551,6 @@ You don&#39;t have write permissions for the /usr/bin directory.
         <category>install</category>
         
         <category>troubleshoot</category>
-        
-      </item>
-    
-      <item>
-        <title>(Swift) Sliding UIView</title>
-        <description>&lt;p&gt;Today we’re going to make a sliding UIView. Similar to the previous post, this tutorial is also very similar to my prievious post about &lt;a href=&quot;http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/08/28/Swift-Rotating-UIView.html&quot; title=&quot;Post on rotating UIViews&quot;&gt;rotating UIViews&lt;/a&gt;, but this is how to do a sliding animation. You might need this type of animation for opening a menu or showing an alert.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-10-01-assets/slidingUIViewSm.gif&quot; alt=&quot;alt text&quot; title=&quot;Sliding UIViews&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Swift 2.2&lt;/li&gt;
-  &lt;li&gt;Xcode Version 7.3.1&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 1 to 4: Create swift project, set up your storyboard, add constraints, and connect your outlets&lt;/strong&gt;
-The steps to set up this project this is pretty much the same as the &lt;a href=&quot;http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/08/28/Swift-Rotating-UIView.html&quot; title=&quot;Post on rotating UIViews&quot;&gt;rotating UIViews&lt;/a&gt; post, so check it out first. After that, you can just augment &lt;strong&gt;Step 5&lt;/strong&gt; to make your UIView slide.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Side Note&lt;/strong&gt;: What’s different from this and the previous tutorials are the constraints that I added to the UIView. However, it doesn’t really matter… :)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 5: Add code to slide&lt;/strong&gt;
-In this example, we’re adding animation to slide a &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView&lt;/code&gt; once the app loads. To do that, we’ll create a function, then call that function within the &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; lifecycle function.&lt;/p&gt;
-
-&lt;p&gt;This is the function that contains the animation.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func beginAnimation () {
-  // 1st transformation
-  self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, -100)
-
-  UIView.animateWithDuration(0.4, delay: 0, options: [.CurveEaseInOut], animations: {
-      // 2nd transformation
-      self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, 50)
-      }, completion: { completion in
-          UIView.animateWithDuration(0.2, delay: 0.0, options: [.CurveEaseInOut], animations: {
-              // 3rd transformation
-              self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, 0)
-          }, completion: nil)
-  })
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;In this example, I’ve got 3 transformations because the animation that I’m going for is a slide+little bump+short slide to position.&lt;/p&gt;
-
-&lt;p&gt;The first transformation is the starting position, and here, I’ve got it set above the visible viewport at &lt;code class=&quot;highlighter-rouge&quot;&gt;-100&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, -100)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;The second transformation brings the UIView into the view, and with the “.CurveEaseInOut” option will give this a snappiness at &lt;code class=&quot;highlighter-rouge&quot;&gt;50&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, 50)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;And finally, the third transformation, I have it in the completion block, and this will bring the UIView up and make it look like it “bumps” into it’s final position at &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, 0)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Add the code in your &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; to start the pulse&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;self.beginAnimation()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Your file should look similar to this:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import UIKit
-
-class ViewController: UIViewController {
-  @IBOutlet weak var uiViewToSlide: UIView!
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-    self.beginAnimation()
-  }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
-  func beginAnimation() {
-    self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, -100)
-
-    UIView.animateWithDuration(0.4, delay: 0, options: [.CurveEaseInOut], animations: {
-      self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, 50)
-      }, completion: { completion in
-        UIView.animateWithDuration(0.2, delay: 0.0, options: [.CurveEaseInOut], animations: {
-          self.uiViewToSlide.transform = CGAffineTransformMakeTranslation(0, 0)
-        }, completion: nil)
-    })
-
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;And that should be it. When you reload your simulator you should see a pulsating pink square!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;You can get the storyboard project is in &lt;a href=&quot;https://github.com/seimith/SwiftSlidingUIView&quot;&gt;this repo&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 01 Oct 2016 08:22:15 -0700</pubDate>
-        <link>http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/10/01/Swift-Sliding-UIView.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/10/01/Swift-Sliding-UIView.html</guid>
-        
-        
-        <category>swift</category>
-        
-        <category>uiview</category>
-        
-        <category>views</category>
-        
-        <category>tutorial</category>
-        
-        <category>animation</category>
         
       </item>
     
