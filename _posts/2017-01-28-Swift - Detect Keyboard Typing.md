@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Swift - Detect Typing
+title:  (Swift) Detect Typing
 date:   2017-01-28 3:33:33 -0700
 categories: ["swift", "keyboard", "handler", "snippet"]
 ---

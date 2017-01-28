@@ -6,12 +6,12 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 28 Jan 2017 10:19:33 -0800</pubDate>
-    <lastBuildDate>Sat, 28 Jan 2017 10:19:33 -0800</lastBuildDate>
+    <pubDate>Sat, 28 Jan 2017 10:21:51 -0800</pubDate>
+    <lastBuildDate>Sat, 28 Jan 2017 10:21:51 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
-        <title>Swift - Detect Typing</title>
+        <title>(Swift) Detect Typing</title>
         <description>&lt;p&gt;Here’s a snippet on how to detect typing on your &lt;code class=&quot;highlighter-rouge&quot;&gt;Swift&lt;/code&gt; app. It’s pretty simple because we’re utilizing the &lt;code class=&quot;highlighter-rouge&quot;&gt;UITextViewDelegate&lt;/code&gt; delegate. Aka, built in success - thank you &lt;code class=&quot;highlighter-rouge&quot;&gt;Swift&lt;/code&gt;!&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
