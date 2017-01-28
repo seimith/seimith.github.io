@@ -7,6 +7,11 @@ categories: ["swift", "UITableView", "snippet"]
 
 Here's a snippet on how to make a `UITableView`. Check out the code below!
 
+**Tools:**
+
+- Swift 3.0
+- Xcode Version 8.0
+
 ```
 import UIKit
 
