@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Swift - Adding Audio
+title:  (Swift) Adding Audio
 date:   2017-01-28 3:33:33 -0700
 categories: ["swift", "audio", "snippet", "AudioToolbox"]
 ---
