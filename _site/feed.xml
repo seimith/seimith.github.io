@@ -6,9 +6,24 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 28 Jan 2017 12:03:09 -0800</pubDate>
-    <lastBuildDate>Sat, 28 Jan 2017 12:03:09 -0800</lastBuildDate>
+    <pubDate>Sat, 04 Feb 2017 22:17:58 -0800</pubDate>
+    <lastBuildDate>Sat, 04 Feb 2017 22:17:58 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>(Swift) Layout Constraints</title>
+        <description>&lt;p&gt;…&lt;/p&gt;
+</description>
+        <pubDate>Sat, 04 Feb 2017 02:33:33 -0800</pubDate>
+        <link>http://seimith.github.io/swift/constraints/2017/02/04/Swift-Layout-Constraints.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/swift/constraints/2017/02/04/Swift-Layout-Constraints.html</guid>
+        
+        
+        <category>swift</category>
+        
+        <category>constraints</category>
+        
+      </item>
     
       <item>
         <title>(Swift) Detect Typing</title>
@@ -479,47 +494,6 @@ self.view.addSubview(myCoolButton)
         <category>swift</category>
         
         <category>zPosition</category>
-        
-        <category>snippet</category>
-        
-      </item>
-    
-      <item>
-        <title>(Swift) Make UILabel Conform to Length of Text</title>
-        <description>&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-12-23-assets/img2.png&quot; alt=&quot;alt text&quot; title=&quot;Simulator of UILabel conforming to width of text&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here’s a snippet of how you can make your UILabel conform to the width of your text.&lt;/p&gt;
-
-&lt;p&gt;You want to use &lt;code class=&quot;highlighter-rouge&quot;&gt;.sizeToFit()&lt;/code&gt; on your UILabel, otherwise you’d have to hardcode  your label’s width in the &lt;code class=&quot;highlighter-rouge&quot;&gt;CGRect&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import UIKit
-
-class ViewController: UIViewController {
-	override func viewDidLoad() {
-		super.viewDidLoad()
-
-		let myCoolUILabel = UILabel()
-		myCoolUILabel.text = &quot;My Cool Label&quot;
-		myCoolUILabel.backgroundColor = UIColor.orange
- 		myCoolUILabel.frame = CGRect(x: 100, y: 100, width: 30, height: 30)
-		myCoolUILabel.sizeToFit()
-		self.view.addSubview(myCoolUILabel)
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;So, no more of this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-12-23-assets/img1.png&quot; alt=&quot;alt text&quot; title=&quot;Simulator of UILabel not conforming to width of text&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 13 Dec 2016 07:22:15 -0800</pubDate>
-        <link>http://seimith.github.io/swift/uilabel/snippet/2016/12/13/Swift-Make-UILabel-conform-to-length-of-text.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/swift/uilabel/snippet/2016/12/13/Swift-Make-UILabel-conform-to-length-of-text.html</guid>
-        
-        
-        <category>swift</category>
-        
-        <category>uilabel</category>
         
         <category>snippet</category>
         
