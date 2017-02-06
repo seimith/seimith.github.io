@@ -6,8 +6,8 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 05 Feb 2017 18:10:50 -0800</pubDate>
-    <lastBuildDate>Sun, 05 Feb 2017 18:10:50 -0800</lastBuildDate>
+    <pubDate>Sun, 05 Feb 2017 19:21:18 -0800</pubDate>
+    <lastBuildDate>Sun, 05 Feb 2017 19:21:18 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -30,17 +30,19 @@
 &lt;ul&gt;
   &lt;li&gt;forView: UIView &lt;code class=&quot;highlighter-rouge&quot;&gt;// What UIView do you want to add constraints to?&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;top: Int? = nil &lt;code class=&quot;highlighter-rouge&quot;&gt;// Top padding&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;bottom: Int? = nil &lt;code class=&quot;highlighter-rouge&quot;&gt;// Bottom padding&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;bottom: Int? = nil &lt;code class=&quot;highlighter-rouge&quot;&gt;// Bottom padding; Negative integer&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;left: Int? = nil &lt;code class=&quot;highlighter-rouge&quot;&gt;// Left padding&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;right: Int? = nil &lt;code class=&quot;highlighter-rouge&quot;&gt;// Right padding&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;right: Int? = nil &lt;code class=&quot;highlighter-rouge&quot;&gt;// Right padding; Negative integer&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;height: Int? = nil &lt;code class=&quot;highlighter-rouge&quot;&gt;Specified height&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;fixedHeight: Bool = false &lt;code class=&quot;highlighter-rouge&quot;&gt;// Boolean defaulted to false; If you want a fixed UIView, give it a height (above)&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;width: Int? = nil &lt;code class=&quot;highlighter-rouge&quot;&gt;// Specified width &lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;fixedWidth: Bool = false &lt;code class=&quot;highlighter-rouge&quot;&gt;// Boolean defaulted to false; If you want a fixed UIView, give it a width (above)&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;selfView: UIViewController &lt;code class=&quot;highlighter-rouge&quot;&gt;// What is the UIViewController?&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;selfView: UIViewController &lt;code class=&quot;highlighter-rouge&quot;&gt;// What is the UIViewController&#39;s view?&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Layout {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import UIKit
+
+class Layout {
   static func setupConstraint (forView: UIView, top: Int?=nil, bottom: Int?=nil, left: Int?=nil, right: Int?=nil, height: Int?=nil, fixedHeight: Bool = false, width: Int?=nil, fixedWidth: Bool = false, selfView: UIViewController) {
 
     var parentViewController: UIView? {
@@ -49,35 +51,38 @@
 
     forView.translatesAutoresizingMaskIntoConstraints = false //USING AUTOLAYOUT NOT FRAMES
 
-    var l = NSLayoutConstraint()
-    var r = NSLayoutConstraint()
-    var t = NSLayoutConstraint()
-    var b = NSLayoutConstraint()
+    var l = NSLayoutConstraint() // LEFT
+    var r = NSLayoutConstraint() // RIGHT
+    var t = NSLayoutConstraint() // TOP
+    var b = NSLayoutConstraint() // BOTTOM
 
     if (left != nil) {
-        l = forView.leadingAnchor.constraint(equalTo: (parentViewController?.leadingAnchor)!, constant: CGFloat(left!)) //LEFT
+        l = forView.leadingAnchor.constraint(equalTo: (parentViewController?.leadingAnchor)!, constant: CGFloat(left!)) // LEFT
     }
 
     if (right != nil) {
-        r = forView.trailingAnchor.constraint(equalTo: (parentViewController?.trailingAnchor)!, constant: CGFloat(right!)) //RIGHT
+        r = forView.trailingAnchor.constraint(equalTo: (parentViewController?.trailingAnchor)!, constant: CGFloat(right!)) // RIGHT
     }
 
     if (top != nil) {
-        t = forView.topAnchor.constraint(equalTo: (parentViewController?.topAnchor)!, constant: CGFloat(top!)) //TOP
+        t = forView.topAnchor.constraint(equalTo: (parentViewController?.topAnchor)!, constant: CGFloat(top!)) // TOP
     }
 
     if (bottom != nil) {
-        b = forView.bottomAnchor.constraint(equalTo: (parentViewController?.bottomAnchor)!, constant: CGFloat(bottom!)) //BOTTOM
+        b = forView.bottomAnchor.constraint(equalTo: (parentViewController?.bottomAnchor)!, constant: CGFloat(bottom!)) // BOTTOM
     }
 
     if (fixedHeight) {
-        let h = forView.heightAnchor.constraint(equalToConstant: CGFloat(height!)) //FIXED HEIGHT
+        // FIXED HEIGHT
+        let h = forView.heightAnchor.constraint(equalToConstant: CGFloat(height!))
         parentViewController?.addConstraints([t, b, l, r, h])
     } else if (fixedWidth) {
-        let w = forView.widthAnchor.constraint(equalToConstant: CGFloat(width!)) //FIXED WIDTH
+        // FIXED WIDTH
+        let w = forView.widthAnchor.constraint(equalToConstant: CGFloat(width!))
         parentViewController?.addConstraints([t, b, l, r, w])
     } else if (fixedHeight == false &amp;amp;&amp;amp; fixedWidth == false) {
-        parentViewController?.addConstraints([t, b, l, r]) //VARIABLE HEIGHT &amp;amp; WIDTH
+        // VARIABLE HEIGHT &amp;amp; WIDTH
+        parentViewController?.addConstraints([t, b, l, r])
     }
   }
 }

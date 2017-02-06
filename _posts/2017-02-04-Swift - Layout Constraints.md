@@ -20,16 +20,18 @@ Below is a class named `Layout` with a static function `setupConstraint` that ac
 
 - forView: UIView `// What UIView do you want to add constraints to?`
 - top: Int? = nil `// Top padding`
-- bottom: Int? = nil `// Bottom padding`
+- bottom: Int? = nil `// Bottom padding; Negative integer`
 - left: Int? = nil `// Left padding`
-- right: Int? = nil `// Right padding`
+- right: Int? = nil `// Right padding; Negative integer`
 - height: Int? = nil `Specified height`
 - fixedHeight: Bool = false `// Boolean defaulted to false; If you want a fixed UIView, give it a height (above)`
 - width: Int? = nil `// Specified width `
 - fixedWidth: Bool = false `// Boolean defaulted to false; If you want a fixed UIView, give it a width (above)`
-- selfView: UIViewController `// What is the UIViewController?`
+- selfView: UIViewController `// What is the UIViewController's view?`
 
 ```
+import UIKit
+
 class Layout {
   static func setupConstraint (forView: UIView, top: Int?=nil, bottom: Int?=nil, left: Int?=nil, right: Int?=nil, height: Int?=nil, fixedHeight: Bool = false, width: Int?=nil, fixedWidth: Bool = false, selfView: UIViewController) {
 
@@ -39,35 +41,38 @@ class Layout {
 
     forView.translatesAutoresizingMaskIntoConstraints = false //USING AUTOLAYOUT NOT FRAMES
 
-    var l = NSLayoutConstraint()
-    var r = NSLayoutConstraint()
-    var t = NSLayoutConstraint()
-    var b = NSLayoutConstraint()
+    var l = NSLayoutConstraint() // LEFT
+    var r = NSLayoutConstraint() // RIGHT
+    var t = NSLayoutConstraint() // TOP
+    var b = NSLayoutConstraint() // BOTTOM
 
     if (left != nil) {
-        l = forView.leadingAnchor.constraint(equalTo: (parentViewController?.leadingAnchor)!, constant: CGFloat(left!)) //LEFT
+        l = forView.leadingAnchor.constraint(equalTo: (parentViewController?.leadingAnchor)!, constant: CGFloat(left!)) // LEFT
     }
 
     if (right != nil) {
-        r = forView.trailingAnchor.constraint(equalTo: (parentViewController?.trailingAnchor)!, constant: CGFloat(right!)) //RIGHT
+        r = forView.trailingAnchor.constraint(equalTo: (parentViewController?.trailingAnchor)!, constant: CGFloat(right!)) // RIGHT
     }
 
     if (top != nil) {
-        t = forView.topAnchor.constraint(equalTo: (parentViewController?.topAnchor)!, constant: CGFloat(top!)) //TOP
+        t = forView.topAnchor.constraint(equalTo: (parentViewController?.topAnchor)!, constant: CGFloat(top!)) // TOP
     }
 
     if (bottom != nil) {
-        b = forView.bottomAnchor.constraint(equalTo: (parentViewController?.bottomAnchor)!, constant: CGFloat(bottom!)) //BOTTOM
+        b = forView.bottomAnchor.constraint(equalTo: (parentViewController?.bottomAnchor)!, constant: CGFloat(bottom!)) // BOTTOM
     }
 
     if (fixedHeight) {
-        let h = forView.heightAnchor.constraint(equalToConstant: CGFloat(height!)) //FIXED HEIGHT
+        // FIXED HEIGHT
+        let h = forView.heightAnchor.constraint(equalToConstant: CGFloat(height!))
         parentViewController?.addConstraints([t, b, l, r, h])
     } else if (fixedWidth) {
-        let w = forView.widthAnchor.constraint(equalToConstant: CGFloat(width!)) //FIXED WIDTH
+        // FIXED WIDTH
+        let w = forView.widthAnchor.constraint(equalToConstant: CGFloat(width!))
         parentViewController?.addConstraints([t, b, l, r, w])
     } else if (fixedHeight == false && fixedWidth == false) {
-        parentViewController?.addConstraints([t, b, l, r]) //VARIABLE HEIGHT & WIDTH
+        // VARIABLE HEIGHT & WIDTH
+        parentViewController?.addConstraints([t, b, l, r])
     }
   }
 }
