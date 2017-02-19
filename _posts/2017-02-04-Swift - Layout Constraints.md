@@ -252,3 +252,8 @@ Unfortunately, I'm personally not very excited about the stacking because I didn
 All it appears to be doing is what you can do when setting the `frame's` `CGRect`.
 
 ![Three UIViews that are stacked horizontally](https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-02-19-assets/img4.png "Three UIViews that are stacked horizontally")
+
+**You can get the storyboard project is in [this repo][link].**
+
+[link]: https://github.com/seimith/SwiftAddConstraints
+

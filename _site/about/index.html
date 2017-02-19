@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,12 +13,11 @@
   <link rel="canonical" href="http://seimith.github.io/about/">
   <link rel="alternate" type="application/rss+xml" title="kaixo, i'm smith." href="http://seimith.github.io/feed.xml">
 
-   <link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 </head>
 
-
   <body>
-
     <div class="content">
       <header class="site-header">
 
@@ -27,7 +25,7 @@
     <ul class="menu">
       <li><a href="/about/">About</a></li>
       <li><a href="/#">Blog</a></li>
-      <li><a href="/categories/">Blog Categories</a></li>
+      <li><a href="/categories/">Categories</a></li>
     </ul>
   </div>
 
@@ -117,33 +115,6 @@
       </div>
     </div>
 
-
-    <!-- <div class="page-content">
-      <div class="wrapper">
-        <article class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">About</h1>
-  </header>
-
-  <div class="post-content">
-    <h2 id="ahoy-mate">Ahoy mate!</h2>
-
-<p>This blog is simply a collection of snippets, thoughts, and other randomness from me. Things here might range from topics on JavaScript, React, Sass, Bash stuffs, and RV living. Do I live in an RV? No, but I really wish I did. Perhaps one day after I pay off my student loans I’ll do it. However, in the meantime, I’m a stationary fool on the west coast.</p>
-
-<h3 id="who-am-i">Who am I?</h3>
-<p>I’m a UX Engineer. I’ve been doing my thang for a little over 2 years now. As a UX Engineer, I primarily focus on front-end technologies and I get to tinker around while building high fidelity prototypes.</p>
-
-<h3 id="how-did-i-get-to-where-i-am-now">How did I get to where I am now?</h3>
-<p>I attended General Assembly’s WDI 3 month program.</p>
-
-  </div>
-
-</article>
-
-      </div>
-    </div> -->
-
     <footer class="site-footer">
   <div class="wrapper">
     <!-- <h2 class="footer-heading">kaixo, i'm smith.</h2> -->
@@ -184,6 +155,16 @@
 </footer>
 
 
+    <script type="text/javascript">
+      var smoothsteptime = function(){
+        $(function(){
+            $('html, body').animate({
+                scrollTop: $('.post-title').offset().top
+            }, 1000);
+            return false;
+        });
+      };
+      setTimeout(smoothsteptime, 500);
+    </script>
   </body>
-
 </html>

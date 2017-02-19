@@ -6,8 +6,8 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Feb 2017 09:36:55 -0800</pubDate>
-    <lastBuildDate>Sun, 19 Feb 2017 09:36:55 -0800</lastBuildDate>
+    <pubDate>Sun, 19 Feb 2017 10:14:13 -0800</pubDate>
+    <lastBuildDate>Sun, 19 Feb 2017 10:14:13 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -265,6 +265,9 @@ Layout.setupConstraint(forView: myYellowUIView,
 &lt;p&gt;All it appears to be doing is what you can do when setting the &lt;code class=&quot;highlighter-rouge&quot;&gt;frame&#39;s&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;CGRect&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-02-19-assets/img4.png&quot; alt=&quot;Three UIViews that are stacked horizontally&quot; title=&quot;Three UIViews that are stacked horizontally&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;You can get the storyboard project is in &lt;a href=&quot;https://github.com/seimith/SwiftAddConstraints&quot;&gt;this repo&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
 </description>
         <pubDate>Sat, 04 Feb 2017 02:33:33 -0800</pubDate>
         <link>http://seimith.github.io/swift/constraints/layout/stacking/uiview/2017/02/04/Swift-Layout-Constraints.html</link>

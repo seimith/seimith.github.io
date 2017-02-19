@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
-
   <body>
-
     <div class="content">
       {% include header.html %}
       <div class="splash">
@@ -19,15 +16,18 @@
       </div>
     </div>
 
-
-    <!-- <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div> -->
-
     {% include footer.html %}
 
+    <script type="text/javascript">
+      var smoothsteptime = function(){
+        $(function(){
+            $('html, body').animate({
+                scrollTop: $('.post-title').offset().top
+            }, 1000);
+            return false;
+        });
+      };
+      setTimeout(smoothsteptime, 500);
+    </script>
   </body>
-
 </html>
