@@ -83,6 +83,7 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
     font-weight: $base-font-weight;
+    color: #d35400 !important;
 }
 
 
@@ -91,20 +92,21 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: #087b64 !important;
+    color: #2c3e50 !important;
     text-decoration: none;
-    font-size: 2rem !important;
+    // font-size: 2rem !important;
+    padding-bottom: 5px;
 
     &:visited {
-        color: #087b64 !important;
-        //color: darken($brand-color, 15%);
-        //color: $text-color;
-        //color: $brand-color;
+        color: #34495e !important;
     }
 
     &:hover {
         color: $text-color !important;
-        text-decoration: none;
+        border-bottom: 5px solid #d35400;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        padding-bottom: 0px;
     }
 }
 
