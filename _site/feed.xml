@@ -6,9 +6,36 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 Sep 2017 14:21:26 -0700</pubDate>
-    <lastBuildDate>Tue, 26 Sep 2017 14:21:26 -0700</lastBuildDate>
+    <pubDate>Sat, 21 Oct 2017 17:19:09 -0700</pubDate>
+    <lastBuildDate>Sat, 21 Oct 2017 17:19:09 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Launch Sublime</title>
+        <description>&lt;p&gt;Launch Sublime: &lt;code class=&quot;highlighter-rouge&quot;&gt;subl&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Launch an entire folder: &lt;code class=&quot;highlighter-rouge&quot;&gt;subl .&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Launch a particular file: &lt;code class=&quot;highlighter-rouge&quot;&gt;subl blah.xxx&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ln -s &quot;/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl&quot; /usr/local/bin/subl
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 21 Oct 2017 17:15:00 -0700</pubDate>
+        <link>http://seimith.github.io/tip/sublime/text-editor/ternimal/2017/10/21/Launch-Sublime.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/tip/sublime/text-editor/ternimal/2017/10/21/Launch-Sublime.html</guid>
+        
+        
+        <category>tip</category>
+        
+        <category>sublime</category>
+        
+        <category>text-editor</category>
+        
+        <category>ternimal</category>
+        
+      </item>
     
       <item>
         <title>(Swift) Stop Using the Storyboard</title>
@@ -739,58 +766,6 @@ NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillDisa
         <category>swift</category>
         
         <category>troubleshoot</category>
-        
-      </item>
-    
-      <item>
-        <title>(Swift) Add Target for Click Handle</title>
-        <description>&lt;p&gt;This entry will show how you’d add a click handler to a &lt;code class=&quot;highlighter-rouge&quot;&gt;UIButton&lt;/code&gt;. It’s very easy.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-12-24-assets/SwiftAddTargetMedium.gif&quot; alt=&quot;alt text&quot; title=&quot;Clicking on a UIButton&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The first thing you want to do it make a button.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let myCoolButton = UIButton()
-myCoolButton.setTitle(&quot;Hey Click Me if You Dare&quot;, for: .normal)
-myCoolButton.frame = CGRect(x: 100, y: 100, width: 200, height: 100)
-myCoolButton.backgroundColor = UIColor.orange
-self.view.addSubview(myCoolButton)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;In this scenario, I’m just slapping it in my &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; function. You can also see that I’ve set the title and set it for the &lt;code class=&quot;highlighter-rouge&quot;&gt;.normal&lt;/code&gt; state. Then, I specified the frame’s &lt;code class=&quot;highlighter-rouge&quot;&gt;CGRect&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;backgroundColor&lt;/code&gt;. And finally, I added the button to the &lt;code class=&quot;highlighter-rouge&quot;&gt;self.view&lt;/code&gt; as a &lt;code class=&quot;highlighter-rouge&quot;&gt;subView&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;After this, add the target.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;myCoolButton.addTarget(self, action: #selector(self.handleOnClickOfMyCoolButton), for: .touchUpInside)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;target&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;self&lt;/code&gt;, the &lt;code class=&quot;highlighter-rouge&quot;&gt;action&lt;/code&gt; is the method that you want to get called, and the &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; is a &lt;code class=&quot;highlighter-rouge&quot;&gt;UIControlEvent&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Somewhere in your file, add the function &lt;code class=&quot;highlighter-rouge&quot;&gt;handleOnClickOfMyCoolButton&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func handleOnClickOfMyCoolButton () {
-	print(&quot;Hey, I was clicked!&quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;You can get the storyboard project is in &lt;a href=&quot;https://github.com/seimith/SwiftAddTarget&quot;&gt;this repo&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 26 Dec 2016 07:22:15 -0800</pubDate>
-        <link>http://seimith.github.io/swift/addtarget/click%20handle/snippet/2016/12/26/Swift-Add-Target-for-Click-Handle.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/swift/addtarget/click%20handle/snippet/2016/12/26/Swift-Add-Target-for-Click-Handle.html</guid>
-        
-        
-        <category>swift</category>
-        
-        <category>addTarget</category>
-        
-        <category>click handle</category>
-        
-        <category>snippet</category>
         
       </item>
     
