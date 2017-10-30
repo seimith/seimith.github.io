@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Launch Sublime
+title:  Launch Sublime in Terminal
 date:   2017-10-21 17:15:00 -0700
 categories: tip sublime text-editor ternimal
 ---
