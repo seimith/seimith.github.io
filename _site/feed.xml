@@ -6,9 +6,35 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 04 Nov 2017 21:19:05 -0700</pubDate>
-    <lastBuildDate>Sat, 04 Nov 2017 21:19:05 -0700</lastBuildDate>
+    <pubDate>Sat, 11 Nov 2017 15:07:28 -0800</pubDate>
+    <lastBuildDate>Sat, 11 Nov 2017 15:07:28 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>So I Started Using VIM</title>
+        <description>&lt;p&gt;So I recently started using VIM and now I can’t stop typing &lt;code class=&quot;highlighter-rouge&quot;&gt;:q&lt;/code&gt; whenever I want to close random browser windows.&lt;/p&gt;
+
+&lt;p&gt;Here are the VIM plugins I’ve been using:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/junegunn/vim-plug&quot;&gt;VIM Plug&lt;/a&gt; - for adding VIM plugins&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/scrooloose/nerdtree&quot;&gt;Nerd Tree&lt;/a&gt; - VIM tree view&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Xuyuanp/nerdtree-git-plugin&quot;&gt;Nerd Tree Git&lt;/a&gt; - git plugin to view git status in tree view&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/mattn/emmet-vim/&quot;&gt;Emmet&lt;/a&gt; - for fast HTML &amp;amp; CSS&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 11 Nov 2017 13:02:00 -0800</pubDate>
+        <link>http://seimith.github.io/vim/snippet/2017/11/11/so-I-started-using-vim.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/vim/snippet/2017/11/11/so-I-started-using-vim.html</guid>
+        
+        
+        <category>vim</category>
+        
+        <category>snippet</category>
+        
+      </item>
     
       <item>
         <title>(Swift) Programmatically Segue</title>
@@ -685,86 +711,6 @@ Sound(name: &quot;NameOfMyAudioFile&quot;, type: &quot;wav&quot;).play()
         <category>Tinkerine</category>
         
         <category>DittoPro</category>
-        
-      </item>
-    
-      <item>
-        <title>(Swift) Keyboard Visibility</title>
-        <description>&lt;p&gt;This post is about doing things when your keyboard is visible or not. You might want to have some animation when your keyboard comes into view, or you might want an alert to pop up. Whatever it may be, here’s a snippet for that.&lt;/p&gt;
-
-&lt;p&gt;In the example below, I just have a &lt;code class=&quot;highlighter-rouge&quot;&gt;UITextView&lt;/code&gt; and a &lt;code class=&quot;highlighter-rouge&quot;&gt;UIButton&lt;/code&gt; set up so that you can see the keyboard appear and disappear.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-07-assets/keyboardLarge.gif&quot; alt=&quot;Keyboard toggling&quot; title=&quot;Keyboard toggling&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Swift 3.0&lt;/li&gt;
-  &lt;li&gt;Xcode Version 8.0&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 1: Set up the UITextView&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let myCoolTextArea = UITextView()
-myCoolTextArea.backgroundColor = UIColor.gray
-myCoolTextArea.frame = CGRect(x: 0, y: 20, width: self.view.frame.width, height: 300)
-myCoolTextArea.text = &quot;This is a textarea! :)&quot;
-self.view.addSubview(myCoolTextArea)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 2: Set up a UIButton to dismiss your keyboard&lt;/strong&gt;
-In this step I &lt;code class=&quot;highlighter-rouge&quot;&gt;add a target&lt;/code&gt; to a function named &lt;code class=&quot;highlighter-rouge&quot;&gt;dismissMyKeyboard&lt;/code&gt; to hide my keyboard.&lt;/p&gt;
-
-&lt;p&gt;Check out my previous post on how to add a target &lt;a href=&quot;http://seimith.github.io/swift/addtarget/click%20handle/snippet/2016/12/26/Swift-Add-Target-for-Click-Handle.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let myButtonToDismissKeyboard = UIButton()
-myButtonToDismissKeyboard.backgroundColor = UIColor.gray
-myButtonToDismissKeyboard.frame = CGRect(x: 0, y: 350, width: self.view.frame.width, height: 30)
-myButtonToDismissKeyboard.setTitle(&quot;Dimiss Button&quot;, for: .normal)
-myButtonToDismissKeyboard.addTarget(self, action: #selector(dismissMyKeyboard), for: .touchUpInside)
-self.view.addSubview(myButtonToDismissKeyboard)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;**Step 3: Fuctions **&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func keyboardWillAppear (_ notification: NSNotification) {
-    print(&quot;=== keyboardWillAppear&quot;)
-}
-
-func keyboardWillDisappear (_ notification: NSNotification) {
-    print(&quot;=== keyboardWillDisappear&quot;)
-}
-
-func dismissMyKeyboard () {
-    self.view.endEditing(true)
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 4: Add Observers&lt;/strong&gt;
-This is similar to adding targets. In order for my functions &lt;code class=&quot;highlighter-rouge&quot;&gt;and&lt;/code&gt; to be observed and then get called, I need to add the following to my &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; function.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillAppear), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-
-NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillDisappear), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;You can get the storyboard project is in &lt;a href=&quot;https://github.com/seimith/SwiftKeyboardVisibility&quot;&gt;this repo&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 07 Jan 2017 07:22:15 -0800</pubDate>
-        <link>http://seimith.github.io/swift/keyboard/snippet/2017/01/07/Swift-Keyboard-Visibility.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/swift/keyboard/snippet/2017/01/07/Swift-Keyboard-Visibility.html</guid>
-        
-        
-        <category>swift</category>
-        
-        <category>keyboard</category>
-        
-        <category>snippet</category>
         
       </item>
     
