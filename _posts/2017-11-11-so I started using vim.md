@@ -15,7 +15,7 @@ Here are the VIM plugins I've been using:
 
 [Nerd Tree][NERD TREE] - VIM tree view
 
-[NERD TREE]: https://github.com/scrooloose/nerdtree 
+[NERD TREE]: https://github.com/scrooloose/nerdtree
 
 [Nerd Tree Git][NERD TREE GIT] - git plugin to view git status in tree view
 
@@ -25,3 +25,24 @@ Here are the VIM plugins I've been using:
 
 [EMMET]: https://github.com/mattn/emmet-vim/
 
+And some basic VIM commands that I think everybody needs to know! :-)
+
+`:q` - to close, "quit"
+
+`:w` - to save, "write"
+
+`:wq` - to save and then close
+
+`:q!` - to force close, "quit", without saving, "writing"
+
+`:u` - to "undo" your last command
+
+`:sort` - to sort
+
+`v` - to visually select
+
+`d` - to "delete"
+
+`y` - to copy, "yank"
+
+`p` - to "past"

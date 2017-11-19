@@ -6,8 +6,8 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 11 Nov 2017 15:07:28 -0800</pubDate>
-    <lastBuildDate>Sat, 11 Nov 2017 15:07:28 -0800</lastBuildDate>
+    <pubDate>Sat, 18 Nov 2017 19:44:42 -0800</pubDate>
+    <lastBuildDate>Sat, 18 Nov 2017 19:44:42 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -24,6 +24,27 @@
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/mattn/emmet-vim/&quot;&gt;Emmet&lt;/a&gt; - for fast HTML &amp;amp; CSS&lt;/p&gt;
 
+&lt;p&gt;And some basic VIM commands that I think everybody needs to know! :-)&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:q&lt;/code&gt; - to close, “quit”&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:w&lt;/code&gt; - to save, “write”&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt; - to save and then close&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:q!&lt;/code&gt; - to force close, “quit”, without saving, “writing”&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:u&lt;/code&gt; - to “undo” your last command&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:sort&lt;/code&gt; - to sort&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v&lt;/code&gt; - to visually select&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; - to “delete”&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt; - to copy, “yank”&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;p&lt;/code&gt; - to “past”&lt;/p&gt;
 </description>
         <pubDate>Sat, 11 Nov 2017 13:02:00 -0800</pubDate>
         <link>http://seimith.github.io/vim/snippet/2017/11/11/so-I-started-using-vim.html</link>
