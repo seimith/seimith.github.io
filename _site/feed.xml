@@ -6,9 +6,260 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Nov 2017 19:02:30 -0800</pubDate>
-    <lastBuildDate>Sun, 19 Nov 2017 19:02:30 -0800</lastBuildDate>
+    <pubDate>Sat, 25 Nov 2017 14:36:00 -0800</pubDate>
+    <lastBuildDate>Sat, 25 Nov 2017 14:36:00 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Setting up React, Hot Reloader, and all that jazz</title>
+        <description>&lt;p&gt;npm init
+  =&amp;gt; fill out the items for your app&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install --save react
+  =&amp;gt; This is the react framework
+npm install --save react-dom
+  =&amp;gt; ???
+  =&amp;gt; The react-dom package provides DOM-specific methods that can be used at the top level of your app and as an escape hatch to get outside of the React model if you need to. Most of your components should not need to use this module.
+npm install --save-dev babel-core
+  =&amp;gt;
+npm install --save-dev babel-cli
+  =&amp;gt;
+npm install --save-dev babel-loader
+  =&amp;gt;
+npm install --save-dev babel-preset-es2015
+  =&amp;gt;
+npm install --save-dev babel-preset-react
+  =&amp;gt;
+npm install --save-dev react-hot-loader
+  =&amp;gt;
+npm install --save-dev webpack
+  =&amp;gt; Pack up all of our stuff!
+//npm install --save-dev webpack-dev-middleware
+//npm install --save-dev webpack-hot-middleware
+npm install --save webpack-dev-server
+  =&amp;gt;
+npm install css-loader --save-dev
+  =&amp;gt;
+npm install style-loader --save-dev
+  =&amp;gt;
+npm install sass-loader --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;my &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt; should look like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;weebly_online_commerce&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0.0.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;description&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Weebly Trial Project&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;main&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;index.js&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;webpack-dev-server --config webpack.config.js&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;build&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;webpack --config ./webpack.deployment.config.js --progress --colors&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;author&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Smith Suth&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;license&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ISC&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;dependencies&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;express&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^4.15.4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;react&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^15.6.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;react-dom&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^15.6.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;webpack-dev-server&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^2.7.1&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;devDependencies&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;babel-cli&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^6.26.0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;babel-core&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^6.26.0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;babel-loader&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^7.1.2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;babel-preset-es2015&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^6.24.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;babel-preset-react&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^6.24.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;react-hot-loader&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^1.3.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;webpack&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^3.5.5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;webpack-dev-middleware&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^1.12.0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;webpack-hot-middleware&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^2.18.2&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;```&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+ &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+ &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;the&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;following&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`script`:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+ &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;```&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;npm build &amp;amp;&amp;amp; node dist/bundle.js&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;dev-start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;node dist/bundle.js&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;build&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;webpack --config ./webpack.deployment.config.js --progress --colors&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;```&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+ &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;mkdir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;touch&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;app/index.js&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;touch&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;index.html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;touch&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;webpack.config.js&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;touch&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;webpack.deployment.config.js&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+ &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;my&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`webpack.config.js`&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;should&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;look&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;like&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;this:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;var path = require(‘path’);
+var webpack = require(‘webpack’);&lt;/p&gt;
+
+&lt;p&gt;module.exports = {
+  entry: [
+    ‘./app/index.js’
+  ],
+  output: {
+    path: __dirname,
+    filename: ‘app.js’,
+    publicPath: ‘/app/assets/’
+  },
+  module: {
+    loaders: [
+      {
+        test: /.jsx?$/,
+        loader: ‘babel-loader’,
+        include: path.join(__dirname, ‘app’),
+        exclude: /node_modules/,
+        query: {
+          presets: [‘es2015’, ‘react’]
+        }
+      },
+      {
+        test: /.scss$/,
+        loader: ‘style-loader!css-loader!sass-loader’
+      }
+    ]
+  },
+};&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+---
+
+my `webpack.deployment.config.js` should look like this:
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;const path = require(‘path’);
+const webpack = require(‘webpack’);&lt;/p&gt;
+
+&lt;p&gt;module.exports = {
+  devtool: ‘source-map’,&lt;/p&gt;
+
+&lt;p&gt;entry: [
+    ‘./app/index.js’
+  ],
+  output: {
+    path: path.join(__dirname, ‘dist’),
+    filename: ‘app.js’,
+    publicPath: ‘/dist/’
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compress: {
+        warnings: false
+      }
+    })
+  ],
+  module: {
+    loaders: [{
+      test: /.jsx?$/,
+      loader: ‘babel-loader’,
+      include: path.join(__dirname, ‘app’),
+      exclude: /node_modules/,
+      query: {
+        presets: [‘es2015’, ‘react’]
+      }
+    }]
+  },
+};
+```&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;my &lt;code class=&quot;highlighter-rouge&quot;&gt;app/index.js&lt;/code&gt; should looke like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React from &#39;react&#39;;
+import ReactDOM from &#39;react-dom&#39;;
+
+import Component from &#39;./Component.jsx&#39;;
+
+ReactDOM.render(&amp;lt;Component/&amp;gt;, document.getElementById(&#39;root&#39;));
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;my &lt;code class=&quot;highlighter-rouge&quot;&gt;app/Component.jsx&lt;/code&gt; should looke like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React, { Component } from &#39;react&#39;;
+
+export default class MyComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {}
+  }
+
+  render() {
+    return (
+      &amp;lt;div&amp;gt;
+        Hello, Harry!
+      &amp;lt;/div&amp;gt;
+    )
+  }
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;my &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; should look like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Weebly Trail Project&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IE=edge,chrome=1&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;dist/bundle.css&quot;&amp;gt; --&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;root&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://localhost:8080/app/assets/app.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 25 Nov 2017 08:11:00 -0800</pubDate>
+        <link>http://seimith.github.io/react/hot-reloader/babel/loaders/express/es2015/2017/11/25/React-+-Hot-Reloader.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/react/hot-reloader/babel/loaders/express/es2015/2017/11/25/React-+-Hot-Reloader.html</guid>
+        
+        
+        <category>react</category>
+        
+        <category>hot-reloader</category>
+        
+        <category>babel</category>
+        
+        <category>loaders</category>
+        
+        <category>express</category>
+        
+        <category>es2015</category>
+        
+      </item>
     
       <item>
         <title>So I Started Using VIM</title>
@@ -655,83 +906,6 @@ Sound(name: &quot;NameOfMyAudioFile&quot;, type: &quot;wav&quot;).play()
         <category>chrome</category>
         
         <category>extension</category>
-        
-      </item>
-    
-      <item>
-        <title>3D Printing</title>
-        <description>&lt;p&gt;I recently began fiddling around with 3D printing. In hind site, I should’ve started about a year ago because I had access to a 3D printer. Unfortunately, life happened and I never got around to it. Until now. :)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/13Large.gif&quot; alt=&quot;Animated image of Tinkerine DittoPro printing&quot; title=&quot;Animated image of Tinkerine DittoPro printing&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The 3D printing machines that I have access to are the &lt;code class=&quot;highlighter-rouge&quot;&gt;FormLabs Form 1+&lt;/code&gt; and the &lt;code class=&quot;highlighter-rouge&quot;&gt;Tinkerine DittoPro&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;FormLabs Form 1+&lt;/code&gt; machine requires a UV curing resin. This means that there is a detachable well that holds the liquid (this can potentially lead to hot mess if you’re not careful enough). Also, the fumes are moderately strong so there is a protective case around the machine.&lt;/p&gt;
-
-&lt;p&gt;The actual printing takes place upside down. This sounds cool, however, this can also lead to some potential problems if you want to print out a heavier object. What happens during this process is that the resin cures via UV lasers as the base of the printing platform and the solids adhere to an arm that slowly moves up. So as the arm moves up, the item that’s printing gets suspended in the air.&lt;/p&gt;
-
-&lt;p&gt;When you’ve completed your printing, you have to physically remove the base of the arm and then pry off your item. At this point, your item might still be malleable and it’ll definitely be goopy from residual resin. This process is definitely not dry. After you pry it off, which can be rather difficult, you’ll need to let it sit in a 91% alcohol bath for a few more minutes (some more fumes).&lt;/p&gt;
-
-&lt;p&gt;I don’t have any videos or images of it because it was messy for me, but you can definitely Google it. The printing is pretty slow because of the curing that occurs inside of the resin tank.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;Tinkerine DittoPro&lt;/code&gt;, on the other hand, requires a malleable filament (imagine something like a glue gun). You feed the filament, or “ink”, into the machine and the “ink” gets extruded out and guided into the shape of your item via some special arm at the top of the machine.&lt;/p&gt;
-
-&lt;p&gt;I personally found the Tinkerine DittoPro to be very intuitive to use because there were no extra steps to it. All I had to do was load my &lt;code class=&quot;highlighter-rouge&quot;&gt;.g&lt;/code&gt; file via an SD card and print.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;How to 3D Print on FormLab 1+ or Tinkerine DittoPro&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 1: Create vector (ex Sketch)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/1.png&quot; alt=&quot;Example of Sketch being used for vector drawing&quot; title=&quot;Example of Sketch being used for vector drawing&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Step 2: Save vector as an .esp file&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/2.png&quot; alt=&quot;Example of exporting vectors as an .esp file&quot; title=&quot;Example of exporting vectors as an .esp file&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Step 3: Open 3D software (ex Rhino 5) and import your .esp file&lt;/p&gt;
-
-&lt;p&gt;Step 4: Convert your imported vector into a layer and then extrude, bool diff, and/or union&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/3.png&quot; alt=&quot;Example of using Rhino 5 to transform vectors into surfaces&quot; title=&quot;Example of using Rhino 5 to transform vectors into surfaces&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/4.png&quot; alt=&quot;Example of using Rhino 5 to extrude surfaces&quot; title=&quot;Example of using Rhino 5 to extrude surfaces&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/7.png&quot; alt=&quot;Example of using Rhino 5 to preform a boolean diff&quot; title=&quot;Example of using Rhino 5 to preform a boolean diff&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/6.png&quot; alt=&quot;Example of using Rhino 5 to preform a boolean diff&quot; title=&quot;Example of using Rhino 5 to preform a boolean diff&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/7.png&quot; alt=&quot;Example of using Rhino 5 to preform a boolean diff&quot; title=&quot;Example of using Rhino 5 to preform a boolean diff&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/8.gif&quot; alt=&quot;Example of using Rhino 5 to preform a boolean diff&quot; title=&quot;Example of using Rhino 5 to preform a boolean diff&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Step 5: Select your object and export as .stl&lt;/p&gt;
-
-&lt;p&gt;Step 6: Import your .stl file in 3D printing program (ex Tinkerine DittoPro or FormLabs PreForm)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/10.png&quot; alt=&quot;Tinkerine DittoPro printing software&quot; title=&quot;Tinkerine DittoPro printing software&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/11.png&quot; alt=&quot;FormLabs PreForm printing software&quot; title=&quot;FormLabs PreForm printing software&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Step 7: Either print via the FormLabs Form 1+ (connect with usb) or save your project as a &lt;code class=&quot;highlighter-rouge&quot;&gt;.g&lt;/code&gt; file and put it on an SD card that can be plugged into the Tinkerine DittoPro&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-13-assets/13Large.gif&quot; alt=&quot;Animated image of Tinkerine DittoPro printing&quot; title=&quot;Animated image of Tinkerine DittoPro printing&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 13 Jan 2017 07:22:15 -0800</pubDate>
-        <link>http://seimith.github.io/3d/printing/formlabs/formlabs%20form%201+/tinkerine/dittopro/2017/01/13/3D-Printing.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/3d/printing/formlabs/formlabs%20form%201+/tinkerine/dittopro/2017/01/13/3D-Printing.html</guid>
-        
-        
-        <category>3D</category>
-        
-        <category>printing</category>
-        
-        <category>FormLabs</category>
-        
-        <category>FormLabs Form 1+</category>
-        
-        <category>Tinkerine</category>
-        
-        <category>DittoPro</category>
         
       </item>
     
