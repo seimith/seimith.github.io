@@ -49,7 +49,7 @@ my `package.json` should look like this:
 {
   "name": "weebly_online_commerce",
   "version": "0.0.1",
-  "description": "Weebly Trial Project",
+  "description": "My Cool Project",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js",
