@@ -12,32 +12,20 @@ npm init
 
 ```
 npm install --save react
-  => This is the react framework
+  => This is React, duh.
 npm install --save react-dom
-  => ???
   => The react-dom package provides DOM-specific methods that can be used at the top level of your app and as an escape hatch to get outside of the React model if you need to. Most of your components should not need to use this module.
 npm install --save-dev babel-core
-  =>
 npm install --save-dev babel-cli
-  =>
 npm install --save-dev babel-loader
-  =>
 npm install --save-dev babel-preset-es2015
-  =>
 npm install --save-dev babel-preset-react
-  =>
 npm install --save-dev react-hot-loader
-  =>
 npm install --save-dev webpack
   => Pack up all of our stuff!
-//npm install --save-dev webpack-dev-middleware
-//npm install --save-dev webpack-hot-middleware
 npm install --save webpack-dev-server
-  =>
 npm install css-loader --save-dev
-  =>
 npm install style-loader --save-dev
-  =>
 npm install sass-loader --save-dev
 ```
 
@@ -47,7 +35,7 @@ my `package.json` should look like this:
 
 ```
 {
-  "name": "weebly_online_commerce",
+  "name": "my_cool_project",
   "version": "0.0.1",
   "description": "My Cool Project",
   "main": "index.js",
