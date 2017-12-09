@@ -6,9 +6,46 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 02 Dec 2017 15:55:39 -0800</pubDate>
-    <lastBuildDate>Sat, 02 Dec 2017 15:55:39 -0800</lastBuildDate>
+    <pubDate>Sat, 09 Dec 2017 13:39:01 -0800</pubDate>
+    <lastBuildDate>Sat, 09 Dec 2017 13:39:01 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Copy Text With JS</title>
+        <description>&lt;p&gt;A whiles ago I wanted to spike a copy and paste. I found this jewel somewhere:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var element = this.parentView.get(&#39;element&#39;)
+var snippet = element.getElementsByClassName(&#39;snippet&#39;)
+var selection = window.getSelection();
+
+if(selection.rangeCount &amp;gt; 0) selection.removeAllRanges();
+
+for(var i = 0; i &amp;lt; snippet.length; i++) {
+  var range = document.createRange();
+  range.selectNode(snippet[i]);
+  selection.addRange(range);
+
+  document.execCommand(&quot;copy&quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 09 Dec 2017 00:33:45 -0800</pubDate>
+        <link>http://seimith.github.io/javascript,/snippet,/copy,/paste,/ember/2017/12/09/Copy-Text-w-JS.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/javascript,/snippet,/copy,/paste,/ember/2017/12/09/Copy-Text-w-JS.html</guid>
+        
+        
+        <category>JavaScript,</category>
+        
+        <category>snippet,</category>
+        
+        <category>copy,</category>
+        
+        <category>paste,</category>
+        
+        <category>ember</category>
+        
+      </item>
     
       <item>
         <title>Setting up React, Hot Reloader, and all that jazz</title>
@@ -870,30 +907,6 @@ Sound(name: &quot;NameOfMyAudioFile&quot;, type: &quot;wav&quot;).play()
         <category>snippet</category>
         
         <category>AudioToolbox</category>
-        
-      </item>
-    
-      <item>
-        <title>(App/Extension) The Great Suspender</title>
-        <description>&lt;p&gt;I just started using this Chrome extension. It’s called &lt;code class=&quot;highlighter-rouge&quot;&gt;The Great Suspender&lt;/code&gt; and it timesout, or suspends, idle tabs in your browser to save memory and system resources. This is super great if you’re one of those people who have hundreds of tabs open but never seem to be able to get rid of them after days…&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-01-14-assets/img1.png&quot; alt=&quot;The great suspender screenshot&quot; title=&quot;The great suspender screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Check out &lt;a href=&quot;https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg?hl=en&quot;&gt;The Great Suspender&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 14 Jan 2017 02:33:33 -0800</pubDate>
-        <link>http://seimith.github.io/app/tabs/chrome/extension/2017/01/14/The-Great-Suspender.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/app/tabs/chrome/extension/2017/01/14/The-Great-Suspender.html</guid>
-        
-        
-        <category>app</category>
-        
-        <category>tabs</category>
-        
-        <category>chrome</category>
-        
-        <category>extension</category>
         
       </item>
     
