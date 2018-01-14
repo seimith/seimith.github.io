@@ -2,7 +2,7 @@
 layout: post
 title:  Setting up React, Hot Reloader, and all that jazz
 date:   2017-11-25 9:11:00 -0700
-categories: [react, hot-reloader, babel, loaders, express, es2015]
+categories: react hot-reloader babel loaders express es2015
 ---
 
 npm init

@@ -2,7 +2,7 @@
 layout: post
 title:  Copy Text With JS
 date:   2017-12-09 1:33:45 -0700
-categories: JavaScript, snippet, copy, paste, ember
+categories: JavaScript snippet copy paste ember
 ---
 
 A whiles ago I wanted to spike a copy and paste. I found this jewel somewhere:

@@ -6,9 +6,76 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 09 Dec 2017 13:39:01 -0800</pubDate>
-    <lastBuildDate>Sat, 09 Dec 2017 13:39:01 -0800</lastBuildDate>
+    <pubDate>Sat, 13 Jan 2018 19:12:55 -0800</pubDate>
+    <lastBuildDate>Sat, 13 Jan 2018 19:12:55 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Align Divs on a Line</title>
+        <description>&lt;p&gt;A few days ago I had to make a few &lt;code class=&quot;highlighter-rouge&quot;&gt;divs&lt;/code&gt; of varying height. Unfortunately, they were looking a little wonky because they weren’t aligning. I made them &lt;code class=&quot;highlighter-rouge&quot;&gt;display: inline-block&lt;/code&gt;, but what’s going on?&lt;/p&gt;
+
+&lt;p&gt;Making my &lt;code class=&quot;highlighter-rouge&quot;&gt;divs&lt;/code&gt; display as inline-block was to make my &lt;code class=&quot;highlighter-rouge&quot;&gt;divs&lt;/code&gt; appear on the same line. However, it was not enough to make them straight.&lt;/p&gt;
+
+&lt;p&gt;TLDR; I had to align my divs, and below are two ways to do so!&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;display: inline-block;
+vertical-align: middle;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;display: inline-block;
+white-space: nowrap;
+overflow-x: auto;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 13 Jan 2018 18:10:33 -0800</pubDate>
+        <link>http://seimith.github.io/html/css/divs/snippet/styles/2018/01/13/Align-Divs-on-a-Line.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/html/css/divs/snippet/styles/2018/01/13/Align-Divs-on-a-Line.html</guid>
+        
+        
+        <category>html</category>
+        
+        <category>css</category>
+        
+        <category>divs</category>
+        
+        <category>snippet</category>
+        
+        <category>styles</category>
+        
+      </item>
+    
+      <item>
+        <title>Troubleshoot ESLint $ Errors</title>
+        <description>&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;error  &#39;$&#39; is not defined  no-undef
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;env: {
+  browser: true,
+  es6: true,
+  jquery: true &amp;lt;== You need this.
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 16 Dec 2017 12:15:33 -0800</pubDate>
+        <link>http://seimith.github.io/eslint/javascript/troubleshoot/error/tip/2017/12/16/ESLint-$-Errors.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/eslint/javascript/troubleshoot/error/tip/2017/12/16/ESLint-$-Errors.html</guid>
+        
+        
+        <category>eslint</category>
+        
+        <category>javascript</category>
+        
+        <category>troubleshoot</category>
+        
+        <category>error</category>
+        
+        <category>tip</category>
+        
+      </item>
     
       <item>
         <title>Copy Text With JS</title>
@@ -31,17 +98,17 @@ for(var i = 0; i &amp;lt; snippet.length; i++) {
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 09 Dec 2017 00:33:45 -0800</pubDate>
-        <link>http://seimith.github.io/javascript,/snippet,/copy,/paste,/ember/2017/12/09/Copy-Text-w-JS.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/javascript,/snippet,/copy,/paste,/ember/2017/12/09/Copy-Text-w-JS.html</guid>
+        <link>http://seimith.github.io/javascript/snippet/copy/paste/ember/2017/12/09/Copy-Text-w-JS.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/javascript/snippet/copy/paste/ember/2017/12/09/Copy-Text-w-JS.html</guid>
         
         
-        <category>JavaScript,</category>
+        <category>JavaScript</category>
         
-        <category>snippet,</category>
+        <category>snippet</category>
         
-        <category>copy,</category>
+        <category>copy</category>
         
-        <category>paste,</category>
+        <category>paste</category>
         
         <category>ember</category>
         
@@ -776,137 +843,6 @@ class ViewController: UIViewController, UITextViewDelegate {
         <category>handler</category>
         
         <category>snippet</category>
-        
-      </item>
-    
-      <item>
-        <title>(Swift) Creating a UITableView</title>
-        <description>&lt;p&gt;Here’s a snippet on how to make a &lt;code class=&quot;highlighter-rouge&quot;&gt;UITableView&lt;/code&gt;. Check out the code below!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Swift 3.0&lt;/li&gt;
-  &lt;li&gt;Xcode Version 8.0&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import UIKit
-
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    var myCoolTableView = UITableView()
-    var myCoolIdentifier = &quot;myCoolCell&quot;
-    let items : [String] = [
-        &quot;Item Uno&quot;,
-        &quot;Item Deux&quot;,
-        &quot;Item Three&quot;,
-        &quot;Item Four&quot;,
-        &quot;Item Cinco&quot;
-    ]
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        // Get main screen bounds
-        let screenSize: CGRect = UIScreen.main.bounds
-        let screenWidth = screenSize.width
-        let screenHeight = screenSize.height
-
-        myCoolTableView.dataSource = self
-        myCoolTableView.delegate = self
-        myCoolTableView.register(UITableViewCell.self, forCellReuseIdentifier: myCoolIdentifier)
-
-        myCoolTableView.frame = CGRect(x: 0, y: 25, width: screenWidth, height: screenHeight);
-        self.view.addSubview(myCoolTableView)
-    }
-
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&amp;gt; Int {
-        return items.count
-    }
-
-    func tableView(_ cellForRowAttableView: UITableView, cellForRowAt indexPath: IndexPath) -&amp;gt; UITableViewCell {
-        let cell = myCoolTableView.dequeueReusableCell(withIdentifier: myCoolIdentifier, for: indexPath)
-        cell.textLabel?.text = self.items[indexPath.row]
-        return cell
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(&quot;========== Selected:&quot;, (items[indexPath.row]), &quot;@&quot;, indexPath.row)
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Sat, 28 Jan 2017 02:33:33 -0800</pubDate>
-        <link>http://seimith.github.io/swift/uitableview/snippet/2017/01/28/Swift-Creating-a-UITableView.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/swift/uitableview/snippet/2017/01/28/Swift-Creating-a-UITableView.html</guid>
-        
-        
-        <category>swift</category>
-        
-        <category>UITableView</category>
-        
-        <category>snippet</category>
-        
-      </item>
-    
-      <item>
-        <title>(Swift) Adding Audio</title>
-        <description>&lt;p&gt;Utilize &lt;code class=&quot;highlighter-rouge&quot;&gt;AudioToolbox&lt;/code&gt; and make a class, &lt;code class=&quot;highlighter-rouge&quot;&gt;Sound&lt;/code&gt;, to pass in the filename of you audio file and it’s type.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Swift 3.0&lt;/li&gt;
-  &lt;li&gt;Xcode Version 8.0&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import AudioToolbox
-
-class Sound {
-
-    var soundEffect: SystemSoundID = 0
-    init (name: String, type: String) {
-        let path  = Bundle.main.path(forResource: name, ofType: type)!
-        let pathURL = NSURL(fileURLWithPath: path)
-        AudioServicesCreateSystemSoundID(pathURL as CFURL, &amp;amp;soundEffect)
-    }
-
-    func play() {
-        AudioServicesPlaySystemSound(soundEffect)
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Then, call it like so:
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-Sound(name: &quot;NameOfMyAudioFile&quot;, type: &quot;wav&quot;).play()
-&lt;/code&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 28 Jan 2017 02:33:33 -0800</pubDate>
-        <link>http://seimith.github.io/swift/audio/snippet/audiotoolbox/2017/01/28/Swift-Adding-Audio.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/swift/audio/snippet/audiotoolbox/2017/01/28/Swift-Adding-Audio.html</guid>
-        
-        
-        <category>swift</category>
-        
-        <category>audio</category>
-        
-        <category>snippet</category>
-        
-        <category>AudioToolbox</category>
         
       </item>
     
