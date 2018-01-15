@@ -17,7 +17,7 @@ cat <<EOF > "./_posts/${TodaysDate}-${str}.md"
 ---
 layout: post
 title:  $str
-date:   2017-MONTH(MM)-DAY(DD) 3:33:33 -0700
+date:   2018-MONTH(MM)-DAY(DD) 3:33:33 -0700
 categories: jekyll update
 ---
 
