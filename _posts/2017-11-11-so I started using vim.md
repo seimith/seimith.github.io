@@ -45,4 +45,4 @@ And some basic VIM commands that I think everybody needs to know! :-)
 
 `y` - to copy, "yank"
 
-`p` - to "past"
+`p` - to "paste"

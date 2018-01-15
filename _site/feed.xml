@@ -6,9 +6,37 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 13 Jan 2018 19:12:55 -0800</pubDate>
-    <lastBuildDate>Sat, 13 Jan 2018 19:12:55 -0800</lastBuildDate>
+    <pubDate>Mon, 15 Jan 2018 08:30:17 -0800</pubDate>
+    <lastBuildDate>Mon, 15 Jan 2018 08:30:17 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Transform camelCase a Camel Case with Regex</title>
+        <description>&lt;p&gt;I’m quite terrible at regex, but lately I figured that I actually really need to learn it.&lt;/p&gt;
+
+&lt;p&gt;Below is a snippet for transforming “camelCase” strings into “Camel Case” strings.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var camelCaseWord = &quot;camelCaseWord&quot;;
+camelCaseWord.replace(/([A-Z])/g, &#39; $1&#39;).replace(/^[a-z]/g, function(firstLetter) {
+  return firstLetter.toUpperCase()
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 15 Jan 2018 07:23:33 -0800</pubDate>
+        <link>http://seimith.github.io/snippet/regex/camelcase/javascript/2018/01/15/Transform-camelCase-a-Camel-Case-with-Regex.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/snippet/regex/camelcase/javascript/2018/01/15/Transform-camelCase-a-Camel-Case-with-Regex.html</guid>
+        
+        
+        <category>snippet</category>
+        
+        <category>regex</category>
+        
+        <category>camelCase</category>
+        
+        <category>javascript</category>
+        
+      </item>
     
       <item>
         <title>Align Divs on a Line</title>
@@ -387,7 +415,7 @@ export default class MyComponent extends Component {
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt; - to copy, “yank”&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;p&lt;/code&gt; - to “past”&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;p&lt;/code&gt; - to “paste”&lt;/p&gt;
 </description>
         <pubDate>Sat, 11 Nov 2017 13:02:00 -0800</pubDate>
         <link>http://seimith.github.io/vim/snippet/2017/11/11/so-I-started-using-vim.html</link>
@@ -783,66 +811,6 @@ Layout.setupConstraint(forView: myYellowUIView,
         <category>stacking</category>
         
         <category>uiview</category>
-        
-      </item>
-    
-      <item>
-        <title>(Swift) Detect Typing</title>
-        <description>&lt;p&gt;Here’s a snippet on how to detect typing on your &lt;code class=&quot;highlighter-rouge&quot;&gt;Swift&lt;/code&gt; app. It’s pretty simple because we’re utilizing the &lt;code class=&quot;highlighter-rouge&quot;&gt;UITextViewDelegate&lt;/code&gt; delegate. Aka, built in success - thank you &lt;code class=&quot;highlighter-rouge&quot;&gt;Swift&lt;/code&gt;!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Swift 3.0&lt;/li&gt;
-  &lt;li&gt;Xcode Version 8.0&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This snippet is pretty short. See below for some code that will print out text when you type.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import UIKit
-
-class ViewController: UIViewController, UITextViewDelegate {
-
-  // 1. Creating a UITextView
-  let myTextArea = UITextView(frame: CGRect(x: 30, y: 30, width: 200, height: 200))
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    // 2. You need this; setting delegate to self
-    myTextArea.delegate = self
-
-    // 3. Adding color and adding my UITextView to my controller&#39;s view
-    myTextArea.backgroundColor = UIColor.gray
-    self.view.addSubview(myTextArea)
-  }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
-  // 4. Detection; printing out the text typed
-  func textViewDidChange (_ textView: UITextView) {
-    // Your code here.
-    print(&quot;===== Text:&quot;, textView.text)
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Sat, 28 Jan 2017 02:33:33 -0800</pubDate>
-        <link>http://seimith.github.io/swift/keyboard/handler/snippet/2017/01/28/Swift-Detect-Keyboard-Typing.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/swift/keyboard/handler/snippet/2017/01/28/Swift-Detect-Keyboard-Typing.html</guid>
-        
-        
-        <category>swift</category>
-        
-        <category>keyboard</category>
-        
-        <category>handler</category>
-        
-        <category>snippet</category>
         
       </item>
     
