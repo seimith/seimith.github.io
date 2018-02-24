@@ -6,9 +6,41 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 Jan 2018 08:32:15 -0800</pubDate>
-    <lastBuildDate>Mon, 15 Jan 2018 08:32:15 -0800</lastBuildDate>
+    <pubDate>Sat, 24 Feb 2018 11:20:07 -0800</pubDate>
+    <lastBuildDate>Sat, 24 Feb 2018 11:20:07 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Command to Compress and Password Protect</title>
+        <description>&lt;p&gt;Lately I’ve been needing to send some folks password protected zip files. Below is a short and basic snippet that you can use to run in your terminal.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;zip -er newFOLDER oldFolder
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Once your run the above snippet, enter a password.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;oldFolder&lt;/code&gt; is the folder with your contents&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;newFOLDER&lt;/code&gt; is the name of the outputed &lt;code class=&quot;highlighter-rouge&quot;&gt;zip&lt;/code&gt; file of this command&lt;/p&gt;
+
+&lt;p&gt;The output  will be &lt;code class=&quot;highlighter-rouge&quot;&gt;newFOLDER.zip&lt;/code&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 24 Feb 2018 02:33:33 -0800</pubDate>
+        <link>http://seimith.github.io/terminal/command/snippet/zip/2018/02/24/Command-to-Compress-and-Password-Protect.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/terminal/command/snippet/zip/2018/02/24/Command-to-Compress-and-Password-Protect.html</guid>
+        
+        
+        <category>terminal</category>
+        
+        <category>command</category>
+        
+        <category>snippet</category>
+        
+        <category>zip</category>
+        
+      </item>
     
       <item>
         <title>Transform camelCase a Camel Case with Regex</title>
@@ -535,282 +567,6 @@ export default class MyComponent extends Component {
         <category>storyboard</category>
         
         <category>snippet</category>
-        
-      </item>
-    
-      <item>
-        <title>(Swift) Layout Constraints</title>
-        <description>&lt;p&gt;A whiles back ago I was trying to learn how &lt;code class=&quot;highlighter-rouge&quot;&gt;constraints&lt;/code&gt; work. Today, I still have no idea what the heck is going on.&lt;/p&gt;
-
-&lt;p&gt;While learning, I can across a bunch of tutorials that helped. However, I don’t remember what blog I particularly liked.&lt;/p&gt;
-
-&lt;p&gt;This post contains a couple of classes that I made to help me add constraints to &lt;code class=&quot;highlighter-rouge&quot;&gt;UIViews&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-02-19-assets/hero.gif&quot; alt=&quot;Visual debug view of layout constraints and stacking constraints&quot; title=&quot;Visual debug view of layout constraints and stacking constraints&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Swift 3.0&lt;/li&gt;
-  &lt;li&gt;Xcode Version 8.0&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;layouting&quot;&gt;Layouting&lt;/h2&gt;
-
-&lt;p&gt;Below is a class named &lt;code class=&quot;highlighter-rouge&quot;&gt;Layout&lt;/code&gt; with a static function &lt;code class=&quot;highlighter-rouge&quot;&gt;setupConstraint&lt;/code&gt; that accepts the following parameters that lets me layer &lt;code class=&quot;highlighter-rouge&quot;&gt;UIViews&lt;/code&gt; that have either fixed or flexible widths and heights&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;forView: UIView &lt;code class=&quot;highlighter-rouge&quot;&gt;// What UIView do you want to add constraints to?&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;top: Int? = nil &lt;code class=&quot;highlighter-rouge&quot;&gt;// Top padding&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;bottom: Int? = nil &lt;code class=&quot;highlighter-rouge&quot;&gt;// Bottom padding; Negative integer&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;left: Int? = nil &lt;code class=&quot;highlighter-rouge&quot;&gt;// Left padding&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;right: Int? = nil &lt;code class=&quot;highlighter-rouge&quot;&gt;// Right padding; Negative integer&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;height: Int? = nil &lt;code class=&quot;highlighter-rouge&quot;&gt;Specified height&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;fixedHeight: Bool = false &lt;code class=&quot;highlighter-rouge&quot;&gt;// Boolean defaulted to false; If you want a fixed UIView, give it a height (above)&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;width: Int? = nil &lt;code class=&quot;highlighter-rouge&quot;&gt;// Specified width &lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;fixedWidth: Bool = false &lt;code class=&quot;highlighter-rouge&quot;&gt;// Boolean defaulted to false; If you want a fixed UIView, give it a width (above)&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;selfView: UIViewController &lt;code class=&quot;highlighter-rouge&quot;&gt;// What is the UIViewController&#39;s view?&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import UIKit
-
-class Layout {
-  static func setupConstraint (forView: UIView, top: Int?=nil, bottom: Int?=nil, left: Int?=nil, right: Int?=nil, height: Int?=nil, fixedHeight: Bool = false, width: Int?=nil, fixedWidth: Bool = false, selfView: UIViewController) {
-
-    var parentViewController: UIView? {
-        return selfView.view
-    }
-
-    forView.translatesAutoresizingMaskIntoConstraints = false //USING AUTOLAYOUT NOT FRAMES
-
-    var l = NSLayoutConstraint() // LEFT
-    var r = NSLayoutConstraint() // RIGHT
-    var t = NSLayoutConstraint() // TOP
-    var b = NSLayoutConstraint() // BOTTOM
-
-    if (left != nil) {
-        l = forView.leadingAnchor.constraint(equalTo: (parentViewController?.leadingAnchor)!, constant: CGFloat(left!)) // LEFT
-    }
-
-    if (right != nil) {
-        r = forView.trailingAnchor.constraint(equalTo: (parentViewController?.trailingAnchor)!, constant: CGFloat(right!)) // RIGHT
-    }
-
-    if (top != nil) {
-        t = forView.topAnchor.constraint(equalTo: (parentViewController?.topAnchor)!, constant: CGFloat(top!)) // TOP
-    }
-
-    if (bottom != nil) {
-        b = forView.bottomAnchor.constraint(equalTo: (parentViewController?.bottomAnchor)!, constant: CGFloat(bottom!)) // BOTTOM
-    }
-
-    if (fixedHeight) {
-        // FIXED HEIGHT
-        let h = forView.heightAnchor.constraint(equalToConstant: CGFloat(height!))
-        parentViewController?.addConstraints([t, b, l, r, h])
-    } else if (fixedWidth) {
-        // FIXED WIDTH
-        let w = forView.widthAnchor.constraint(equalToConstant: CGFloat(width!))
-        parentViewController?.addConstraints([t, b, l, r, w])
-    } else if (fixedHeight == false &amp;amp;&amp;amp; fixedWidth == false) {
-        // VARIABLE HEIGHT &amp;amp; WIDTH
-        parentViewController?.addConstraints([t, b, l, r])
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;flexible-height-and-width-with-constraints-on-top-right-bottom-and-left&quot;&gt;Flexible Height and Width With Constraints on Top, Right, Bottom, and Left&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-02-19-assets/img1.gif&quot; alt=&quot;A Cyan UIView that retains its shape in portrait and landscape mode&quot; title=&quot;A Cyan UIView that retains its shape in portrait and landscape mode&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is an example of a &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView&lt;/code&gt; with constraints on the &lt;code class=&quot;highlighter-rouge&quot;&gt;top&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;right&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;bottom&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;left&lt;/code&gt; side. When you rotate your simulator, the shape of the &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView&lt;/code&gt; is flexible and the constraints, or fake margin, remain constant.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let myCyanUIView = UIView()
-myCyanUIView.backgroundColor = UIColor.cyan
-self.view.addSubview(myCyanUIView)
-// Add layout constraint after adding my subview
-Layout.setupConstraint(forView: myCyanUIView,
-  top: 50,
-  bottom: -50,
-  left: 50,
-  right: -50,
-  //height: 0, // I don&#39;t want a fixed height, so I can give this an arbitrary number or remove this paramater
-  fixedHeight: false, // &amp;lt;===
-  //width: 0, // I don&#39;t want a fixed width, so I can give this an arbitrary number or remove this paramater
-  fixedWidth: false, // &amp;lt;===
-  selfView: self)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;fixed-width-with-constraints-on-top-bottom-and-left&quot;&gt;Fixed Width With Constraints on Top, Bottom, and Left&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-02-19-assets/img2.gif&quot; alt=&quot;A red UIView that retains its shape in portrait and landscape mode&quot; title=&quot;A red UIView that retains its shape in portrait and landscape mode&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This example is of a &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView&lt;/code&gt; “pegged” to the left side of the viewport. The height will vary upon the orientation of the device.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let myRedUIView = UIView()
-myRedUIView.backgroundColor = UIColor.red
-self.view.addSubview(myRedUIView)
-// Add layout constraint after adding my subview
-Layout.setupConstraint(forView: myRedUIView,
-  top: 75,
-  bottom: -75,
-  left: 75,
-  right: nil, // &amp;lt;=== I want my UIView to be fixed on the left side
-  //height: 0,
-  fixedHeight: false, // &amp;lt;=== With no fixed height
-  width: 100, // &amp;lt;=== With a fixed width
-  fixedWidth: true, // &amp;lt;=== So, I set this to true
-  selfView: self)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;fixed-height-with-constraints-on-right-bottom-and-left&quot;&gt;Fixed Height With Constraints on Right, Bottom, and Left&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-02-19-assets/img3.gif&quot; alt=&quot;A green UIView that retains its shape in portrait and landscape mode&quot; title=&quot;A green UIView that retains its shape in portrait and landscape mode&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This example is of a &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView&lt;/code&gt; “pegged” to the bottom side of the viewport. The height is fixed and the width will vary upon the orientation of the device.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let myGreenUIView = UIView()
-myGreenUIView.backgroundColor = UIColor.green
-self.view.addSubview(myGreenUIView)
-// Add layout constraint after adding my subview
-Layout.setupConstraint(forView: myGreenUIView,
-  top: nil, // &amp;lt;===
-  bottom: -100,
-  left: 100,
-  right: -100,
-  height: 100, // &amp;lt;===
-  fixedHeight: true,
-  //width: 100, // &amp;lt;=== I want flexible width
-  fixedWidth: false, // &amp;lt;=== I want flexible width
-  selfView: self)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;stacking&quot;&gt;Stacking&lt;/h2&gt;
-
-&lt;p&gt;This class, &lt;code class=&quot;highlighter-rouge&quot;&gt;Stack&lt;/code&gt;, lets me stack &lt;code class=&quot;highlighter-rouge&quot;&gt;UIViews&lt;/code&gt;. The private function accepts the following parameters:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;views: &lt;code class=&quot;highlighter-rouge&quot;&gt;[UIView]&lt;/code&gt; // Array of &lt;code class=&quot;highlighter-rouge&quot;&gt;UIViews&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;axis: &lt;code class=&quot;highlighter-rouge&quot;&gt;UILayoutConstraintAxis&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;distribution: &lt;code class=&quot;highlighter-rouge&quot;&gt;UIStackViewDistribution&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;alignment: &lt;code class=&quot;highlighter-rouge&quot;&gt;UIStackViewAlignment&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;spacing: &lt;code class=&quot;highlighter-rouge&quot;&gt;Int? = 0&lt;/code&gt;,&lt;/li&gt;
-  &lt;li&gt;selfView: &lt;code class=&quot;highlighter-rouge&quot;&gt;UIViewController&lt;/code&gt;,&lt;/li&gt;
-  &lt;li&gt;parentContainer: &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView? = nil&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I can use this in conjunction with the &lt;code class=&quot;highlighter-rouge&quot;&gt;Layout&lt;/code&gt; class above.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import UIKit
-
-class Stack {
-    static func setupConstraints (views: [UIView], axis: UILayoutConstraintAxis, distribution: UIStackViewDistribution, alignment: UIStackViewAlignment, spacing: Int?=0, selfView: UIViewController, parentContainer: UIView?=nil) {
-
-        var parentViewController: UIView! {
-            return selfView.view
-        }
-
-        var pContainer = UIView()
-        if (parentContainer != nil) {
-            pContainer = parentContainer!
-        } else {
-            pContainer = parentViewController
-        }
-
-        let stackView = UIStackView()
-        stackView.axis = axis
-        stackView.distribution = distribution
-        stackView.alignment = alignment
-        stackView.spacing = CGFloat(spacing!)
-
-        for view in views {
-            var height = Int()
-            var width = Int()
-
-            if (view.frame.size.height != 0.0 &amp;amp;&amp;amp; view.frame.size.width != 0.0) {
-                height = Int(view.frame.size.height)
-                width = Int(view.frame.size.width)
-            } else {
-                height = 100
-                width = 100
-            }
-            stackView.addArrangedSubview(view)
-            view.heightAnchor.constraint(equalToConstant: CGFloat(height)).isActive = true
-            view.widthAnchor.constraint(equalToConstant: CGFloat(width)).isActive = true
-        }
-
-        stackView.translatesAutoresizingMaskIntoConstraints = false;
-        parentViewController.addSubview(stackView)
-
-        // Constraints FOR NESTING LOCATION
-        let l = stackView.leadingAnchor.constraint(equalTo: pContainer.leadingAnchor)
-        let t = stackView.topAnchor.constraint(equalTo: pContainer.topAnchor)
-        parentViewController.addConstraints([l, t])
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Once you add this &lt;code class=&quot;highlighter-rouge&quot;&gt;stacking&lt;/code&gt; class to your project, you can consume it like so:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let myYellowUIView = UIView()
-myYellowUIView.backgroundColor = UIColor.yellow
-
-let myOrangeUIView = UIView()
-myOrangeUIView.backgroundColor = UIColor.orange
-
-let myBlueUIView = UIView()
-myBlueUIView.backgroundColor = UIColor.blue
-
-Stack.setupConstraints(views: [myYellowUIView, myOrangeUIView, myBlueUIView],
-  axis: .horizontal,
-  distribution: .fill,
-  alignment: .leading,
-  spacing: 20,
-  selfView: self,
-  parentContainer: myYellowUIView)
-
-Layout.setupConstraint(forView: myYellowUIView,
-  top: 50,
-  //bottom: nil,
-  left: 20,
-  //right: nil,
-  height: 100,
-  fixedHeight: true,
-  width: 100,
-  fixedWidth: true,
-  selfView: self)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Unfortunately, I’m personally not very excited about the stacking because I didn’t flesh it out yet.&lt;/p&gt;
-
-&lt;p&gt;All it appears to be doing is what you can do when setting the &lt;code class=&quot;highlighter-rouge&quot;&gt;frame&#39;s&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;CGRect&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2017-02-19-assets/img4.png&quot; alt=&quot;Three UIViews that are stacked horizontally&quot; title=&quot;Three UIViews that are stacked horizontally&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;You can get the storyboard project is in &lt;a href=&quot;https://github.com/seimith/SwiftAddConstraints&quot;&gt;this repo&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 04 Feb 2017 02:33:33 -0800</pubDate>
-        <link>http://seimith.github.io/swift/constraints/layout/stacking/uiview/2017/02/04/Swift-Layout-Constraints.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/swift/constraints/layout/stacking/uiview/2017/02/04/Swift-Layout-Constraints.html</guid>
-        
-        
-        <category>swift</category>
-        
-        <category>constraints</category>
-        
-        <category>layout</category>
-        
-        <category>stacking</category>
-        
-        <category>uiview</category>
         
       </item>
     
