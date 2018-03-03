@@ -6,9 +6,32 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Feb 2018 11:20:07 -0800</pubDate>
-    <lastBuildDate>Sat, 24 Feb 2018 11:20:07 -0800</lastBuildDate>
+    <pubDate>Sat, 03 Mar 2018 13:44:56 -0800</pubDate>
+    <lastBuildDate>Sat, 03 Mar 2018 13:44:56 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Remove Mirage Logs</title>
+        <description>&lt;p&gt;These past couple of days I’ve been using Mirage, and the console will output a bunch of messages by default. To turn them off, use the following in your &lt;code class=&quot;highlighter-rouge&quot;&gt;config.js&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;this.logging = false;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 03 Mar 2018 02:33:33 -0800</pubDate>
+        <link>http://seimith.github.io/ember/snippet/divs/mirage/2018/03/03/Remove-Mirage-Logs.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/ember/snippet/divs/mirage/2018/03/03/Remove-Mirage-Logs.html</guid>
+        
+        
+        <category>ember</category>
+        
+        <category>snippet</category>
+        
+        <category>divs</category>
+        
+        <category>mirage</category>
+        
+      </item>
     
       <item>
         <title>Command to Compress and Password Protect</title>
@@ -508,65 +531,6 @@ export default class MyComponent extends Component {
         <category>text-editor</category>
         
         <category>ternimal</category>
-        
-      </item>
-    
-      <item>
-        <title>(Swift) Stop Using the Storyboard</title>
-        <description>&lt;p&gt;I started learning &lt;code class=&quot;highlighter-rouge&quot;&gt;Swift&lt;/code&gt; about three months ago and when I started I used the &lt;code class=&quot;highlighter-rouge&quot;&gt;storyboard&lt;/code&gt;. This post will be a snippet of how you can stop using the &lt;code class=&quot;highlighter-rouge&quot;&gt;storyboard&lt;/code&gt;!&lt;/p&gt;
-
-&lt;p&gt;The major benefit of not using the &lt;code class=&quot;highlighter-rouge&quot;&gt;storyboard&lt;/code&gt; is not having messy merge conflicts. Long story short, the &lt;code class=&quot;highlighter-rouge&quot;&gt;storyboard&lt;/code&gt; file is a fairly large &lt;code class=&quot;highlighter-rouge&quot;&gt;xml&lt;/code&gt; file and every time you open it something changes. Every time, you change a controller, or every time you add an &lt;code class=&quot;highlighter-rouge&quot;&gt;IBOutlet&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;IBAction&lt;/code&gt; something changes.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Swift 3.0&lt;/li&gt;
-  &lt;li&gt;Xcode Version 8.0&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Within your &lt;code class=&quot;highlighter-rouge&quot;&gt;AppDelegate.swift&lt;/code&gt;, specify the &lt;code class=&quot;highlighter-rouge&quot;&gt;window&lt;/code&gt; frame.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Then, in your &lt;code class=&quot;highlighter-rouge&quot;&gt;application&lt;/code&gt; function you can specify your main view controller to be something else.&lt;/p&gt;
-
-&lt;p&gt;In this example below, I’ve created some other view controller, called &lt;code class=&quot;highlighter-rouge&quot;&gt;NewViewController&lt;/code&gt;,&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -&amp;gt; Bool {
-  let startingViewController = NewViewController()
-  self.window!.rootViewController = startingViewController
-  window!.makeKeyAndVisible()
-  return true
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;At this point, you can delete your &lt;code class=&quot;highlighter-rouge&quot;&gt;Storyboard.main&lt;/code&gt; file. However, when you build and run your project at this point, you might get an error like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*** Terminating app due to uncaught exception &#39;NSInvalidArgumentException&#39;, reason: &#39;Could not find a storyboard named &#39;Main&#39; in bundle NSBundle.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;If this happens, navigate to your &lt;code class=&quot;highlighter-rouge&quot;&gt;info.plist&lt;/code&gt; and delete the following entry:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Main storyboard file base name | String | Main
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Hard clean and rebuild and you should see your new view controller.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 19 Feb 2017 02:33:33 -0800</pubDate>
-        <link>http://seimith.github.io/swift/storyboard/snippet/2017/02/19/Swift-Stop-Using-the-Storyboard.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/swift/storyboard/snippet/2017/02/19/Swift-Stop-Using-the-Storyboard.html</guid>
-        
-        
-        <category>swift</category>
-        
-        <category>storyboard</category>
-        
-        <category>snippet</category>
         
       </item>
     
