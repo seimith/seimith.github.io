@@ -8,13 +8,12 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    // font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    font-size: 16px;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
@@ -25,8 +24,6 @@ body {
     font-kerning: normal;
 }
 
-
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -34,10 +31,8 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: 0;
 }
-
-
 
 /**
  * Images
@@ -45,9 +40,9 @@ ul, ol, dl, figure,
 img {
     max-width: 100%;
     vertical-align: middle;
+    margin: 2em;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
 }
-
-
 
 /**
  * Figures
@@ -60,57 +55,17 @@ figcaption {
     font-size: $small-font-size;
 }
 
-
-
-/**
- * Lists
- */
-ul, ol {
-    margin-left: $spacing-unit;
-}
-
-li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
-}
-
-
-
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
-    color: #d35400 !important;
-}
-
-
-
 /**
  * Links
  */
 a {
-    color: #2c3e50 !important;
+    color: #666;
     text-decoration: none;
-    // font-size: 2rem !important;
-    padding-bottom: 5px;
-
-    &:visited {
-        color: #34495e !important;
-    }
 
     &:hover {
-        color: $text-color !important;
-        border-bottom: 5px solid #d35400;
-        border-bottom-left-radius: 7px;
-        border-bottom-right-radius: 7px;
-        padding-bottom: 0px;
+        color: #d35400;
     }
 }
-
-
 
 /**
  * Blockquotes
@@ -128,8 +83,6 @@ blockquote {
     }
 }
 
-
-
 /**
  * Code formatting
  */
@@ -146,7 +99,6 @@ code {
 }
 
 pre {
-    padding: 8px 12px;
     overflow-x: auto;
 
     > code {
@@ -155,8 +107,10 @@ pre {
         padding-left: 0;
     }
 }
-
-
+.highlight {
+    margin: 1em 0;
+    padding: 1em;
+}
 
 /**
  * Wrapper
@@ -164,25 +118,14 @@ pre {
 .wrapper {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-left: 1rem;
     @extend %clearfix;
 
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        // padding-right: $spacing-unit / 2;
-        // padding-left: $spacing-unit / 2;
     }
-
-    // .home {
-    //     padding: 0 2rem;
-    // }
 }
-
-
 
 /**
  * Clearfix
@@ -195,8 +138,6 @@ pre {
         clear: both;
     }
 }
-
-
 
 /**
  * Icons

@@ -10,16 +10,14 @@ layout: default
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
-
-    <hr>
-    <h2>Categories</h2>
-      <ul>
+    <br><br><br>
+    <h1 class="post-header">Categories</h1>
+      <ul class="post-list">
       {% for category in page.categories %}
         <li>
           <a href="/categories/#{{category | split: ' ' | join: '+'}}">{{ category }}</a>
         </li>
       {% endfor %}
     </ul>
-    <hr>
   </div>
 </article>
