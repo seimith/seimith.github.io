@@ -5,9 +5,6 @@ permalink: /writings/
 ---
 
 <div class="post">
-  <!-- <center>
-    <img src="//raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/hanuman.png" alt="">
-  </center> -->
   <div class="post-header">
     <ul class="post-list">
     {% for post in site.posts %}
