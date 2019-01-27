@@ -5,16 +5,23 @@
     {{ content }}
     <script type="text/javascript">
       var randomVideos = [
-        'https://www.youtube.com/watch?v=anwy2MPT5RE',
-        'https://www.youtube.com/watch?v=8BGnEzAasl0',
-        'https://www.youtube.com/watch?v=gLRPJEoQBQQ',
-        'https://www.youtube.com/watch?v=uEuBZRAX_5k',
-        'https://www.youtube.com/watch?v=pSj5fDjw3zQ',
-        'https://www.youtube.com/watch?v=oO4eR51HLfc'];
+        {title: "Monty Python's 'Spam' Skit", url: 'https://www.youtube.com/watch?v=anwy2MPT5RE'},
+        {title: "Libby's 1990 Vienna Sausage Commercial", url: 'https://www.youtube.com/watch?v=8BGnEzAasl0'},
+        {title: "Old Spam Commercial w/ Jingle", url: 'https://www.youtube.com/watch?v=gLRPJEoQBQQ'},
+        {title: "Armour's 1985 Vienna Sausage Commercial", url: 'https://www.youtube.com/watch?v=uEuBZRAX_5k'},
+        {title: "Canned Vienna Sausages Throw Down (Armour vs. Prairie Belt)", url: 'https://www.youtube.com/watch?v=pSj5fDjw3zQ'},
+        {title: "Canned Beef Stew Throw Down (Dinty Moore vs. Southgate vs. Lion Gate)", url: 'https://www.youtube.com/watch?v=oO4eR51HLfc'},
+        {title: "Spaghetti-O Jello Mold Retro Recipe w/ Vienna Sausages", url: 'https://www.youtube.com/watch?v=2jJg0LgMH9Y'},
+        {title: "Cincinnati Chili Throw Down (Skyline vs. Gold Star Chili)", url: 'https://www.youtube.com/watch?v=uoZxyCrQzxo'},
+        {title: "Cincinnati Chili Spaghetti & Coney Dog (Skyline vs. Gold Star)", url: 'https://www.youtube.com/watch?v=4lsnnpQaSuM'},
+        {title: "Skyline 3 Way Chili Spaghetti", url: 'https://www.youtube.com/watch?v=-EVGT_83xJg'},
+        {title: "Hot Dog with Spicy Meat Sauce Recipe", url: 'https://www.youtube.com/watch?v=4aDZ0yT5agM'},
+        {title: "", url: ''},
+      ];
       var treatSelector = document.querySelector('.treat');
       treatSelector.onclick = function() {
         var randomIndex = Math.floor(Math.random() * randomVideos.length - 1) + 1;
-        treatSelector.href=randomVideos[randomIndex];
+        treatSelector.href=randomVideos[randomIndex].url;
       };
     </script>
   </body>
