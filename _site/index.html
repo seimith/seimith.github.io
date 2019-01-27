@@ -18,27 +18,30 @@
 </head>
 
   <body>
-    <div class="content">
-      <!-- <header class="site-header">
-  <div class="navigation">
-    <ul class="menu">
-      <li><a href="/#">Home</a></li>
-      <li><a href="/writings/">Articles</a></li>
-      <li><a href="/categories/">Categories</a></li>
-    </ul>
-  </div>
-</header>
- -->
-      <div class="wrapper">
-        <div class="media-object">
+    <div class="media-object">
   <img src="//raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/me.jpg" alt="Me laughing at you." class="avatar">
   <H1>Kaixo!</H1>
-  <p>I <a href="/writings/">write</a> sometimes (usually to remind myself how to do <a href="/categories/">things</a>).</p>
-  <p>And on <a href="https://twitter.com/themcsuth/">social media</a> I'm pretty dead.</p>
-  <p>- "<a href="https://www.linkedin.com/in/seimith/">Smith</a>".</p>
+  <p>I <a href="/writings/" target="_self">write</a> sometimes (usually to remind myself how to do <a href="/categories/" target="_self">things</a>).</p>
+  <p>On <a href="https://twitter.com/themcsuth/" target="_blank">social media</a> I'm pretty dead.</p>
+  <p>- "<a href="https://www.linkedin.com/in/seimith/" target="_blank">Smith</a>".</p>
+</div>
+<div class="special-treat">
+  🍭 Here's a <a href="#" class="treat" target="_blank">video</a>.
 </div>
 
-      </div>
-    </div>
+    <script type="text/javascript">
+      var randomVideos = [
+        'https://www.youtube.com/watch?v=anwy2MPT5RE',
+        'https://www.youtube.com/watch?v=8BGnEzAasl0',
+        'https://www.youtube.com/watch?v=gLRPJEoQBQQ',
+        'https://www.youtube.com/watch?v=uEuBZRAX_5k',
+        'https://www.youtube.com/watch?v=pSj5fDjw3zQ',
+        'https://www.youtube.com/watch?v=oO4eR51HLfc'];
+      var treatSelector = document.querySelector('.treat');
+      treatSelector.onclick = function() {
+        var randomIndex = Math.floor(Math.random() * randomVideos.length - 1) + 1;
+        treatSelector.href=randomVideos[randomIndex];
+      };
+    </script>
   </body>
 </html>

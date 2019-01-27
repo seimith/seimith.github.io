@@ -2,11 +2,20 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    <div class="content">
-      <!-- {% include header.html %} -->
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+    {{ content }}
+    <script type="text/javascript">
+      var randomVideos = [
+        'https://www.youtube.com/watch?v=anwy2MPT5RE',
+        'https://www.youtube.com/watch?v=8BGnEzAasl0',
+        'https://www.youtube.com/watch?v=gLRPJEoQBQQ',
+        'https://www.youtube.com/watch?v=uEuBZRAX_5k',
+        'https://www.youtube.com/watch?v=pSj5fDjw3zQ',
+        'https://www.youtube.com/watch?v=oO4eR51HLfc'];
+      var treatSelector = document.querySelector('.treat');
+      treatSelector.onclick = function() {
+        var randomIndex = Math.floor(Math.random() * randomVideos.length - 1) + 1;
+        treatSelector.href=randomVideos[randomIndex];
+      };
+    </script>
   </body>
 </html>
