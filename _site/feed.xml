@@ -6,9 +6,61 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Jan 2019 15:37:46 -0800</pubDate>
-    <lastBuildDate>Sun, 27 Jan 2019 15:37:46 -0800</lastBuildDate>
+    <pubDate>Tue, 29 Jan 2019 13:12:30 -0800</pubDate>
+    <lastBuildDate>Tue, 29 Jan 2019 13:12:30 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>SCSS Nesting with at-root</title>
+        <description>&lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;@at-root&lt;/code&gt; to extend your styles.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;color: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;o&quot;&gt;&amp;amp;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_bar&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;color: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_baz&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;color: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stuff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_primary&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;color: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;vi&quot;&gt;@at&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;color: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;o&quot;&gt;&amp;amp;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@extend&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;ss&quot;&gt;color: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yellow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;o&quot;&gt;&amp;amp;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mod2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@extend&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;ss&quot;&gt;color: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Tue, 29 Jan 2019 02:33:33 -0800</pubDate>
+        <link>http://seimith.github.io/scss/at-root/2019/01/29/SCSS-Nesting-with-at-root.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/scss/at-root/2019/01/29/SCSS-Nesting-with-at-root.html</guid>
+        
+        
+        <category>scss</category>
+        
+        <category>at-root</category>
+        
+      </item>
     
       <item>
         <title>Check for color with Regex</title>
@@ -532,30 +584,6 @@ export default class MyComponent extends Component {
         
         
         <category>vim</category>
-        
-        <category>snippet</category>
-        
-      </item>
-    
-      <item>
-        <title>(Swift) Programmatically Segue</title>
-        <description>&lt;p&gt;Using the code from my previous post on segues, here’s a snippet:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func segueToPublisher () {
-  let customSegueGoToRightScene = CustomSegueGoToRightScene(identifier: &quot;CustomSegueGoToRightScene&quot;, source: self, destination: PublisherViewController())
-  customSegueGoToRightScene.perform()
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Sat, 04 Nov 2017 11:15:00 -0700</pubDate>
-        <link>http://seimith.github.io/swift/segue/snippet/2017/11/04/Swift-Programmatically-Segue.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/swift/segue/snippet/2017/11/04/Swift-Programmatically-Segue.html</guid>
-        
-        
-        <category>swift</category>
-        
-        <category>segue</category>
         
         <category>snippet</category>
         
