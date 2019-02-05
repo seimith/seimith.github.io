@@ -6,9 +6,39 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 03 Feb 2019 16:54:11 -0800</pubDate>
-    <lastBuildDate>Sun, 03 Feb 2019 16:54:11 -0800</lastBuildDate>
+    <pubDate>Mon, 04 Feb 2019 17:46:07 -0800</pubDate>
+    <lastBuildDate>Mon, 04 Feb 2019 17:46:07 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>SCSS Get-Map</title>
+        <description>&lt;p&gt;Creating variables, or tokens, is pretty handy when you want to tidy up your styles. You can create what I call a grouped variable.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;my-cool-variable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;light&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;#FFFFFF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;medium&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;#CCCCCC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;heavy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;#000000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You can then use the variable like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;map-get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my-cool-variable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;medium&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Mon, 04 Feb 2019 02:33:33 -0800</pubDate>
+        <link>http://seimith.github.io/scss/get-map/variables/2019/02/04/SCSS-Get-Map.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/scss/get-map/variables/2019/02/04/SCSS-Get-Map.html</guid>
+        
+        
+        <category>scss</category>
+        
+        <category>get-map</category>
+        
+        <category>variables</category>
+        
+      </item>
     
       <item>
         <title>SCSS Nesting with at-root</title>
@@ -539,53 +569,6 @@ export default class MyComponent extends Component {
         <category>express</category>
         
         <category>es2015</category>
-        
-      </item>
-    
-      <item>
-        <title>So I Started Using VIM</title>
-        <description>&lt;p&gt;So I recently started using VIM and now I can’t stop typing &lt;code class=&quot;highlighter-rouge&quot;&gt;:q&lt;/code&gt; whenever I want to close random browser windows.&lt;/p&gt;
-
-&lt;p&gt;Here are the VIM plugins I’ve been using:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/junegunn/vim-plug&quot;&gt;VIM Plug&lt;/a&gt; - for adding VIM plugins&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/scrooloose/nerdtree&quot;&gt;Nerd Tree&lt;/a&gt; - VIM tree view&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/Xuyuanp/nerdtree-git-plugin&quot;&gt;Nerd Tree Git&lt;/a&gt; - git plugin to view git status in tree view&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/mattn/emmet-vim/&quot;&gt;Emmet&lt;/a&gt; - for fast HTML &amp;amp; CSS&lt;/p&gt;
-
-&lt;p&gt;And some basic VIM commands that I think everybody needs to know! :-)&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:q&lt;/code&gt; - to close, “quit”&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:w&lt;/code&gt; - to save, “write”&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt; - to save and then close&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:q!&lt;/code&gt; - to force close, “quit”, without saving, “writing”&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:u&lt;/code&gt; - to “undo” your last command&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:sort&lt;/code&gt; - to sort&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v&lt;/code&gt; - to visually select&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; - to “delete”&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt; - to copy, “yank”&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;p&lt;/code&gt; - to “paste”&lt;/p&gt;
-</description>
-        <pubDate>Sat, 11 Nov 2017 13:02:00 -0800</pubDate>
-        <link>http://seimith.github.io/vim/snippet/2017/11/11/so-I-started-using-vim.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/vim/snippet/2017/11/11/so-I-started-using-vim.html</guid>
-        
-        
-        <category>vim</category>
-        
-        <category>snippet</category>
         
       </item>
     
