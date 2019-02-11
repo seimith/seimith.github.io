@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Swift Creating a Custom Delegate
+title:  (Swift) Creating a Custom Delegate
 date:   2019-02-06 3:33:33 -0700
 categories: swift uiview UIViewController mobile
 ---
