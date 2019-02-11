@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  SCSS Get-Map
+title:  (SCSS) Get-Map
 date:   2019-02-04 3:33:33 -0700
 categories: scss get-map variables
 ---
