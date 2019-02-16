@@ -28,6 +28,23 @@ body {
     bottom: 20px;
     left: 20px;
   }
+
+  .post {
+    max-width: 850px;
+
+    .post-content {
+      img {
+        width: 20%;
+        height: 20%;
+      }
+
+      .highlight {
+        max-width: 850px;
+        padding: 32px;
+        overflow: scroll;
+      }
+    }
+  }
 }
 
 @media (max-width : 520px) {
