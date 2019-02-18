@@ -6,9 +6,48 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 16 Feb 2019 13:27:00 -0800</pubDate>
-    <lastBuildDate>Sat, 16 Feb 2019 13:27:00 -0800</lastBuildDate>
+    <pubDate>Mon, 18 Feb 2019 14:37:18 -0800</pubDate>
+    <lastBuildDate>Mon, 18 Feb 2019 14:37:18 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>My Go-To Media Queries</title>
+        <description>&lt;p&gt;When I’m making a website from scratch I always end up scratching my head on what breakpoints to use for the media queries. There’s just a TON to use.&lt;/p&gt;
+
+&lt;p&gt;These are my ULTRA SIMPLE go-to media query breakpoints. It’s super simple because there are only two sizes to think about!&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Small shit vs large shit.&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// This is for views at 850px or less, which is basically when you split your 13&quot;
+// browser in half (vertically).
+
+@media (max-width : 850px) {
+  ...
+}
+
+// This is the counterpart to the previous media query. Anything larger will use
+// styles specified in here.
+
+@media (min-width : 850px) {
+  ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 18 Feb 2019 02:33:33 -0800</pubDate>
+        <link>http://seimith.github.io/css/scss/media-queries/breakpoints/2019/02/18/media-queries.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/css/scss/media-queries/breakpoints/2019/02/18/media-queries.html</guid>
+        
+        
+        <category>css</category>
+        
+        <category>scss</category>
+        
+        <category>media-queries</category>
+        
+        <category>breakpoints</category>
+        
+      </item>
     
       <item>
         <title>(Swift) Creating a Custom Delegate</title>
@@ -351,43 +390,6 @@ overflow-x: auto;
         <category>error</category>
         
         <category>tip</category>
-        
-      </item>
-    
-      <item>
-        <title>Copy Text With JS</title>
-        <description>&lt;p&gt;A whiles ago I wanted to spike a copy and paste. I found this jewel somewhere:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var element = this.parentView.get(&#39;element&#39;)
-var snippet = element.getElementsByClassName(&#39;snippet&#39;)
-var selection = window.getSelection();
-
-if(selection.rangeCount &amp;gt; 0) selection.removeAllRanges();
-
-for(var i = 0; i &amp;lt; snippet.length; i++) {
-  var range = document.createRange();
-  range.selectNode(snippet[i]);
-  selection.addRange(range);
-
-  document.execCommand(&quot;copy&quot;);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Sat, 09 Dec 2017 00:33:45 -0800</pubDate>
-        <link>http://seimith.github.io/javascript/snippet/copy/paste/ember/2017/12/09/Copy-Text-w-JS.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/javascript/snippet/copy/paste/ember/2017/12/09/Copy-Text-w-JS.html</guid>
-        
-        
-        <category>JavaScript</category>
-        
-        <category>snippet</category>
-        
-        <category>copy</category>
-        
-        <category>paste</category>
-        
-        <category>ember</category>
         
       </item>
     
