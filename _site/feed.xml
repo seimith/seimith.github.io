@@ -6,9 +6,71 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Feb 2019 14:37:18 -0800</pubDate>
-    <lastBuildDate>Mon, 18 Feb 2019 14:37:18 -0800</lastBuildDate>
+    <pubDate>Wed, 20 Feb 2019 15:17:43 -0800</pubDate>
+    <lastBuildDate>Wed, 20 Feb 2019 15:17:43 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Deploying a Static Website to AWS</title>
+        <description>&lt;p&gt;1 - You need to have an AWS s3 Account&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;You will need you `Access key ID` &amp;amp; `Secret access key`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;2 - Install the &lt;code class=&quot;highlighter-rouge&quot;&gt;AWS CLI&lt;/code&gt; (https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html)&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 1. Download the AWS CLI Bundled Installer.
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;curl &lt;span class=&quot;s2&quot;&gt;&quot;https://s3.amazonaws.com/aws-cli/awscli-bundle.zip&quot;&lt;/span&gt; -o &lt;span class=&quot;s2&quot;&gt;&quot;awscli-bundle.zip&quot;&lt;/span&gt;
+
+// 2. Unzip the package.
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;unzip awscli-bundle.zip
+
+// 3. Run the install executable
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;3 - Configure you AWS Credentials&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;aws configure
+
+// AWS Access Key ID: &lt;span class=&quot;k&quot;&gt;*****&lt;/span&gt;YOUR-KEY-ID&lt;span class=&quot;k&quot;&gt;*****&lt;/span&gt;
+// AWS Secret Access Key: &lt;span class=&quot;k&quot;&gt;*****&lt;/span&gt;YOUR-SECRET-KEY&lt;span class=&quot;k&quot;&gt;*****&lt;/span&gt;
+// Default region name &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;us-west-1]: us-west-1
+// Default output format &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;dist/]: dist/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;4 - Configure your package.json to make things easier&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;scripts&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;build&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;ember build&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;aws&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;aws s3 sync dist/ s3://[your-bucket]/&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;deploy&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;npm run build &amp;amp;&amp;amp; npm run aws&quot;&lt;/span&gt; &amp;lt;---- &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;You want to make sure you build because this will update your dist/ folder and get pushed into your AWS bucket&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Also, &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; means that &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;npm run aws&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; will run AFTER &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;npm run build&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; completes&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;5 - Deploy&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;npm run deploy
+
+// &lt;span class=&quot;s1&quot;&gt;&#39;npm run deploy&#39;&lt;/span&gt; will &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ember build&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; and update the &lt;span class=&quot;s1&quot;&gt;&#39;dist/&#39;&lt;/span&gt; folder.
+// After the &lt;span class=&quot;s1&quot;&gt;&#39;dist/&#39;&lt;/span&gt; has been updated, the contents will publish to &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;s3://[your-bucket]]/&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 20 Feb 2019 02:33:33 -0800</pubDate>
+        <link>http://seimith.github.io/deploying/static/aws/2019/02/20/Deploying-a-Static-Website-to-AWS.html</link>
+        <guid isPermaLink="true">http://seimith.github.io/deploying/static/aws/2019/02/20/Deploying-a-Static-Website-to-AWS.html</guid>
+        
+        
+        <category>deploying</category>
+        
+        <category>static</category>
+        
+        <category>aws</category>
+        
+      </item>
     
       <item>
         <title>My Go-To Media Queries</title>
@@ -359,37 +421,6 @@ overflow-x: auto;
         <category>snippet</category>
         
         <category>styles</category>
-        
-      </item>
-    
-      <item>
-        <title>Troubleshoot ESLint $ Errors</title>
-        <description>&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;error  &#39;$&#39; is not defined  no-undef
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;env: {
-  browser: true,
-  es6: true,
-  jquery: true &amp;lt;== You need this.
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Sat, 16 Dec 2017 12:15:33 -0800</pubDate>
-        <link>http://seimith.github.io/eslint/javascript/troubleshoot/error/tip/2017/12/16/ESLint-$-Errors.html</link>
-        <guid isPermaLink="true">http://seimith.github.io/eslint/javascript/troubleshoot/error/tip/2017/12/16/ESLint-$-Errors.html</guid>
-        
-        
-        <category>eslint</category>
-        
-        <category>javascript</category>
-        
-        <category>troubleshoot</category>
-        
-        <category>error</category>
-        
-        <category>tip</category>
         
       </item>
     
