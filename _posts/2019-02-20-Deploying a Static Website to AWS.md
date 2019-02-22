@@ -36,7 +36,7 @@ $ aws configure
 ```
 4 - Configure your package.json to make things easier
 
-```bash
+```javascript
   "scripts": {
     "build": "ember build",
     "aws": "aws s3 sync dist/ s3://[your-bucket]/",

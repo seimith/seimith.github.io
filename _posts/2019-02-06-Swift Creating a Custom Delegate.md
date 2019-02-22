@@ -8,7 +8,7 @@ Exposing a function from **UIViewController A** to a **CUSTOM UIVIEW** such that
 
 **CUSTOM UIVIEW**
 
-```
+```swift
 import UIKit
 import DesignSystem
 
@@ -31,7 +31,7 @@ class AttachmentBar: UIView {
 
 **UIViewController A**
 
-```
+```swift
 import UIKit
 import DesignSystem
 

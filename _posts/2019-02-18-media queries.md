@@ -11,7 +11,7 @@ These are my ULTRA SIMPLE go-to media query breakpoints. It's super simple becau
 
 `Small shit vs large shit.`
 
-```
+```css
 // This is for views at 850px or less, which is basically when you split your 13"
 // browser in half (vertically).
 
