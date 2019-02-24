@@ -1,6 +1,6 @@
 ---
 layout: page
-title: writings
+title: technical writings
 permalink: /writings/
 ---
 
