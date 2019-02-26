@@ -3,6 +3,7 @@ layout: post
 title:  Deploying a Static Website to AWS
 date:   2019-02-20 3:33:33 -0700
 categories: deploying static aws
+tags: code
 ---
 
 1 - You need to have an AWS s3 Account

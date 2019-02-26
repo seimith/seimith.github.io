@@ -6,8 +6,8 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 Feb 2019 11:15:08 -0800</pubDate>
-    <lastBuildDate>Tue, 26 Feb 2019 11:15:08 -0800</lastBuildDate>
+    <pubDate>Tue, 26 Feb 2019 12:05:05 -0800</pubDate>
+    <lastBuildDate>Tue, 26 Feb 2019 12:05:05 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -63,6 +63,8 @@
         <link>http://seimith.github.io/deploying/static/aws/2019/02/20/Deploying-a-Static-Website-to-AWS.html</link>
         <guid isPermaLink="true">http://seimith.github.io/deploying/static/aws/2019/02/20/Deploying-a-Static-Website-to-AWS.html</guid>
         
+        <category>code</category>
+        
         
         <category>deploying</category>
         
@@ -99,6 +101,8 @@
         <pubDate>Mon, 18 Feb 2019 02:33:33 -0800</pubDate>
         <link>http://seimith.github.io/css/scss/media-queries/breakpoints/2019/02/18/media-queries.html</link>
         <guid isPermaLink="true">http://seimith.github.io/css/scss/media-queries/breakpoints/2019/02/18/media-queries.html</guid>
+        
+        <category>code</category>
         
         
         <category>css</category>
@@ -154,6 +158,8 @@
         <pubDate>Wed, 06 Feb 2019 02:33:33 -0800</pubDate>
         <link>http://seimith.github.io/swift/uiview/uiviewcontroller/mobile/2019/02/06/Swift-Creating-a-Custom-Delegate.html</link>
         <guid isPermaLink="true">http://seimith.github.io/swift/uiview/uiviewcontroller/mobile/2019/02/06/Swift-Creating-a-Custom-Delegate.html</guid>
+        
+        <category>code</category>
         
         
         <category>swift</category>

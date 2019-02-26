@@ -3,6 +3,7 @@ layout: post
 title:  My Go-To Media Queries
 date:   2019-02-18 3:33:33 -0700
 categories: css scss media-queries breakpoints
+tags: code
 ---
 
 When I'm making a website from scratch I always end up scratching my head on what breakpoints to use for the media queries. There's just a TON to use.
