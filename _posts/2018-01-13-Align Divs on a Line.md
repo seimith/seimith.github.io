@@ -3,6 +3,7 @@ layout: post
 title:  Align Divs on a Line
 date:   2018-01-13 19:10:33 -0700
 categories: html css divs snippet styles
+tags: code
 ---
 
 A few days ago I had to make a few `divs` of varying height. Unfortunately, they were looking a little wonky because they weren't aligning. I made them `display: inline-block`, but what's going on?

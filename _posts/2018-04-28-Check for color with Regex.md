@@ -3,6 +3,7 @@ layout: post
 title:  Check for color with Regex
 date:   2018-04-28 3:33:33 -0700
 categories: regex colors hex rgb rgba hsl hsla snippet
+tags: code
 ---
 
 Hey, are you in need of checking if a string is `hex, rgb, rgba, hsl, and hsla`? Look no further.

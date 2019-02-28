@@ -3,6 +3,7 @@ layout: post
 title:  (Swift) Creating a UITableView
 date:   2017-01-28 3:33:33 -0700
 categories: ["swift", "UITableView", "snippet"]
+tags: code
 ---
 
 Here's a snippet on how to make a `UITableView`. Check out the code below!

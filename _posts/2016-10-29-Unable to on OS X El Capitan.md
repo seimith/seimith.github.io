@@ -3,6 +3,7 @@ layout: post
 title:  Unable to run gem install XYZ on OS X El Capitan
 date:   2016-10-29 8:22:15 -0700
 categories: ["gem", "el capitan", "install", "troubleshoot"]
+tags: code
 ---
 
 If you've upgraded your computer to El Capitan and you're getting errors while trying to install some gems, this is due to  El Capitan's introduction of SIP (System Integrity Protection).
@@ -19,10 +20,10 @@ ERROR:  While executing gem ... (Gem::FilePermissionError)
 You don't have write permissions for the /usr/bin directory.
 ```
 
-Try installing to your directory: 
+Try installing to your directory:
 
 ```
 gem install bundler -n /usr/local/bin
 ```
 
-[link]:https://support.apple.com/en-us/HT204899 
+[link]:https://support.apple.com/en-us/HT204899

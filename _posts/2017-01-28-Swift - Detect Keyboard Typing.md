@@ -3,6 +3,7 @@ layout: post
 title:  (Swift) Detect Typing
 date:   2017-01-28 3:33:33 -0700
 categories: ["swift", "keyboard", "handler", "snippet"]
+tags: code
 ---
 
 Here's a snippet on how to detect typing on your `Swift` app. It's pretty simple because we're utilizing the `UITextViewDelegate` delegate. Aka, built in success - thank you `Swift`!

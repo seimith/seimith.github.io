@@ -3,6 +3,7 @@ layout: post
 title:  (App/Extension) GIPHY
 date:   2016-09-11 8:22:15 -0700
 categories: ["app", "gif"]
+tags: design
 ---
 
 I wanted to give a shoutout to a cool app that I recently downloaded from the app store. It's called GIPHY and I use it to create gifs of what I'm doing.

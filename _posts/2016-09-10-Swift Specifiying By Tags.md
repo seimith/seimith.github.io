@@ -3,6 +3,7 @@ layout: post
 title:  (Swift) Specifiying By Tags
 date:   2016-09-10 8:22:15 -0700
 categories: ["swift", "uiview", "views", "tutorial", "tags"]
+tags: code
 ---
 
 In Swift, you can add items to your storyboard and refer to it in your code. For example, you can add a UIButton and then create an IBOutlet in your code to "connect" to it.

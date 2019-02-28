@@ -3,6 +3,7 @@ layout: post
 title:  (Swift) Sliding UIView
 date:   2016-10-01 8:22:15 -0700
 categories: ["swift", "uiview", "views", "tutorial", "animation"]
+tags: code
 ---
 
 Today we're going to make a sliding UIView. Similar to the previous post, this tutorial is also very similar to my prievious post about [rotating UIViews](http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/08/28/Swift-Rotating-UIView.html "Post on rotating UIViews"), but this is how to do a sliding animation. You might need this type of animation for opening a menu or showing an alert.

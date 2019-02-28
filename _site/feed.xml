@@ -6,8 +6,8 @@
 </description>
     <link>http://seimith.github.io/</link>
     <atom:link href="http://seimith.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 Feb 2019 12:05:05 -0800</pubDate>
-    <lastBuildDate>Tue, 26 Feb 2019 12:05:05 -0800</lastBuildDate>
+    <pubDate>Thu, 28 Feb 2019 12:10:22 -0800</pubDate>
+    <lastBuildDate>Thu, 28 Feb 2019 12:10:22 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -196,6 +196,8 @@
         <link>http://seimith.github.io/scss/get-map/variables/2019/02/04/SCSS-Get-Map.html</link>
         <guid isPermaLink="true">http://seimith.github.io/scss/get-map/variables/2019/02/04/SCSS-Get-Map.html</guid>
         
+        <category>code</category>
+        
         
         <category>scss</category>
         
@@ -250,6 +252,8 @@
         <link>http://seimith.github.io/scss/at-root/2019/01/29/SCSS-Nesting-with-at-root.html</link>
         <guid isPermaLink="true">http://seimith.github.io/scss/at-root/2019/01/29/SCSS-Nesting-with-at-root.html</guid>
         
+        <category>code</category>
+        
         
         <category>scss</category>
         
@@ -290,6 +294,8 @@
         <link>http://seimith.github.io/regex/colors/hex/rgb/rgba/hsl/hsla/snippet/2018/04/28/Check-for-color-with-Regex.html</link>
         <guid isPermaLink="true">http://seimith.github.io/regex/colors/hex/rgb/rgba/hsl/hsla/snippet/2018/04/28/Check-for-color-with-Regex.html</guid>
         
+        <category>code</category>
+        
         
         <category>regex</category>
         
@@ -320,6 +326,8 @@
         <pubDate>Sat, 03 Mar 2018 02:33:33 -0800</pubDate>
         <link>http://seimith.github.io/ember/mirage/snippet/console/logs/2018/03/03/Remove-Mirage-Logs.html</link>
         <guid isPermaLink="true">http://seimith.github.io/ember/mirage/snippet/console/logs/2018/03/03/Remove-Mirage-Logs.html</guid>
+        
+        <category>code</category>
         
         
         <category>ember</category>
@@ -355,6 +363,8 @@
         <link>http://seimith.github.io/terminal/command/snippet/zip/2018/02/24/Command-to-Compress-and-Password-Protect.html</link>
         <guid isPermaLink="true">http://seimith.github.io/terminal/command/snippet/zip/2018/02/24/Command-to-Compress-and-Password-Protect.html</guid>
         
+        <category>code</category>
+        
         
         <category>terminal</category>
         
@@ -382,6 +392,8 @@ camelCaseWord.replace(/([A-Z])/g, &#39; $1&#39;).replace(/^[a-z]/g, function(fir
         <pubDate>Mon, 15 Jan 2018 07:23:33 -0800</pubDate>
         <link>http://seimith.github.io/snippet/regex/camelcase/javascript/2018/01/15/Transform-camelCase-a-Camel-Case-with-Regex.html</link>
         <guid isPermaLink="true">http://seimith.github.io/snippet/regex/camelcase/javascript/2018/01/15/Transform-camelCase-a-Camel-Case-with-Regex.html</guid>
+        
+        <category>code</category>
         
         
         <category>snippet</category>
@@ -416,6 +428,8 @@ overflow-x: auto;
         <pubDate>Sat, 13 Jan 2018 18:10:33 -0800</pubDate>
         <link>http://seimith.github.io/html/css/divs/snippet/styles/2018/01/13/Align-Divs-on-a-Line.html</link>
         <guid isPermaLink="true">http://seimith.github.io/html/css/divs/snippet/styles/2018/01/13/Align-Divs-on-a-Line.html</guid>
+        
+        <category>code</category>
         
         
         <category>html</category>

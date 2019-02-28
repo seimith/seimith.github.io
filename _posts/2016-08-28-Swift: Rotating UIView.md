@@ -3,6 +3,7 @@ layout: post
 title:  (Swift) Rotating UIView
 date:   2016-08-28 8:22:15 -0700
 categories: ["swift", "uiview", "views", "tutorial", "animation"]
+tags: code
 ---
 
 This tutorial is about spinning UIViews. Why spinning things you might ask? Animations can be (for a lack of better terminology because I hate this word) delightful for users.

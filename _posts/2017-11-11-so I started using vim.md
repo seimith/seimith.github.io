@@ -3,6 +3,7 @@ layout: post
 title:  So I Started Using VIM
 date:   2017-11-11 14:02:00 -0700
 categories: vim snippet
+tags: code
 ---
 
 So I recently started using VIM and now I can't stop typing `:q` whenever I want to close random browser windows.

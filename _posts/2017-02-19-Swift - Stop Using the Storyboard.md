@@ -3,6 +3,7 @@ layout: post
 title:  (Swift) Stop Using the Storyboard
 date:   2017-02-19 3:33:33 -0700
 categories: ["swift", "storyboard", "snippet"]
+tags: code
 ---
 
 I started learning `Swift` about three months ago and when I started I used the `storyboard`. This post will be a snippet of how you can stop using the `storyboard`!

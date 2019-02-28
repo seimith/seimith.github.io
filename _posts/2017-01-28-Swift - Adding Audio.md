@@ -3,6 +3,7 @@ layout: post
 title:  (Swift) Adding Audio
 date:   2017-01-28 3:33:33 -0700
 categories: ["swift", "audio", "snippet", "AudioToolbox"]
+tags: code
 ---
 
 Utilize `AudioToolbox` and make a class, `Sound`, to pass in the filename of you audio file and it's type.

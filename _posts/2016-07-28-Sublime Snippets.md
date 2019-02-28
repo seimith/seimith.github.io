@@ -3,6 +3,7 @@ layout: post
 title:  Sublime User Preferences
 date:   2016-06-12 10:22:15 -0700
 categories: ["snippet"]
+tags: code
 ---
 
 I don't like to customize my sublime (or anything else, really) very much but when I do I blog about it. Just in case I forget.

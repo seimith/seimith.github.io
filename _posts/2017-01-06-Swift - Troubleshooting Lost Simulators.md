@@ -3,6 +3,7 @@ layout: post
 title:  (Swift) Troubleshooting Lost Simulators
 date:   2017-01-06 8:22:15 -0700
 categories: ["swift", "troubleshoot"]
+tags: code
 ---
 
 Have you ever ran into the issue of all of your simulators disappearing?

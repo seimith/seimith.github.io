@@ -3,6 +3,7 @@ layout: post
 title:  Edit Github Author For Past Commits
 date:   2016-08-05 8:22:15 -0700
 categories: ["snippet"]
+tags: code
 ---
 
 So a while back I was working on a fun project on my new laptop. However, I totally forgot to set the Github username and email. This meant that all the authors on my commits were not recognized as me.

@@ -3,6 +3,7 @@ layout: post
 title:  (Swift) Custom Segue
 date:   2016-11-05 8:22:15 -0700
 categories: ["swift", "segue", "transitions", "animation"]
+tags: code
 ---
 
 This tutorial will demonstrate how to add a custom segue to your Swift app.

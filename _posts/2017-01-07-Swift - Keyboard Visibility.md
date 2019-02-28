@@ -3,6 +3,7 @@ layout: post
 title:  (Swift) Keyboard Visibility
 date:   2017-01-07 8:22:15 -0700
 categories: ["swift", "keyboard", "snippet"]
+tags: code
 ---
 
 This post is about doing things when your keyboard is visible or not. You might want to have some animation when your keyboard comes into view, or you might want an alert to pop up. Whatever it may be, here's a snippet for that.

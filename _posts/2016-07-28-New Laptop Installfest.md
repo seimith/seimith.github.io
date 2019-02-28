@@ -3,6 +3,7 @@ layout: post
 title:  New Laptop Installfest
 date:   2016-06-11 8:22:15 -0700
 categories: ["installation"]
+tags: code
 ---
 
 So I recently purchased a laptop.

@@ -3,6 +3,7 @@ layout: post
 title:  (Swift) Create Navigation with Multiple Pages with only Storyboard
 date:   2016-08-20 8:22:15 -0700
 categories: ["swift", "navigation", "views", "tutorial"]
+tags: code
 ---
 
 After one week of playing around with Swift I have some opinions on using the storyboard. It’s weird. But, it definitely makes creating an app real easy. For example, if I want to make an application that has multiple pages, I can do that all via the storyboard. Styling the pages on storyboard, is another beast, and we won’t get into that right now.

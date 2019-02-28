@@ -3,6 +3,7 @@ layout: post
 title:  Troubleshoot ESLint $ Errors
 date:   2017-12-16 13:15:33 -0700
 categories: eslint javascript troubleshoot error tip
+tags: code
 ---
 
 ```

@@ -3,6 +3,7 @@ layout: post
 title:  (Swift) Add Target for Click Handle
 date:   2016-12-26 8:22:15 -0700
 categories: ["swift", "addTarget", "click handle", "snippet"]
+tags: code
 ---
 
 This entry will show how you'd add a click handler to a `UIButton`. It's very easy.

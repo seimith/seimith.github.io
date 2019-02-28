@@ -3,6 +3,7 @@ layout: post
 title:  (Swift) Make UILabel Conform to Length of Text
 date:   2016-12-13 8:22:15 -0700
 categories: ["swift", "uilabel", "snippet"]
+tags: code
 ---
 
 ![alt text](https://raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/2016-12-23-assets/img2.png "Simulator of UILabel conforming to width of text")

@@ -3,6 +3,7 @@ layout: post
 title:  (Swift) UIImage to Base64
 date:   2016-10-30 8:22:15 -0700
 categories: ["swift", "snippet"]
+tags: code
 ---
 
 I recently had a project where I needed to convert my image to base64. With JavaScript it's relatively easy and since I was new to Swift I had no idea how to do this.
@@ -11,7 +12,7 @@ Below, I obtain my image as a `UIImage`, then convert it into NSData, and then i
 
 ```
 let image = ...UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)...
- 
+
 // Turn UIImage into Base64
 let imageNSData = UIImageJPEGRepresentation(image, 0.05)
 let base64String = imageNSData!.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)

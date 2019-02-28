@@ -3,6 +3,7 @@ layout: post
 title:  (Swift) Layout Constraints
 date:   2017-02--4 3:33:33 -0700
 categories: ["swift", "constraints", "layout", "stacking", "uiview"]
+tags: code
 ---
 
 A whiles back ago I was trying to learn how `constraints` work. Today, I still have no idea what the heck is going on.
