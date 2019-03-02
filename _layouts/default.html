@@ -26,6 +26,25 @@
         var randomIndex = Math.floor(Math.random() * randomVideos.length - 1) + 1;
         treatSelector.href=randomVideos[randomIndex].url;
       };
+
+      var randomWeekendActivities = [
+        {title: "knit & crochet", url: 'https://www.instagram.com/p/BtHSfozg1Mh/'},
+        {title: "do hot process soap-making", url: 'https://www.instagram.com/p/BarKC8EDo87/'},
+        {title: "do candle making", url: '#'},
+        {title: "row on my erg", url: '#'},
+        {title: "casually hike", url: 'https://www.instagram.com/p/3W7XSuAalJ/'},
+        {title: "do tissue art in random bathrooms", url: 'https://www.instagram.com/p/BPdeWcJBJT3/'},
+        {title: "grab drinks", url: 'https://www.instagram.com/p/Bk3xYxaFwQd/'},
+        {title: "organize my Carmex collection", url: 'https://www.instagram.com/p/BYFXAugDQ3i/'},
+        {title: "work on my secret business plan", url: '#'},
+        {title: "bake short bread", url: 'https://www.instagram.com/p/Bsn3AMSg9NX/'},
+        {title: "rewatch Bob's Burgers", url: 'https://getyarn.io/yarn-clip/c5df929a-9ae0-4cdc-b398-df41a211d2c1'},
+
+      ];
+      var weekendSelector = document.querySelector('.weekend');
+      var randomWeekendIndex = Math.floor(Math.random() * randomWeekendActivities.length - 1) + 1;
+      weekendSelector.innerText = randomWeekendActivities[randomWeekendIndex].title
+      weekendSelector.href = randomWeekendActivities[randomWeekendIndex].url;
     </script>
   </body>
 </html>
