@@ -19,10 +19,10 @@
 
   <body>
     <div class="media-object">
-  <img src="//raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/me.jpg" alt="Me laughing at you." class="avatar">
+  <img src="//raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/me.jpg" alt="Me doing things." class="avatar">
   <H1>Kaixo!</H1>
-  <p>I <a href="/writings/" target="_self" title="Technical posts.">code</a> most of the <a href="/categories/" target="_self" title="All post categories.">time</a>, I <a href="/designs/" target="_self" title="Design related posts.">design</a> sometimes, and I <a href="#" class="weekend">do random stuff</a> on the weekends.</p>
-  <p>On <a href="https://twitter.com/themcsuth/" target="_blank" title="Twitter.">social</a> <a href="https://www.instagram.com/razzlebeedaz/" target="_blank" title="The grams.">media</a> I'm pretty dead.</p>
+  <p>I <a href="/writings/" target="_self" title="Technical posts.">code</a> some <a href="/categories/" target="_self" title="All post categories.">things</a>, I <a href="/designs/" target="_self" title="Design related posts.">design</a> sometimes, and I <a href="#" class="weekend">do random stuff</a> on the weekends.</p>
+  <p>On <a href="https://twitter.com/themcsuth/" target="_blank" title="Twitter.">social</a> media I'm pretty dead.</p>
   <p>- "<a href="https://www.linkedin.com/in/seimith/" target="_blank" title="Reach out to me on LinkedIn for work-related inquiries.">Smith</a>"</p>
 </div>
 <div class="special-treat">
@@ -56,7 +56,7 @@
       var randomWeekendActivities = [
         {title: "knit & crochet", url: 'https://www.instagram.com/p/BtHSfozg1Mh/'},
         {title: "do hot process soap-making", url: 'https://www.instagram.com/p/BarKC8EDo87/'},
-        {title: "make candles", url: '#'},
+        {title: "make candles", url: 'https://www.instagram.com/p/BuzWNQ6HVc_/'},
         {title: "row on my erg", url: '#'},
         {title: "casually hike", url: 'https://www.instagram.com/p/3W7XSuAalJ/'},
         {title: "do tissue art in random bathrooms", url: 'https://www.instagram.com/p/BPdeWcJBJT3/'},
@@ -70,6 +70,17 @@
       var randomWeekendIndex = Math.floor(Math.random() * randomWeekendActivities.length - 1) + 1;
       weekendSelector.innerText = randomWeekendActivities[randomWeekendIndex].title
       weekendSelector.href = randomWeekendActivities[randomWeekendIndex].url;
+
+      var randomAvatar = [
+        {url: '//raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/me.jpg'},
+        {url: '//raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/me1.jpg'},
+        {url: '//raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/me2.png'},
+        {url: '//raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/me4.jpg'},
+        {url: '//raw.githubusercontent.com/seimith/seimith.github.io/master/_assets/me5.png'},
+      ];
+      var avatarSelector = document.querySelector('.avatar');
+      var randomIndex = Math.floor(Math.random() * randomAvatar.length - 1) + 1;
+      avatarSelector.src=randomAvatar[randomIndex].url;
     </script>
   </body>
 </html>
